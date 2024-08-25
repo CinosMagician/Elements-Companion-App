@@ -3,11 +3,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
+import Error from "./components/Error.jsx";
 import Home from './pages/Home';
 import Calculator from './pages/Calculator';
 import Decks from './pages/Decks';
 import Library from './pages/Library';
 import Random from './pages/Random';
+import CardDetails from './pages/CardDetails';
 
 const router = createBrowserRouter([
   {
@@ -17,7 +19,6 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        path: "home",
         element: <Home />,
       },
       {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
         path: "random",
         element: <Random />,
       },
+      {
+        path: 'card/:id',
+        element: <CardDetails />,
+      }
     ],
   },
 ]);

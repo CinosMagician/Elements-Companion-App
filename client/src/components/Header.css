@@ -1,0 +1,15 @@
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    padding-right: 2rem;
+    list-style: none;
+}
+
+.navHeader {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
