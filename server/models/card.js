@@ -28,7 +28,7 @@ const cardSchema = new mongoose.Schema({
   // how much quanta it costs to play
   cost: {
     type: Number,
-    required: true,
+    required: false,
   },
   // Determine the card's type, creature, permanent or spell.
   type: {

@@ -17,105 +17,136 @@ const CardCanvas = ({ card }) => {
 
         const drawCard = async () => {
             try {
-                const background = await loadImage(card.element === 'none' ? '/assets/images/cardBacks/normal.png' : `/assets/images/cardBacks/${card.element}.png`);
+                const backgroundSrc = card.element === 'none' ? '/assets/images/cardBacks/normal.png' : `/assets/images/cardBacks/${card.element}.png`;
+                const background = await loadImage(backgroundSrc);
                 const cardArt = await loadImage(card.imageUrl);
-                const icon = await loadImage(card.element === 'none' ? '/assets/images/icons/normalsmall.png' : `/assets/images/icons/${card.element}small.png`);
+                
+                let typeIcon = null;
+                if (card.type === 'Permanent') {
+                    typeIcon = await loadImage('/assets/images/icons/permanent.png');
+                } else if (card.type === 'Spell') {
+                    typeIcon = await loadImage('/assets/images/icons/spell.png');
+                }
+
+                let elementIcon = null;
+                if (card.cost && card.cost > 0) {
+                    elementIcon = await loadImage(card.element === 'none' ? '/assets/images/icons/normalsmall.png' : `/assets/images/icons/${card.element}small.png`);
+                }
 
                 ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
                 ctx.drawImage(cardArt, 20, 42, 250, 250);
-                ctx.drawImage(icon, 257, 8, 25, 26);
 
-                let textColor = '#FFFFFF'; 
-                if (background.src.includes('light')) { 
-                    textColor = '#000000';
+                if (elementIcon) {
+                    ctx.drawImage(elementIcon, 257, 8, 25, 26);
                 }
+
+                if (typeIcon) {
+                    ctx.drawImage(typeIcon, 240, 260, 25, 26);
+                }
+
+                const textColor = backgroundSrc.includes('light') ? '#000000' : '#FFFFFF';
 
                 ctx.font = '25px Gill Sans';
                 ctx.fillStyle = textColor;
-                ctx.shadowColor = '#000000';  
-                ctx.shadowBlur = 2;          
-                ctx.shadowOffsetX = 2;        
-                ctx.shadowOffsetY = 2;        
+                ctx.shadowColor = '#000000';
+                ctx.shadowBlur = 2;
+                ctx.shadowOffsetX = 2;
+                ctx.shadowOffsetY = 2;
                 ctx.fillText(card.name, 10, 28);
 
-                drawTextWithIcons(card.text, ctx, textColor, 25, 330, 275);
+                await drawTextWithIcons(card.text, ctx, textColor, 25, 330, 275);
 
-                let costX = card.cost > 9 ? 230 : 240;
-                ctx.font = '20px Gill Sans';
-                ctx.fillStyle = textColor;
-                ctx.fillText(`${card.cost}`, costX, 28);
+                if (card.cost && card.cost > 0) {
+                    const costX = card.cost > 9 ? 230 : 240;
+                    ctx.font = '20px Gill Sans';
+                    ctx.fillStyle = textColor;
+                    ctx.fillText(`${card.cost}`, costX, 28);
+                }
 
                 if (card.attack && card.health) {
                     ctx.font = '22px Gill Sans';
-                    ctx.fillText(`${card.attack}`, 220, 280);
-                    ctx.fillText(`|`, 248, 278);
-                    ctx.fillText(`${card.health}`, 255, 280);
+                    if (card.attack > 9) {
+                        ctx.fillText(`${card.attack}`, 210, 280);
+                        ctx.fillText('|', 240, 278);
+                    } else {
+                        ctx.fillText(`${card.attack}`, 220, 280);
+                    }
+
+                    if (card.health > 9) {
+                        ctx.fillText(`${card.health}`, 240, 280);
+                        ctx.fillText('|', 235, 278);
+                    } else {
+                        ctx.fillText(`${card.health}`, 250, 280);
+                    }
+
+                    if (card.health < 10 && card.attack < 10) {
+                        ctx.fillText('|', 240, 278);
+                    }
+
                 }
             } catch (error) {
                 console.error('Error loading images:', error);
             }
         };
 
-        drawCard();
-    }, [card]);
+        const drawTextWithIcons = async (text, ctx, textColor, x, y, maxWidth) => {
+            const iconSize = 25;
+            const lineHeight = 30;
+            const iconRegex = /\[icon:([^\]]+)\]/g;
+            const lines = text.split('\n');
+        
+            ctx.font = card.hasFlavourText ? '20px Gill Sans Italic' : '20px Gill Sans';
+            ctx.fillStyle = textColor;
 
-    const drawTextWithIcons = (text, ctx, textColor, x, y, maxWidth) => {
-        const iconSize = 25; 
-        const lineHeight = 30; 
+            for (let lineIndex = 0; lineIndex < lines.length; lineIndex++) {
+                let line = lines[lineIndex];
+                let lineY = y + (lineIndex * lineHeight);
+                let xOffset = x;
 
-        const lines = text.split('\n'); 
-        ctx.font = '20px Gill Sans';
-        ctx.fillStyle = textColor;
+                const parts = line.split(iconRegex);
 
-        function countIcons(text) {
-            const iconRegex = /\[icon:[^\]]+\]/g; 
-            const matches = text.match(iconRegex);
-            return matches ? matches.length : 0;
-        }
+                for (let i = 0; i < parts.length; i++) {
+                    if (i % 2 === 0) {
+                        const textPart = parts[i];
+                        const words = textPart.split(' ');
 
-        lines.forEach((line, lineIndex) => {
-            let words = line.split(' ');
-            let lineText = '';
-            let lineY = y + (lineIndex * lineHeight); 
-            let xOffset = x;
-            let iconCount = countIcons(text);
-            let yOffset = iconCount > 2 ? 75 : 45;
+                        for (let word of words) {
+                            const testLine = word + ' ';
+                            const metrics = ctx.measureText(testLine);
+                            const testWidth = metrics.width;
 
-            words.forEach((word, wordIndex) => {
-                if (word.startsWith('[icon:')) {
-                    const iconName = word.slice(6, -1); 
-                    const iconImg = new Image();
-                    iconImg.src = `/assets/images/icons/${iconName}.png`;
+                            if (xOffset + testWidth > maxWidth) {
+                                lineY += lineHeight;
+                                xOffset = x;
+                            }
 
-                    const iconPlaceholderWidth = iconSize; 
-                    const iconXOffset = xOffset; 
-
-                    xOffset += iconPlaceholderWidth; 
-
-                    iconImg.onload = () => {
-                        ctx.drawImage(iconImg, iconXOffset, lineY - yOffset, iconSize, iconSize);
-                    };
-                    
-                    lineText = ' ';
-                } else {
-                    const testLine = lineText + word + ' ';
-                    const metrics = ctx.measureText(testLine);
-                    const testWidth = metrics.width;
-
-                    if (testWidth > maxWidth - xOffset) {
-                        ctx.fillText(lineText, xOffset, lineY);
-                        lineText = word + ' ';
-                        lineY += lineHeight; 
-                        xOffset = x; 
+                            ctx.fillText(word + ' ', xOffset, lineY);
+                            xOffset += testWidth;
+                        }
                     } else {
-                        lineText = testLine;
+                        const iconName = parts[i].trim();
+                        if (iconName) {
+                            try {
+                                const iconImg = await loadImage(`/assets/images/icons/${iconName}.png`);
+
+                                if (xOffset + iconSize > maxWidth) {
+                                    lineY += lineHeight;
+                                    xOffset = x;
+                                }
+
+                                ctx.drawImage(iconImg, xOffset - 8, lineY - iconSize + 10, iconSize, iconSize);
+                                xOffset += iconSize - 8;
+                            } catch {
+                                // Handle icon loading error if needed
+                            }
+                        }
                     }
                 }
-            });
+            }
+        };
 
-            ctx.fillText(lineText, xOffset, lineY);
-        });
-    };
+        drawCard();
+    }, [card]);
 
     return (
         <canvas ref={canvasRef} width="289" height="443"></canvas>

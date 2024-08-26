@@ -23,7 +23,7 @@ const cardData = [
   },
   {
     name: 'Seraph',
-    text: '[icon:lightsmall] : Divine shield. Seraph can not be targeted for 1 turn.',
+    text: '[icon:lightsmall] : Divine shield.\n Seraph can not be targeted for 1 turn.',
     hasFlavourText: false,
     imageUrl: '/assets/images/cardArt/seraph.png',
     element: 'Fire',
@@ -31,6 +31,65 @@ const cardData = [
     type: 'Creature',
     attack: 10,
     health: 1
+  },
+  {
+    name: 'Water Pillar',
+    text: 'Each turn [icon:watersmall] is generated',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/waterpillar.png',
+    element: 'Water',
+    type: 'Permanent',
+  },
+  {
+    name: 'Shortsword',
+    text: 'Weapon: Deal 3 damages at the end of every turn',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/shortsword.png',
+    element: 'none',
+    cost: 1,
+    type: 'Permanent',
+  },
+  {
+    name: 'Catapult',
+    text: '[icon:gravitysmall] [icon:gravitysmall] : Sacrifice the target creature and damage your opponent. Larger creatures inflict more damage.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/catapult.png',
+    element: 'Gravity',
+    cost: 3,
+    type: 'Permanent',
+  },
+  {
+    name: 'Rustler',
+    text: '[icon:lightsmall] : Photosynthesis.\n Gain  [icon:lifesmall] [icon:lifesmall] . This skill can be used multiple times per turn.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/rustler.png',
+    element: 'Life',
+    cost: 1,
+    type: 'Creature',
+    attack: 1,
+    health: 1
+  },
+  {
+    name: 'Psion',
+    text: "Psion's attacks deal spell damage.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/psion.png',
+    element: 'Aether',
+    cost: 4,
+    type: 'Creature',
+    attack: 4,
+    health: 4
+  },
+  {
+    name: 'Stone Dragon',
+    text: "This mighty dragon of stone is no joke, with its raw power in both its attack and defense.",
+    hasFlavourText: true,
+    imageUrl: '/assets/images/cardArt/stonedragon.png',
+    element: 'Earth',
+    cost: 10,
+    type: 'Creature',
+    attack: 8,
+    health: 10
   },
   // Add more cards as needed
 ];

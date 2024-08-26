@@ -22,7 +22,7 @@ const CardDetails = () => {
             <div className="card-info">
                 <h1>{card.name}</h1>
                 <p><strong>Element:</strong> {card.element}</p>
-                <p><strong>Cost:</strong> {card.cost}</p>
+                {card.cost && <p><strong>Cost:</strong> {card.cost}</p>}
                 <TextWithIcons text={card.text} hasFlavourText={card.hasFlavourText} />
                 <p><strong>Type:</strong> {card.type}</p>
                 {card.attack && <p><strong>Attack:</strong> {card.attack}</p>}
