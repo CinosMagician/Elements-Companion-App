@@ -1,6 +1,7 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ApolloProvider, InMemoryCache, ApolloClient } from '@apollo/client'; // Import ApolloClient setup
 import App from "./App.jsx";
 import "./index.css";
 import Error from "./components/Error.jsx";
@@ -8,9 +9,17 @@ import Home from './pages/Home';
 import Calculator from './pages/Calculator';
 import Decks from './pages/Decks';
 import Library from './pages/Library';
+import HardLibrary from './pages/HardcodeLibrary';
 import Random from './pages/Random';
 import CardDetails from './pages/CardDetails';
 
+// Initialize Apollo Client
+const client = new ApolloClient({
+  uri: 'http://localhost:3001/graphql', // Replace with your GraphQL server URI
+  cache: new InMemoryCache(),
+});
+
+// Define your router
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,6 +43,10 @@ const router = createBrowserRouter([
         element: <Library />,
       },
       {
+        path: "hardlibrary",
+        element: <HardLibrary />,
+      },
+      {
         path: "random",
         element: <Random />,
       },
@@ -45,6 +58,9 @@ const router = createBrowserRouter([
   },
 ]);
 
+// Render the application
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <ApolloProvider client={client}>
+    <RouterProvider router={router} />
+  </ApolloProvider>
 );

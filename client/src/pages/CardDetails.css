@@ -1,0 +1,23 @@
+.card-details-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.card-canvas {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cardCanvas {
+    border: 1px solid #ddd; /* Optional: Add a border around the canvas */
+}

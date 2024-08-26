@@ -1,0 +1,50 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns of equal width */
+    gap: 10px; /* Space between cards */
+    padding: 10px; /* Space around the grid */
+    box-sizing: border-box;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card canvas {
+    width: 100%;
+    height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .card-grid {
+        grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    }
+}
+
+@media (max-width: 992px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+}
+
+@media (max-width: 576px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+@media (max-width: 400px) {
+    .card-grid {
+        grid-template-columns: 1fr; /* 1 column */
+    }
+}

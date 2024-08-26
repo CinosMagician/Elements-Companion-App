@@ -16,14 +16,16 @@ const cardData = [
     name: "Fractal",
     text: "Fill your hand with copies of the target creature's card. All the remaining aether quanta is consumed.",
     hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/fractal.png',
     element: 'Aether',
     cost: 10,
     type: 'Spell'
   },
   {
     name: 'Seraph',
-    text: '${lighticon}: Divine shield. Seraph can not be targeted for 1 turn.',
+    text: '[icon:lightsmall] : Divine shield. Seraph can not be targeted for 1 turn.',
     hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/seraph.png',
     element: 'Fire',
     cost: 9,
     type: 'Creature',

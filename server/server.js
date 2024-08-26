@@ -1,14 +1,11 @@
 const express = require("express");
-// import Apollo server
 const { ApolloServer } = require("@apollo/server");
-// import Apollo server middleware
 const { expressMiddleware } = require("@apollo/server/express4");
 const path = require("path");
-// import typeDefs and resolvers
 const { typeDefs, resolvers } = require("./schemas");
-// import JWT auth middleware
 const { authMiddleware } = require("./utils/auth");
 const db = require("./config/connection");
+const cors = require('cors'); // Import CORS middleware
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -26,7 +23,14 @@ const startApolloServer = async () => {
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
 
-  // Apply graphql middleware to express server
+  // Apply CORS middleware before applying GraphQL middleware
+  app.use(cors({
+    origin: 'http://localhost:3000', // Replace with your frontend's origin
+    methods: 'GET,POST', // Allow these methods
+    credentials: true, // Allow credentials
+  }));
+
+  // Apply GraphQL middleware to express server
   app.use(
     "/graphql",
     expressMiddleware(server, {
@@ -34,11 +38,14 @@ const startApolloServer = async () => {
     })
   );
 
+  // Serve static files from the "server/assets" directory
+  app.use('/assets', express.static(path.join(__dirname, 'assets')));
+
   // Serve static files in production
   if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "../client/dist")));
 
-    // Catch-all route to serve index.html for any unmatched routes - anything other than index.html 🤣
+    // Catch-all route to serve index.html for any unmatched routes
     app.get("*", (req, res) => {
       res.sendFile(path.join(__dirname, "../client/dist/index.html"));
     });
