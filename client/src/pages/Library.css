@@ -1,3 +1,33 @@
+.library-container {
+    padding: 20px;
+}
+
+.search-filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.filter-button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-button:hover {
+    background-color: #0056b3;
+}
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr); /* 6 columns of equal width */
@@ -11,6 +41,11 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card canvas {
@@ -47,4 +82,61 @@
     .card-grid {
         grid-template-columns: 1fr; /* 1 column */
     }
+}
+
+.filter-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.filter-modal-content h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.filter-modal-content .filter-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.filter-modal-content label {
+    flex: 1; /* Take up equal space on the left */
+    margin-bottom: 0;
+}
+
+.filter-modal-content select,
+.filter-modal-content input {
+    flex: 2; /* Take up more space on the right */
+    width: 100%;
+    padding: 10px;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+
+.filter-modal-content button {
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-modal-content button:hover {
+    background-color: #f1f1f1;
 }

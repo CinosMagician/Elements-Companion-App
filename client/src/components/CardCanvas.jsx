@@ -17,7 +17,7 @@ const CardCanvas = ({ card }) => {
 
         const drawCard = async () => {
             try {
-                const backgroundSrc = card.element === 'none' ? '/assets/images/cardBacks/normal.png' : `/assets/images/cardBacks/${card.element}.png`;
+                const backgroundSrc = card.element === 'None' ? '/assets/images/cardBacks/normal.png' : `/assets/images/cardBacks/${card.element}.png`;
                 const background = await loadImage(backgroundSrc);
                 const cardArt = await loadImage(card.imageUrl);
                 
@@ -30,7 +30,7 @@ const CardCanvas = ({ card }) => {
 
                 let elementIcon = null;
                 if (card.cost && card.cost > 0) {
-                    elementIcon = await loadImage(card.element === 'none' ? '/assets/images/icons/normalsmall.png' : `/assets/images/icons/${card.element}small.png`);
+                    elementIcon = await loadImage(card.element === 'None' ? '/assets/images/icons/normalsmall.png' : `/assets/images/icons/${card.element}small.png`);
                 }
 
                 ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
