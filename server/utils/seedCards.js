@@ -93,7 +93,7 @@ const cardData = [
   },
   {
     name: 'CinosMagician',
-    text: "[icon:lightsmall] [icon:darknesssmall] : Chaos Blast.\n Deal 4 damage to target creature.",
+    text: "[icon:lightsmall] [icon:darknesssmall] : Chaos Blast.\n Deal 4 damage to target creature",
     hasFlavourText: false,
     imageUrl: '/assets/images/cardArt/cinosmagician.png',
     element: 'Entropy',

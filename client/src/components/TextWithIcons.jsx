@@ -14,6 +14,7 @@ import iconTime from '../assets/icons/timesmall.png';
 import iconEntropy from '../assets/icons/entropysmall.png';
 import iconDarkness from '../assets/icons/darknesssmall.png';
 import iconAir from '../assets/icons/airsmall.png';
+import iconEarth from '../assets/icons/earthsmall.png';
 // Import other icons as needed
 
 const icons = {
@@ -29,6 +30,7 @@ const icons = {
     entropysmall: iconEntropy,
     darknesssmall: iconDarkness,
     airsmall: iconAir,
+    earthsmall: iconEarth,
     // Add other icons to the mapping
 };
 
