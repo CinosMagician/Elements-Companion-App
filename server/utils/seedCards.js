@@ -91,6 +91,17 @@ const cardData = [
     attack: 8,
     health: 10
   },
+  {
+    name: 'CinosMagician',
+    text: "[icon:lightsmall] [icon:darknesssmall] : Chaos Blast.\n Deal 4 damage to target creature.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/cinosmagician.png',
+    element: 'Entropy',
+    cost: 9,
+    type: 'Creature',
+    attack: 9,
+    health: 4
+  },
   // Add more cards as needed
 ];
 
