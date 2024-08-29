@@ -21,9 +21,12 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate("decks");
     },
+    userID: async (parent, { _id }) => {
+      return User.findOne({ _id }).populate("decks");
+    },
     // Get all decks
-    decks: async () => {
-      return Deck.find().populate("user cards");
+    decks: async (parent, {userId}) => {
+      return await Deck.find({ user: userId });
     },
     // Get a deck by ID
     deck: async (parent, { _id }) => {
@@ -95,19 +98,19 @@ const resolvers = {
       return { token, user };
     },
     // Add a new deck
-    addDeck: async (parent, { name, element, cardIds }, context) => {
+    addDeck: async (parent, { name, userId, element, cardIds }, context) => {
       if (context.user) {
         const deck = await Deck.create({
           name,
           element,
-          cards: cardIds,
+          cards: cardIds, // This should match the mutation's variable name
           user: context.user._id,
         });
-
+    
         await User.findByIdAndUpdate(context.user._id, {
           $push: { decks: deck._id },
         });
-
+    
         return Deck.findById(deck._id).populate("user cards");
       }
       throw new GraphQLError("You need to be logged in!", {

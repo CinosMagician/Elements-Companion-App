@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import { ADD_DECK } from '../utils/mutations';
+import { GET_CARDS } from '../utils/queries';
+import { useMyContext } from '../utils/UserContext'; // Use the custom hook
+import CardCanvas from '../components/CardCanvas';
+import DeckCardCanvas from '../components/DeckCardCanvas';
+import FilterModal from '../components/FilterModal';
+import './DeckScreens.css';
 
 // Import icons
 import iconFire from '../assets/icons/fire.png';
@@ -37,33 +43,87 @@ const DeckCreate = () => {
     const navigate = useNavigate();
 
     // State for new deck
+    const { state, setUser } = useMyContext(); // Destructure state and setUser from the context
     const [deckName, setDeckName] = useState('');
+    const [deckCards, setDeckCards] = useState([]); // Initialize deck as empty
     const [selectedMark, setSelectedMark] = useState('life'); // Default to 'life'
     const [cards, setCards] = useState([]);
     const [showModal, setShowModal] = useState(false);
+    const [showFilterModal, setShowFilterModal] = useState(false);
+    const [filteredCards, setFilteredCards] = useState([]);
+    const [filters, setFilters] = useState({
+        element: 'none',
+        cost: '',
+        type: '',
+        attack: '',
+        health: '',
+    });
+
+    const id = state.user.data._id;
 
     // Mutation for creating a new deck
     const [createDeck, { loading, error }] = useMutation(ADD_DECK);
+    const { loading: cardLoading, error: cardError, data: cardData } = useQuery(GET_CARDS);
+
+    useEffect(() => {
+        if (!cardLoading && !cardError && cardData) {
+            setCards(cardData.cards);
+            setFilteredCards(cardData.cards); // Initially, all cards are shown
+        }
+    }, [cardLoading, cardError, cardData]);
 
     const handleCardClick = (card) => {
-        setCards(cards.filter(c => c._id !== card._id));
+        setDeckCards(deckCards.filter((c, i) => i !== deckCards.indexOf(card)));
     };
 
+    const handleCardInsertClick = (card) => {
+        const cardName = card.name.toLowerCase();
+        
+        // Functional update to ensure the state is current
+        setDeckCards(prevDeckCards => {
+            const cardCount = prevDeckCards.filter(c => c._id === card._id).length;
+    
+            if (prevDeckCards.length === 60) {
+                alert("You can only have up to 60 cards in the deck.");
+                console.log(deckCards);
+                return prevDeckCards;
+            }
+    
+            if (cardName.includes("pillar") || cardName.includes("pendulum") || cardCount < 6) {
+                console.log(deckCards);
+                const updatedDeck = [...prevDeckCards, card];
+                // Sort the deck based on the order of the cards in the filtered library
+                updatedDeck.sort((a, b) => 
+                    filteredCards.findIndex(c => c._id === a._id) - filteredCards.findIndex(c => c._id === b._id)
+                );
+                return updatedDeck;
+            } else {
+                alert("You can only have up to 6 copies of this card in the deck.");
+                console.log(deckCards);
+                return prevDeckCards;
+            }
+        });
+    };
+    
+
     const handleSaveDeck = async () => {
-        if (cards.length < 30) {
+        if (deckCards.length < 30) {
             alert("Deck must have at least 30 cards.");
             return;
         }
         try {
             await createDeck({
                 variables: {
+                    userId: state.user.data._id,
                     name: deckName,
                     element: selectedMark,
-                    cards: cards.map(card => card._id) // Assuming cards are referenced by IDs
+                    cardIds: deckCards.map(card => card._id)
                 }
             });
-            navigate('/decks'); // Redirect after successful creation
+            navigate(`/decks/${id}`); // Redirect after successful creation
+            window.location.reload();
         } catch (err) {
+            console.error('Error creating deck:', err.graphQLErrors || err.networkError || err.message);
             console.error('Error creating deck:', err);
         }
     };
@@ -71,6 +131,36 @@ const DeckCreate = () => {
     const handleMarkSelect = (mark) => {
         setSelectedMark(mark);
         setShowModal(false); // Close the modal after selection
+    };
+
+    const handleSearch = (e) => {
+        const searchQuery = e.target.value.toLowerCase();
+        const searchedCards = cards.filter((card) =>
+            card.name.toLowerCase().includes(searchQuery)
+        );
+        setFilteredCards(searchedCards);
+    };
+
+    const handleFilterSubmit = () => {
+        const filtered = cards.filter((card) => {
+            return (
+                (filters.element === 'none' || card.element === filters.element) &&
+                (filters.cost === '' || card.cost === parseInt(filters.cost)) &&
+                (filters.type === '' || card.type === filters.type) &&
+                (filters.attack === '' || card.attack === parseInt(filters.attack)) &&
+                (filters.health === '' || card.health === parseInt(filters.health))
+            );
+        });
+        setFilteredCards(filtered);
+        setShowFilterModal(false);
+    };
+
+    const handleFilterChange = (e) => {
+        const { name, value } = e.target;
+        setFilters({
+            ...filters,
+            [name]: value,
+        });
     };
 
     return (
@@ -95,21 +185,53 @@ const DeckCreate = () => {
                 </button>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <div style={{ border: '1px solid #ccc', padding: '10px', width: '70%' }}>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '10px' }}>
-                        {cards.map((card) => (
-                            <div key={card._id} onClick={() => handleCardClick(card)} style={{ cursor: 'pointer' }}>
-                                <img src={card.imageUrl} alt={card.name} style={{ width: '100%' }} />
-                                <p>{card.name}</p>
-                                <p>{card.text}</p>
+                {/* Deck Display */}
+                <div style={{ border: '1px solid #ccc', padding: '10px', width: '70%', height: "fit-content" }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(10, 1fr)', gap: '10px' }}>
+                        {deckCards.map((card, index) => (
+                            <div key={index} onClick={() => handleCardClick(card)} style={{ cursor: 'pointer' }} className='card-deck'>
+                              <DeckCardCanvas card={card}/>
                             </div>
                         ))}
                     </div>
                 </div>
-                <div style={{ width: '25%', padding: '10px', border: '1px solid #ccc' }}>
-                    <input type="text" placeholder="Search Cards..." style={{ width: '100%', marginBottom: '10px' }} />
-                    <button onClick={() => {}} style={{ width: '100%' }}>Filter</button>
-                    {/* Render filtered cards here if needed */}
+
+                {/* Search & Filter Section */}
+                <div className="library-container">
+                    <div className="search-filter-container">
+                        <input
+                            type="text"
+                            className="search-bar"
+                            placeholder="Search cards..."
+                            onChange={handleSearch} // Update filteredCards based on search query
+                        />
+                        <button
+                            className="filter-button"
+                            onClick={() => setShowFilterModal(true)}
+                        >
+                            Filter
+                        </button>
+                    </div>
+
+                    <div className="card-grid-deck">
+                        {filteredCards.map((card) => (
+                            <div
+                                key={card._id}
+                                className="card-deck"
+                                onClick={() => handleCardInsertClick(card)}
+                            >
+                                <CardCanvas card={card} />
+                            </div>
+                        ))}
+                    </div>
+
+                    <FilterModal
+                        show={showFilterModal}
+                        filters={filters}
+                        handleFilterChange={handleFilterChange}
+                        handleFilterSubmit={handleFilterSubmit}
+                        handleClose={() => setShowFilterModal(false)}
+                    />
                 </div>
             </div>
             <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-between' }}>
@@ -140,10 +262,7 @@ const DeckCreate = () => {
                                 </div>
                             ))}
                         </div>
-                        <button 
-                            onClick={() => setShowModal(false)} 
-                            style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: 'lightcoral', color: '#fff', border: 'none', cursor: 'pointer' }}
-                        >
+                        <button onClick={() => setShowModal(false)} style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#333', color: '#fff', border: 'none', cursor: 'pointer' }}>
                             Close
                         </button>
                     </div>

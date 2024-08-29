@@ -45,13 +45,23 @@ export const GET_USER = gql`
         name
         cards {
           _id
-          name
-          text
-          hasFlavourText
-          imageUrl
-          element
-          cost
-          type
+        }
+      }
+    }
+  }
+`;
+
+// Query to get a user by id
+export const GET_USERID = gql`
+  query GetUser($id: ID!) {
+    userID(_id: $id) {
+      _id
+      username
+      decks {
+        _id
+        name
+        cards {
+          _id
         }
       }
     }
@@ -59,23 +69,17 @@ export const GET_USER = gql`
 `;
 
 export const GET_DECKS = gql`
-  query decks {
-    decks {
+  query decks($userId: ID!) {
+    decks(userId: $userId) {
       _id
       name
+      element
       user {
         _id
         username
       }
       cards {
         _id
-        name
-        text
-        hasFlavourText
-        imageUrl
-        element
-        cost
-        type
       }
     }
   }
@@ -86,6 +90,7 @@ export const GET_DECK = gql`
     deck(_id: $_id) {
       _id
       name
+      element
       user {
         _id
         username

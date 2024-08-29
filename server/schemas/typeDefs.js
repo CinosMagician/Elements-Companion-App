@@ -37,8 +37,9 @@ const typeDefs = gql`
   type Query {
     me: User                 
     users: [User]            
-    user(username: String!): User 
-    decks: [Deck]            # Get all decks
+    user(username: String!): User
+    userID(_id: ID!) : User
+    decks(userId: ID!): [Deck]            # Get all decks
     deck(_id: ID!): Deck     # Get a deck by ID
     cards: [Card]            # Get all cards
     card(_id: ID!): Card     # Get a card by ID
@@ -48,8 +49,8 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, password: String!): Auth 
     login(username: String!, password: String!): Auth 
-    addDeck(name: String!, element: String!, cardIds: [ID!]!): Deck  # Mutation to add a deck
-    updateDeck(deckId: ID!, name: String, element: String, cardIds: [ID!]): Deck # Mutation to update a deck
+    addDeck(name: String!, userId: ID!, element: String!, cardIds: [ID!]!): Deck
+    updateDeck(deckId: ID!, name: String!, element: String!, cards: [ID!]): Deck # Mutation to update a deck
     removeDeck(deckId: ID!): Deck           # Mutation to remove a deck
     addCard(name: String!, text: String!, hasFlavourText: Boolean!, element: String!, cost: Int!, type: String!, attack: Int, health: Int): Card # Mutation to add a card
     updateCard(cardId: ID!, name: String, text: String, hasFlavourText: Boolean, imageUrl: String, element: String, cost: Int, type: String, attack: Int, health: Int): Card # Mutation to update a card
