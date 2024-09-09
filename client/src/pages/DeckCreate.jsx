@@ -43,10 +43,10 @@ const DeckCreate = () => {
     const navigate = useNavigate();
 
     // State for new deck
-    const { state, setUser } = useMyContext(); // Destructure state and setUser from the context
+    const { state, setUser } = useMyContext(); 
     const [deckName, setDeckName] = useState('');
-    const [deckCards, setDeckCards] = useState([]); // Initialize deck as empty
-    const [selectedMark, setSelectedMark] = useState('life'); // Default to 'life'
+    const [deckCards, setDeckCards] = useState([]); 
+    const [selectedMark, setSelectedMark] = useState('life'); 
     const [cards, setCards] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [showFilterModal, setShowFilterModal] = useState(false);
@@ -58,6 +58,9 @@ const DeckCreate = () => {
         attack: '',
         health: '',
     });
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const cardsPerPage = 9; // Display 9 cards per page (3x3 grid)
 
     const id = state.user.data._id;
 
@@ -139,6 +142,7 @@ const DeckCreate = () => {
             card.name.toLowerCase().includes(searchQuery)
         );
         setFilteredCards(searchedCards);
+        setCurrentPage(1); // Reset to first page when searching
     };
 
     const handleFilterSubmit = () => {
@@ -153,6 +157,7 @@ const DeckCreate = () => {
         });
         setFilteredCards(filtered);
         setShowFilterModal(false);
+        setCurrentPage(1); // Reset to first page when filtering
     };
 
     const handleFilterChange = (e) => {
@@ -161,6 +166,23 @@ const DeckCreate = () => {
             ...filters,
             [name]: value,
         });
+    };
+
+    // Calculate the current cards to display based on pagination
+    const indexOfLastCard = currentPage * cardsPerPage;
+    const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+    const currentCards = filteredCards.slice(indexOfFirstCard, indexOfLastCard);
+
+    const handleNextPage = () => {
+        if (currentPage < Math.ceil(filteredCards.length / cardsPerPage)) {
+            setCurrentPage(currentPage + 1);
+        }
+    };
+
+    const handlePrevPage = () => {
+        if (currentPage > 1) {
+            setCurrentPage(currentPage - 1);
+        }
     };
 
     return (
@@ -214,7 +236,7 @@ const DeckCreate = () => {
                     </div>
 
                     <div className="card-grid-deck">
-                        {filteredCards.map((card) => (
+                        {currentCards.map((card) => (
                             <div
                                 key={card._id}
                                 className="card-deck"
@@ -225,6 +247,7 @@ const DeckCreate = () => {
                         ))}
                     </div>
 
+                    {/* Filter Modal */}
                     <FilterModal
                         show={showFilterModal}
                         filters={filters}
@@ -232,39 +255,83 @@ const DeckCreate = () => {
                         handleFilterSubmit={handleFilterSubmit}
                         handleClose={() => setShowFilterModal(false)}
                     />
+                    
+                    {/* Pagination Controls */}
+                    <div className="pagination-controls">
+                        <button 
+                            onClick={handlePrevPage} 
+                            disabled={currentPage === 1}
+                            style={{ padding: '10px', marginRight: '10px', cursor: 'pointer' }}
+                        >
+                            Previous
+                        </button>
+                        <button 
+                            onClick={handleNextPage} 
+                            disabled={currentPage === Math.ceil(filteredCards.length / cardsPerPage)}
+                            style={{ padding: '10px', cursor: 'pointer' }}
+                        >
+                            Next
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-between' }}>
-                <button 
-                    onClick={handleSaveDeck} 
-                    style={{ padding: '10px 20px', backgroundColor: 'limegreen', color: '#fff', border: 'none', cursor: 'pointer' }}
-                    disabled={loading}  // Disable while loading
-                >
-                    Save Deck
-                </button>
-            </div>
-            {error && <p>Error creating deck: {error.message}</p>}
 
-            {/* Modal for selecting mark */}
+            {/* Save Deck Button */}
+            <button
+                onClick={handleSaveDeck}
+                style={{
+                    marginTop: '20px',
+                    backgroundColor: '#007bff',
+                    color: '#fff',
+                    padding: '10px 20px',
+                    border: 'none',
+                    borderRadius: '5px',
+                    cursor: 'pointer'
+                }}
+            >
+                Save Deck
+            </button>
+
+            {/* Modal for selecting Mark */}
             {showModal && (
-                <div style={{ position: 'fixed', top: '0', left: '0', right: '0', bottom: '0', backgroundColor: 'rgba(0,0,0,0.5)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <div style={{ backgroundColor: '#fff', padding: '20px', borderRadius: '8px', width: '80%', maxWidth: '600px' }}>
-                        <h2>Select an Element</h2>
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
-                            {Object.keys(icons).map((key) => (
-                                <div 
-                                    key={key} 
-                                    onClick={() => handleMarkSelect(key)} 
-                                    style={{ cursor: 'pointer', textAlign: 'center' }}
-                                >
-                                    <img src={icons[key]} alt={key} style={{ width: '60px', height: '60px' }} />
-                                    <p>{key.charAt(0).toUpperCase() + key.slice(1)}</p>
-                                </div>
-                            ))}
-                        </div>
-                        <button onClick={() => setShowModal(false)} style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#333', color: '#fff', border: 'none', cursor: 'pointer' }}>
-                            Close
-                        </button>
+                <div style={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    zIndex: 9999
+                }}>
+                    <div style={{
+                        backgroundColor: 'white',
+                        padding: '20px',
+                        borderRadius: '10px',
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(4, 1fr)',
+                        gap: '10px',
+                        maxWidth: '600px',
+                        textAlign: 'center'
+                    }}>
+                        {Object.entries(icons).map(([key, icon]) => (
+                            <div
+                                key={key}
+                                onClick={() => handleMarkSelect(key)}
+                                style={{
+                                    cursor: 'pointer',
+                                    padding: '10px',
+                                    border: selectedMark === key ? '2px solid #007bff' : '2px solid transparent',
+                                    borderRadius: '10px'
+                                }}
+                            >
+                                <img src={icon} alt={key} style={{ width: '50px', height: '50px' }} />
+                                <p>{key.charAt(0).toUpperCase() + key.slice(1)}</p>
+                            </div>
+                        ))}
+                        <button onClick={() => setShowModal(false)}>Close</button>
                     </div>
                 </div>
             )}

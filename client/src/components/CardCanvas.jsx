@@ -63,7 +63,7 @@ const CardCanvas = ({ card }) => {
                     ctx.fillText(`${card.cost}`, costX, 28);
                 }
 
-                if (card.attack && card.health) {
+                if (card.attack !== null && card.health !== null) {
                     ctx.font = '22px Gill Sans';
                     if (card.attack > 9) {
                         ctx.fillText(`${card.attack}`, 210, 280);
