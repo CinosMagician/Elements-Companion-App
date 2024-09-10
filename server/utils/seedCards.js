@@ -3,7 +3,15 @@ const Card = require('../models/card');  // Adjust the path as necessary
 
 // Define the card data
 const cardData = [
-  // None
+// None
+  {
+    name: 'Mark of Chroma',
+    text: 'Each turn 3 random quantums are generated',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/markofchroma.png',
+    element: 'None',
+    type: 'Permanent',
+  },
   {
     name: 'Quantum Pillar',
     text: 'Each turn 3 random quantums are generated',
@@ -84,7 +92,7 @@ const cardData = [
     cost: 1,
     type: 'Spell',
   },
-  // Entropy
+// Entropy
   {
     name: 'Mark of Entropy',
     text: 'Each turn [icon:entropysmall] is generated',
@@ -307,7 +315,7 @@ const cardData = [
     name: 'Bone Pillar',
     text: 'Each turn  [icon:deathsmall]  is generated',
     hasFlavourText: false,
-    imageUrl: '/assets/images/cardArt/markofdeath.png',
+    imageUrl: '/assets/images/cardArt/bonepillar.jpeg',
     element: 'Death',
     type: 'Permanent',
   },
@@ -422,7 +430,7 @@ const cardData = [
   },
   {
     name: 'Aflatoxin',
-    text: 'Poison the target creature (+2 Poison). If the target creature dies, it turns into a malignant cell.',
+    text: 'Poison the target creature\n(+2 Poison). If the target creature dies, it turns into a malignant cell.',
     hasFlavourText: false,
     imageUrl: '/assets/images/cardArt/aflatoxin.jpeg',
     element: 'Death',
@@ -481,7 +489,7 @@ const cardData = [
   },
   {
     name: 'Grey Nymph',
-    text: '[icon:deathsmall] : Aflatoxin\n Poison the target creature (+2 poison). If the target creature dies, it turns into a malignant cell.',
+    text: '[icon:deathsmall] : Aflatoxin, Poison the target creature (+2 poison). If the target creature dies, it turns into a malignant cell.',
     hasFlavourText: false,
     imageUrl: '/assets/images/cardArt/greynymph.jpeg',
     element: 'Death',
@@ -490,9 +498,406 @@ const cardData = [
     attack: 7,
     health: 8
   },
-  // Gravity
-  // Earth
-  // Life
+// Gravity
+  {
+    name: 'Mark of Gravity',
+    text: 'Each turn  [icon:gravitysmall]  is generated',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/markofgravity.png',
+    element: 'Gravity',
+    type: 'Permanent',
+  },
+  {
+    name: 'Gravity Pillar',
+    text: 'Each turn  [icon:gravitysmall]  is generated',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/gravitypillar.jpeg',
+    element: 'Gravity',
+    type: 'Permanent',
+  },
+  {
+    name: 'Gravity Pendulum',
+    text: 'Alternately generates  [icon:gravitysmall]  and 1 quantum matching your mark.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/gravitypendulum.jpeg',
+    element: 'Gravity',
+    type: 'Permanent',
+  },
+  {
+    name: 'Sapphire Charger',
+    text: 'Momentum:\nThe damage caused by the Sapphire Charger can not be reduced, shields are ignored.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/sapphirecharger.jpeg',
+    element: 'Gravity',
+    cost: 5,
+    type: 'Creature',
+    attack: 4,
+    health: 5
+  },
+  {
+    name: 'Armagio',
+    text: '[icon:gravitysmall] : Gravity Pull\nThe damage inflicted to you is redirected on Armagio.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/armagio.jpeg',
+    element: 'Gravity',
+    cost: 5,
+    type: 'Creature',
+    attack: 1,
+    health: 25
+  },
+  {
+    name: 'Graviton Mercenary',
+    text: 'flavour text',
+    hasFlavourText: true,
+    imageUrl: '/assets/images/cardArt/gravitonmercenary.jpeg',
+    element: 'Gravity',
+    cost: 4,
+    type: 'Creature',
+    attack: 3,
+    health: 5
+  },
+  {
+    name: 'Colossal Dragon',
+    text: 'flavour text',
+    hasFlavourText: true,
+    imageUrl: '/assets/images/cardArt/colossaldragon.jpeg',
+    element: 'Gravity',
+    cost: 10,
+    type: 'Creature',
+    attack: 7,
+    health: 15
+  },
+  {
+    name: 'Gravity Shield',
+    text: "Shield:\nAny creature that has more than 5 HP's is unable to reach you",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/gravityshield.jpeg',
+    element: 'Gravity',
+    cost: 5,
+    type: 'Permanent'
+  },
+  {
+    name: 'Momentum',
+    text: 'The target creature ignores shield effects and gains +1/+1',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/momentum.jpeg',
+    element: 'Gravity',
+    cost: 2,
+    type: 'Spell'
+  },
+  {
+    name: 'Otyugh',
+    text: "[icon:gravitysmall] : Devour\nSwallow a smaller (less HP's) creature and gain +1/+1",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/otyugh.jpeg',
+    element: 'Gravity',
+    cost: 4,
+    type: 'Creature',
+    attack: 0,
+    health: 3
+  },
+  {
+    name: 'Gravity Pull',
+    text: 'The creature enchanted with gravity pull will absorb all the damage directed against its owner.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/gravitypull.jpeg',
+    element: 'Gravity',
+    cost: 2,
+    type: 'Spell'
+  },
+  {
+    name: 'Graviton Fire Eater',
+    text: "[icon:firesmall] : Ablaze\nGraviton Fire Eater gains\n+2/+0",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/gravitonfireeater.jpeg',
+    element: 'Gravity',
+    cost: 2,
+    type: 'Creature',
+    attack: 0,
+    health: 5
+  },
+  {
+    name: 'Black Hole',
+    text: 'Absorb 3 quanta per element from the opponent. Gain 1 HP per absorbed quantum.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/blackhole.jpeg',
+    element: 'Gravity',
+    cost: 4,
+    type: 'Spell'
+  },
+  {
+    name: 'Chimera',
+    text: "Combine all your creatures in a single one. Gravity pull, Momentum",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/chimera.jpeg',
+    element: 'Gravity',
+    cost: 7,
+    type: 'Creature',
+    attack: 0,
+    health: 0
+  },
+  {
+    name: 'Catapult',
+    text: '[icon:gravitysmall] [icon:gravitysmall] : Sacrifice the target creature and damage your opponent. Larger creatures inflict more damage.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/catapult.jpeg',
+    element: 'Gravity',
+    cost: 3,
+    type: 'Permanent',
+  },
+  {
+    name: 'Acceleration',
+    text: 'Replace the target creature skill with acceleration: gain\n+2 / -1 per turn.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/acceleration.jpeg',
+    element: 'Gravity',
+    cost: 3,
+    type: 'Spell'
+  },
+  {
+    name: 'Graviton Salvager',
+    text: 'Salvaging: a permanent destroyed by your opponent is returned to your hand.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/gravitonsalvager.jpeg',
+    element: 'Gravity',
+    cost: 1,
+    type: 'Creature',
+    attack: 1,
+    health: 5
+  },
+  {
+    name: 'Titan',
+    text: "Weapon: Deal 7 damages at the end of every turn. Momentum: Shield effects are ignored.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/titan.jpeg',
+    element: 'Gravity',
+    cost: 5,
+    type: 'Permanent',
+    attack: 7,
+    health: 50
+  },
+  {
+    name: 'Shard of Focus',
+    text: 'Accretion:\nDestroy a permanent and gain +0/+15. Turn into a black hole if HP>45.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/shardoffocus.jpeg',
+    element: 'Gravity',
+    cost: 6,
+    type: 'Creature',
+    attack: 0,
+    health: 1
+  },
+  {
+    name: 'Amber Nymph',
+    text: '[icon:gravitysmall] [icon:gravitysmall] [icon:gravitysmall] : Black Hole\nAbsorb 3 quanta per element from the opponent. Gain 1 HP per absorbed quantum.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/ambernymph.jpeg',
+    element: 'Gravity',
+    cost: 9,
+    type: 'Creature',
+    attack: 1,
+    health: 3
+  },
+// Earth
+  {
+    name: 'Mark of Earth',
+    text: 'Each turn  [icon:earthsmall]  is generated',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/markofearth.png',
+    element: 'Earth',
+    type: 'Permanent',
+  },
+  {
+    name: 'Stone Pillar',
+    text: 'Each turn  [icon:earthsmall]  is generated',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/stonepillar.jpeg',
+    element: 'Earth',
+    type: 'Permanent',
+  },
+  {
+    name: 'Earth Pendulum',
+    text: 'Alternately generates  [icon:earthsmall]  and 1 quantum matching your mark.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/earthpendulum.jpeg',
+    element: 'Earth',
+    type: 'Permanent',
+  },
+  {
+    name: 'Antlion',
+    text: '[icon:earthsmall] : Burrow\nThe Antlion can not be targeted, but its damage is halved.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/antlion.jpeg',
+    element: 'Earth',
+    cost: 2,
+    type: 'Creature',
+    attack: 2,
+    health: 3
+  },
+  {
+    name: 'Hematite Golem',
+    text: "flavour text",
+    hasFlavourText: true,
+    imageUrl: '/assets/images/cardArt/hematitegolem.jpeg',
+    element: 'Earth',
+    cost: 4,
+    type: 'Creature',
+    attack: 4,
+    health: 6
+  },
+  {
+    name: 'Stone Dragon',
+    text: "This mighty dragon of stone is no joke, with its raw power in both its attack and defense.",
+    hasFlavourText: true,
+    imageUrl: '/assets/images/cardArt/stonedragon.jpeg',
+    element: 'Earth',
+    cost: 10,
+    type: 'Creature',
+    attack: 8,
+    health: 10
+  },
+  {
+    name: 'Titanium Shield',
+    text: "Shield:\nThe damage dealt to you from physical damage sources is reduced by 2.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/titaniumshield.jpeg',
+    element: 'Earth',
+    cost: 4,
+    type: 'Permanent'
+  },
+  {
+    name: 'Plate Armor',
+    text: 'The target creature gains +0/+3',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/platearmor.jpeg',
+    element: 'Earth',
+    cost: 1,
+    type: 'Spell'
+  },
+  {
+    name: 'Gnome Rider',
+    text: "Each turn  [icon:earthsmall]  is generated",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/gnomerider.jpeg',
+    element: 'Earth',
+    cost: 1,
+    type: 'Creature',
+    attack: 1,
+    health: 2
+  },
+  {
+    name: 'Graboid',
+    text: "[icon:timesmall] : Evolve\nTurn the Graboid into a Shrieker. Graboid enters the game burrowed.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/graboid.jpeg',
+    element: 'Earth',
+    cost: 3,
+    type: 'Creature',
+    attack: 2,
+    health: 3
+  },
+  {
+    name: 'Shrieker',
+    text: '[icon:earthsmall] : Burrow\nThe Shrieker can not be targeted, but its damage is halved.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/shrieker.jpeg',
+    element: 'Earth',
+    cost: 8,
+    type: 'Creature',
+    attack: 8,
+    health: 3
+  },
+  {
+    name: 'Enchant Artifact',
+    text: 'The target permanent can not be target of any skill. It does not work on creatures.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/enchantartifact.jpeg',
+    element: 'Earth',
+    cost: 2,
+    type: 'Spell'
+  },
+  {
+    name: 'Earthquake',
+    text: 'Destroy up to 3 pillars in the target cluster.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/earthquake.jpeg',
+    element: 'Earth',
+    cost: 3,
+    type: 'Spell'
+  },
+  {
+    name: 'Stone Skin',
+    text: "Add X HP's to your maximum life points. X is the number of  [icon:earthsmall]  that you own.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/stoneskin.jpeg',
+    element: 'Earth',
+    cost: 2,
+    type: 'Spell'
+  },
+  {
+    name: 'Basilisk Blood',
+    text: 'The target creature gains +0/+20 but can not attack or use skills for 6 turns',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/basiliskblood.jpeg',
+    element: 'Earth',
+    cost: 2,
+    type: 'Spell'
+  },
+  {
+    name: 'Iridium Warden',
+    text: "[icon:earthsmall] : Guard (Do not attack) Delay the target creature for 1 turn (cumulative) and attack it unless it is airborne.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/iridiumwarden.jpeg',
+    element: 'Earth',
+    cost: 1,
+    type: 'Creature',
+    attack: 0,
+    health: 3
+  },
+  {
+    name: 'Shard Golem',
+    text: "Reassemble your last shard golem. See Random Effects tab for Shard Golem Stats",
+    hasFlavourText: false,
+    isToken: true,
+    imageUrl: '/assets/images/cardArt/shardgolem.jpeg',
+    element: 'Earth',
+    cost: 8,
+    type: 'Creature',
+    attack: 0,
+    health: 0
+  },
+  {
+    name: 'Pulverizer',
+    text: "Weapon: Deal 5 damage at the end of every turn. [icon:gravitysmall] [icon:gravitysmall] [icon:gravitysmall] : Shatter the target permanent.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/pulverizer.jpeg',
+    element: 'Earth',
+    cost: 4,
+    type: 'Permanent',
+    attack: 5,
+    health: 12
+  },
+  {
+    name: 'Shard of Integrity',
+    text: 'Combine all the shards in your hand to form and summon a shard golem.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/shardofintegrity.jpeg',
+    element: 'Earth',
+    cost: 2,
+    type: 'Spell',
+  },
+  {
+    name: 'Auburn Nymph',
+    text: '[icon:earthsmall] [icon:earthsmall] [icon:earthsmall] : Petrify\nThe target creature gains +0/+20 but can not attack or use skills for 6 turns.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/auburnnymph.jpeg',
+    element: 'Earth',
+    cost: 8,
+    type: 'Creature',
+    attack: 4,
+    health: 8
+  },
+// Life
   {
     name: 'Mark of Life',
     text: 'Each turn  [icon:lifesmall]  is generated',
@@ -668,21 +1073,150 @@ const cardData = [
     attack: 3,
     health: 6
   },
-  // Fire
-  // Water
-  // Light
-  // Wind
-  // Time
-  // Darkness
-  // Aether
+// Fire
   {
-    name: "Fractal",
-    text: "Fill your hand with copies of the target creature's card. All the remaining aether quanta is consumed.",
+    name: 'Mark of Fire',
+    text: 'Each turn  [icon:firesmall]  is generated',
     hasFlavourText: false,
-    imageUrl: '/assets/images/cardArt/fractal.jpeg',
-    element: 'Aether',
+    imageUrl: '/assets/images/cardArt/markoffire.png',
+    element: 'Fire',
+    type: 'Permanent',
+  },
+  {
+    name: 'Burning Pillar',
+    text: 'Each turn  [icon:firesmall]  is generated',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/burningpillar.jpeg',
+    element: 'Fire',
+    type: 'Permanent',
+  },
+  {
+    name: 'Fire Pendulum',
+    text: 'Alternately generates  [icon:firesmall]  and 1 quantum matching your mark.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/firependulum.jpeg',
+    element: 'Fire',
+    type: 'Permanent',
+  },
+  {
+    name: 'Ash Eater',
+    text: 'flavour text',
+    hasFlavourText: true,
+    imageUrl: '/assets/images/cardArt/asheater.jpeg',
+    element: 'Fire',
+    cost: 1,
+    type: 'Creature',
+    attack: 2,
+    health: 1
+  },
+  {
+    name: 'Crimson Dragon',
+    text: "This mighty dragon of flames is no joke, with its raw power in both its attack and heat.",
+    hasFlavourText: true,
+    imageUrl: '/assets/images/cardArt/crimsondragon.jpeg',
+    element: 'Fire',
     cost: 10,
+    type: 'Creature',
+    attack: 12,
+    health: 3
+  },
+  {
+    name: 'Fire Spirit',
+    text: "[icon:firesmall] : Ablaze\nThe Fire Spirit gains +2/+0",
+    hasFlavourText: true,
+    imageUrl: '/assets/images/cardArt/firespirit.jpeg',
+    element: 'Fire',
+    cost: 2,
+    type: 'Creature',
+    attack: 0,
+    health: 2
+  },
+  {
+    name: 'Fire Bolt',
+    text: 'Deals 3 damage to the target for each 10 fire quantums in your possession.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/firebolt.jpeg',
+    element: 'Fire',
+    cost: 3,
     type: 'Spell'
+  },
+  {
+    name: 'Fire Shield',
+    text: "Shield: 1 damage is dealt to any attacking creature",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/firesheild.jpeg',
+    element: 'Fire',
+    cost: 6,
+    type: 'Permanent'
+  },
+  {
+    name: 'Deflagration',
+    text: "Destroy the targeted permanent",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/deflagration.jpeg',
+    element: 'Fire',
+    cost: 3,
+    type: 'Spell',
+  },
+  {
+    name: 'Rain of Fire',
+    text: "Deals 3 damages to every enemy creature. Removes invisibility.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/rainoffire.jpeg',
+    element: 'Fire',
+    cost: 7,
+    type: 'Spell'
+  },
+  {
+    name: 'Immolation',
+    text: 'Sacrifice a creature to generate 6  [icon:firesmall]  plus 1 quantum for each non-fire element.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/immolation.jpeg',
+    element: 'Fire',
+    type: 'Spell'
+  },
+  {
+    name: 'Lava Golem',
+    text: '[icon:earthsmall] : Growth\nLava Golem gains +2/+2',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/lavagolem.jpeg',
+    element: 'Fire',
+    cost: 5,
+    type: 'Creature',
+    attack: 5,
+    health: 1
+  },
+  {
+    name: 'Rage Potion',
+    text: 'The target creature gains +5/-5',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/ragepotion.jpeg',
+    element: 'Fire',
+    cost: 3,
+    type: 'Spell'
+  },
+  {
+    name: 'Phoenix',
+    text: "Phoenix turns into Ash when killed",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/phoenix.jpeg',
+    element: 'Fire',
+    cost: 7,
+    type: 'Creature',
+    attack: 7,
+    health: 1
+  },
+  {
+    name: 'Ash',
+    text: '[icon:firesmall] : Rebirth\nTurn this card into a Phoenix',
+    hasFlavourText: false,
+    isToken: true,
+    imageUrl: '/assets/images/cardArt/ash.jpeg',
+    element: 'Fire',
+    cost: 7,
+    type: 'Creature',
+    attack: 0,
+    health: 5
   },
   {
     name: 'Seraph',
@@ -696,20 +1230,57 @@ const cardData = [
     health: 1
   },
   {
+    name: 'Fahrenheit',
+    text: "Weapon: Deal 4+X damage at the end of every turn. X is the number of [icon:firesmall] you own, divided by 5.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/fahrenheit.jpeg',
+    element: 'Fire',
+    cost: 3,
+    type: 'Permanent',
+    attack: 4,
+    health: 5
+  },
+  {
+    name: 'Shard of Bravery',
+    text: 'Your opponent draws 2 cards, 3 if your mark is [icon:firesmall] . Draw an equal amount of cards.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/shardofbravery.jpeg',
+    element: 'Fire',
+    cost: 2,
+    type: 'Spell',
+  },
+  {
+    name: 'Red Nymph',
+    text: '[icon:firesmall] [icon:firesmall] [icon:firesmall] : Rage\nThe target creature gains +5/-5',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/rednymph.jpeg',
+    element: 'Fire',
+    cost: 8,
+    type: 'Creature',
+    attack: 1,
+    health: 6
+  },
+// Water
+// Light
+// Wind
+// Time
+// Darkness
+// Aether
+  {
+    name: "Fractal",
+    text: "Fill your hand with copies of the target creature's card. All the remaining aether quanta is consumed.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/fractal.jpeg',
+    element: 'Aether',
+    cost: 10,
+    type: 'Spell'
+  },
+  {
     name: 'Water Pillar',
     text: 'Each turn [icon:watersmall] is generated',
     hasFlavourText: false,
     imageUrl: '/assets/images/cardArt/waterpillar.jpeg',
     element: 'Water',
-    type: 'Permanent',
-  },
-  {
-    name: 'Catapult',
-    text: '[icon:gravitysmall] [icon:gravitysmall] : Sacrifice the target creature and damage your opponent. Larger creatures inflict more damage.',
-    hasFlavourText: false,
-    imageUrl: '/assets/images/cardArt/catapult.jpeg',
-    element: 'Gravity',
-    cost: 3,
     type: 'Permanent',
   },
   {
@@ -722,17 +1293,6 @@ const cardData = [
     type: 'Creature',
     attack: 4,
     health: 4
-  },
-  {
-    name: 'Stone Dragon',
-    text: "This mighty dragon of stone is no joke, with its raw power in both its attack and defense.",
-    hasFlavourText: true,
-    imageUrl: '/assets/images/cardArt/stonedragon.jpeg',
-    element: 'Earth',
-    cost: 10,
-    type: 'Creature',
-    attack: 8,
-    health: 10
   },
   {
     name: 'CinosMagician',

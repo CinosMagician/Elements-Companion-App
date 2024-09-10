@@ -62,27 +62,27 @@ const CardCanvas = ({ card }) => {
                     ctx.fillStyle = textColor;
                     ctx.fillText(`${card.cost}`, costX, 28);
                 }
+                if (card.type === 'Creature') {
+                    if (card.attack !== null && card.health !== null) {
+                        ctx.font = '22px Gill Sans';
+                        if (card.attack > 9) {
+                            ctx.fillText(`${card.attack}`, 210, 280);
+                            ctx.fillText('|', 240, 278);
+                        } else {
+                            ctx.fillText(`${card.attack}`, 220, 280);
+                        }
 
-                if (card.attack !== null && card.health !== null) {
-                    ctx.font = '22px Gill Sans';
-                    if (card.attack > 9) {
-                        ctx.fillText(`${card.attack}`, 210, 280);
-                        ctx.fillText('|', 240, 278);
-                    } else {
-                        ctx.fillText(`${card.attack}`, 220, 280);
+                        if (card.health > 9) {
+                            ctx.fillText(`${card.health}`, 240, 280);
+                            ctx.fillText('|', 235, 278);
+                        } else {
+                            ctx.fillText(`${card.health}`, 250, 280);
+                        }
+
+                        if (card.health < 10 && card.attack < 10) {
+                            ctx.fillText('|', 240, 278);
+                        }
                     }
-
-                    if (card.health > 9) {
-                        ctx.fillText(`${card.health}`, 240, 280);
-                        ctx.fillText('|', 235, 278);
-                    } else {
-                        ctx.fillText(`${card.health}`, 250, 280);
-                    }
-
-                    if (card.health < 10 && card.attack < 10) {
-                        ctx.fillText('|', 240, 278);
-                    }
-
                 }
             } catch (error) {
                 console.error('Error loading images:', error);

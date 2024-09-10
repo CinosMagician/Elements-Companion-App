@@ -25,8 +25,9 @@ const CardDetails = () => {
                 {card.cost && <p><strong>Cost:</strong> {card.cost}</p>}
                 <TextWithIcons text={card.text} hasFlavourText={card.hasFlavourText} />
                 <p><strong>Type:</strong> {card.type}</p>
-                {card.attack && <p><strong>Attack:</strong> {card.attack}</p>}
-                {card.health && <p><strong>Health:</strong> {card.health}</p>}
+                {card.type === 'Permanent' && card.attack && card.health && <p><strong>Animated Weapon Stats:</strong></p>}
+                {card.attack !== null && <p><strong>Attack:</strong> {card.attack}</p>}
+                {card.health !== null && <p><strong>Health:</strong> {card.health}</p>}
             </div>
             <div className="card-canvas">
                 <CardCanvas card={card} />
