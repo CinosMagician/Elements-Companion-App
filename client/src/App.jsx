@@ -7,7 +7,7 @@ import Auth from './utils/auth';
 import './App.css'
 import './assets/fonts/fonts.css';
 import { UserProvider } from './utils/UserContext';
-
+require('dotenv').config()
 
 // Create an HTTP link to the GraphQL server
 const httpLink = createHttpLink({

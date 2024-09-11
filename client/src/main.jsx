@@ -16,10 +16,11 @@ import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx';
 import DeckEdit from "./pages/DeckEdit.jsx";
 import DeckCreate from "./pages/DeckCreate.jsx";
+require('dotenv').config()
 
 // Initialize Apollo Client
 const client = new ApolloClient({
-  uri: 'http://localhost:3001/graphql', // Replace with your GraphQL server URI
+  uri: process.env.REACT_APP_GRAPHQL_ENDPOINT || 'http://localhost:3001/graphql', // Replace with your GraphQL server URI
   cache: new InMemoryCache(),
 });
 
