@@ -1,6 +1,6 @@
 require('dotenv').config(); // Load environment variables from .env file
 const mongoose = require('mongoose');
-const Card = require('../models/Card'); // Ensure this path is correct
+const Card = require('../models/card'); // Ensure this path is correct
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
