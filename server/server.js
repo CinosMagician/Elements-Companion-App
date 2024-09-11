@@ -1,3 +1,4 @@
+require('dotenv').config(); // Load environment variables from .env file
 const express = require("express");
 const { ApolloServer } = require("@apollo/server");
 const { expressMiddleware } = require("@apollo/server/express4");
@@ -25,9 +26,9 @@ const startApolloServer = async () => {
 
   // Apply CORS middleware before applying GraphQL middleware
   app.use(cors({
-    origin: 'http://localhost:3000', // Replace with your frontend's origin
-    methods: 'GET,POST,DELETE,PUT', // Allow these methods
-    credentials: true, // Allow credentials
+    origin: process.env.FRONTEND_URL || 'http://localhost:3000', // Use environment variable or default to localhost
+    methods: 'GET,POST,DELETE,PUT',
+    credentials: true,
   }));
 
   // Apply GraphQL middleware to express server

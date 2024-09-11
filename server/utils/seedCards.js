@@ -1,6 +1,12 @@
+require('dotenv').config(); // Load environment variables from .env file
 const mongoose = require('mongoose');
-const Card = require('../models/card');  // Adjust the path as necessary
+const Card = require('../models/Card'); // Ensure this path is correct
 
+const MONGODB_URI = process.env.MONGODB_URI;
+
+if (!MONGODB_URI) {
+  throw new Error('MONGODB_URI environment variable is not defined');
+}
 // Define the card data
 const cardData = [
 // None
@@ -1309,13 +1315,16 @@ const cardData = [
 ];
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/elementsthegame', {
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
 const seedCards = async () => {
   try {
+    // Wait for the connection to be established
+    await mongoose.connection.once('open', () => console.log('Connected to MongoDB'));
+
     // Clear the existing cards
     await Card.deleteMany({});
     console.log('Old card data removed.');
@@ -1323,13 +1332,13 @@ const seedCards = async () => {
     // Insert the new card data
     await Card.insertMany(cardData);
     console.log('New card data seeded.');
-
-    // Close the connection
-    mongoose.connection.close();
   } catch (error) {
     console.error('Error seeding card data:', error);
+  } finally {
+    // Close the connection
     mongoose.connection.close();
   }
 };
 
+// Call the function to start seeding
 seedCards();
