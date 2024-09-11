@@ -20,9 +20,10 @@ const typeDefs = gql`
     name: String!            # Name of the card
     text: String!            # Text displayed on the card
     hasFlavourText: Boolean! # Indicates if the card has flavor text
+    isToken: Boolean         # Indicates if the card is a token (unable to add to main deck)
     imageUrl: String         # Card art image
     element: String!         # Element of the card
-    cost: Int               # Cost to play the card
+    cost: Int                # Cost to play the card
     type: String!            # Type of the card (creature, permanent, spell)
     attack: Int              # Attack value, if applicable
     health: Int              # Health value, if applicable

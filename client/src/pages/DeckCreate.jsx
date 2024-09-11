@@ -70,8 +70,11 @@ const DeckCreate = () => {
 
     useEffect(() => {
         if (!cardLoading && !cardError && cardData) {
-            setCards(cardData.cards);
-            setFilteredCards(cardData.cards); // Initially, all cards are shown
+            console.log('Raw card data:', cardData.cards);
+            const nonTokenCards = cardData.cards.filter(card => card.isToken === false || card.isToken == null);
+            console.log('Non-token cards:', nonTokenCards);
+            setCards(nonTokenCards);
+            setFilteredCards(nonTokenCards); // Initially, all non-token cards are shown
         }
     }, [cardLoading, cardError, cardData]);
 
@@ -139,15 +142,17 @@ const DeckCreate = () => {
     const handleSearch = (e) => {
         const searchQuery = e.target.value.toLowerCase();
         const searchedCards = cards.filter((card) =>
-            card.name.toLowerCase().includes(searchQuery)
+            card.name.toLowerCase().includes(searchQuery) && card.isToken !== true // Exclude token cards
         );
         setFilteredCards(searchedCards);
         setCurrentPage(1); // Reset to first page when searching
     };
+    
 
     const handleFilterSubmit = () => {
         const filtered = cards.filter((card) => {
             return (
+                card.isToken !== true && // Exclude token cards
                 (filters.element === 'none' || card.element === filters.element) &&
                 (filters.cost === '' || card.cost === parseInt(filters.cost)) &&
                 (filters.type === '' || card.type === filters.type) &&
@@ -158,7 +163,7 @@ const DeckCreate = () => {
         setFilteredCards(filtered);
         setShowFilterModal(false);
         setCurrentPage(1); // Reset to first page when filtering
-    };
+    };    
 
     const handleFilterChange = (e) => {
         const { name, value } = e.target;

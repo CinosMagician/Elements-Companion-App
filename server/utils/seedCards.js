@@ -1123,7 +1123,7 @@ const cardData = [
   {
     name: 'Fire Spirit',
     text: "[icon:firesmall] : Ablaze\nThe Fire Spirit gains +2/+0",
-    hasFlavourText: true,
+    hasFlavourText: false,
     imageUrl: '/assets/images/cardArt/firespirit.jpeg',
     element: 'Fire',
     cost: 2,
