@@ -26,7 +26,7 @@ const startApolloServer = async () => {
   // Apply CORS middleware before applying GraphQL middleware
   app.use(cors({
     origin: 'http://localhost:3000', // Replace with your frontend's origin
-    methods: 'GET,POST', // Allow these methods
+    methods: 'GET,POST,DELETE,PUT', // Allow these methods
     credentials: true, // Allow credentials
   }));
 
