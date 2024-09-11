@@ -1309,7 +1309,7 @@ const cardData = [
 ];
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/elementsthegame', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/elementsthegame', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
