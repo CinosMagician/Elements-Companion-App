@@ -20,7 +20,7 @@ require('dotenv').config()
 
 // Initialize Apollo Client
 const client = new ApolloClient({
-  uri: process.env.REACT_APP_GRAPHQL_ENDPOINT || 'http://localhost:3001/graphql', // Replace with your GraphQL server URI
+  uri: process.env.REACT_APP_GRAPHQL_ENDPOINT, // Replace with your GraphQL server URI
   cache: new InMemoryCache(),
 });
 

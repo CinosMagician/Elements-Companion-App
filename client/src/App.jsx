@@ -11,7 +11,7 @@ require('dotenv').config()
 
 // Create an HTTP link to the GraphQL server
 const httpLink = createHttpLink({
-  uri: 'http://localhost:3001/graphql',
+  uri: process.env.REACT_APP_GRAPHQL_ENDPOINT,
 });
 
 // Create a middleware to attach the JWT token to every request

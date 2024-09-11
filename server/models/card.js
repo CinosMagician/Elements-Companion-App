@@ -16,10 +16,12 @@ const cardSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
   },
+  // Determins if a card is a token card and therefore unable to be added to a deck.
   isToken: {
     type: Boolean,
     required: false,
   },
+  // determins the card art
   imageUrl: {
     type: String,
     required: false,
