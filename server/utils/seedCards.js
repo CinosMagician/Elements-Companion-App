@@ -1318,6 +1318,10 @@ const cardData = [
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+}).then(() => {
+  console.log('Connected to MongoDB');
+}).catch(err => {
+  console.error('Error connecting to MongoDB:', err);
 });
 
 const seedCards = async () => {
@@ -1326,7 +1330,7 @@ const seedCards = async () => {
     await mongoose.connection.once('open', () => console.log('Connected to MongoDB'));
 
     // Clear the existing cards
-    // await Card.deleteMany({});
+    await Card.deleteMany({});
     console.log('Old card data removed.');
 
     // Insert the new card data
