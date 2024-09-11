@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/elementsthegame", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  serverSelectionTimeoutMS: 5000, // Adjust the timeout to prevent long waits
+  serverSelectionTimeoutMS: 50000, // Adjust the timeout to prevent long waits
   socketTimeoutMS: 45000, // Set a custom socket timeout (optional)
 });
 
