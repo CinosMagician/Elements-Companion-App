@@ -1326,7 +1326,7 @@ const seedCards = async () => {
     await mongoose.connection.once('open', () => console.log('Connected to MongoDB'));
 
     // Clear the existing cards
-    await Card.deleteMany({});
+    // await Card.deleteMany({});
     console.log('Old card data removed.');
 
     // Insert the new card data
