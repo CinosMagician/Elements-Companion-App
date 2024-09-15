@@ -16,6 +16,9 @@ const cardSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
   },
+  isToken: {
+    type: Boolean
+  },
   imageUrl: {
     type: String,
     required: false,

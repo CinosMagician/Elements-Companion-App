@@ -44,6 +44,9 @@ const DeckEdit = () => {
         health: '',
     });
 
+    const [currentPage, setCurrentPage] = useState(1);
+    const cardsPerPage = 9; // Display 9 cards per page (3x3 grid)
+
     const id = state.user._id;
 
     // Query to get the deck data
@@ -62,21 +65,21 @@ const DeckEdit = () => {
 
     useEffect(() => {
         if (!deckLoading && !deckError && deckData) {
-            console.log(deckData);
             const { name, element, cards } = deckData.deck;
             setDeckName(name);
-            setSelectedMark(element.toLowerCase()); // Default to 'life' if element is undefined
+            setSelectedMark(element.toLowerCase()); 
             setDeckCards(cards);
-            console.log(selectedMark)
         }
-    }, [deckLoading, deckError, deckData]);    
+    }, [deckLoading, deckError, deckData]);
 
     useEffect(() => {
         if (!cardLoading && !cardError && cardData) {
-            setCards(cardData.cards);
-            setFilteredCards(cardData.cards);
+            // Filter out cards with isToken: true
+            const nonTokenCards = cardData.cards.filter(card => !card.isToken);
+            setCards(nonTokenCards);
+            setFilteredCards(nonTokenCards); // Initially, all non-token cards are shown
         }
-    }, [cardLoading, cardError, cardData]);    
+    }, [cardLoading, cardError, cardData]);
 
     const handleCardClick = (card) => {
         setDeckCards(deckCards.filter((c, i) => i !== deckCards.indexOf(card)));
@@ -147,6 +150,7 @@ const DeckEdit = () => {
             card.name.toLowerCase().includes(searchQuery)
         );
         setFilteredCards(searchedCards);
+        setCurrentPage(1); // Reset to first page on search
     };
 
     const handleFilterSubmit = () => {
@@ -161,6 +165,7 @@ const DeckEdit = () => {
         });
         setFilteredCards(filtered);
         setShowFilterModal(false);
+        setCurrentPage(1); // Reset to first page on filter
     };
 
     const handleFilterChange = (e) => {
@@ -169,6 +174,23 @@ const DeckEdit = () => {
             ...filters,
             [name]: value,
         });
+    };
+
+    // Calculate the current cards to display based on pagination
+    const indexOfLastCard = currentPage * cardsPerPage;
+    const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+    const currentCards = filteredCards.slice(indexOfFirstCard, indexOfLastCard);
+
+    const handleNextPage = () => {
+        if (currentPage < Math.ceil(filteredCards.length / cardsPerPage)) {
+            setCurrentPage(currentPage + 1);
+        }
+    };
+
+    const handlePrevPage = () => {
+        if (currentPage > 1) {
+            setCurrentPage(currentPage - 1);
+        }
     };
 
     if (deckLoading || cardLoading) return <p>Loading...</p>;
@@ -225,7 +247,7 @@ const DeckEdit = () => {
                     </div>
 
                     <div className="card-grid-deck">
-                        {filteredCards.map((card) => (
+                        {currentCards.map((card) => ( // Use currentCards here
                             <div
                                 key={card._id}
                                 className="card-deck"
@@ -243,6 +265,24 @@ const DeckEdit = () => {
                         handleFilterSubmit={handleFilterSubmit}
                         handleClose={() => setShowFilterModal(false)}
                     />
+
+                    {/* Pagination Controls */}
+                    <div className="pagination-controls">
+                        <button 
+                            onClick={handlePrevPage} 
+                            disabled={currentPage === 1}
+                            style={{ padding: '10px', marginRight: '10px', cursor: 'pointer' }}
+                        >
+                            Previous
+                        </button>
+                        <button 
+                            onClick={handleNextPage} 
+                            disabled={currentPage === Math.ceil(filteredCards.length / cardsPerPage)}
+                            style={{ padding: '10px', cursor: 'pointer' }}
+                        >
+                            Next
+                        </button>
+                    </div>
                 </div>
             </div>
             <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-between' }}>

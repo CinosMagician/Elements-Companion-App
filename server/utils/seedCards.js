@@ -21,6 +21,14 @@ const cardData = [
     type: 'Permanent',
   },
   {
+    name: 'Chroma Pendulum',
+    text: 'Alternately generates 3 random quantums and 1 quantum matching your mark.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/chromapendulum.png',
+    element: 'None',
+    type: 'Permanent',
+  },
+  {
     name: 'Dagger',
     text: 'Weapon: Deal 2 damage at the end of every turn. Deal 1 extra damage if you have a Death or Darkness mark.',
     hasFlavourText: false,
