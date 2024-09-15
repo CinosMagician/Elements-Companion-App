@@ -9,34 +9,20 @@ import DeckCardCanvas from '../components/DeckCardCanvas';
 import FilterModal from '../components/FilterModal';
 import './DeckScreens.css';
 
-// Import icons
-import iconFire from '../assets/icons/fire.png';
-import iconLife from '../assets/icons/life.png';
-import iconAether from '../assets/icons/aether.png';
-import iconLight from '../assets/icons/light.png';
-import iconWater from '../assets/icons/water.png';
-import iconGravity from '../assets/icons/gravity.png';
-import iconDeath from '../assets/icons/death.png';
-import iconTime from '../assets/icons/time.png';
-import iconEntropy from '../assets/icons/entropy.png';
-import iconDarkness from '../assets/icons/darkness.png';
-import iconAir from '../assets/icons/air.png';
-import iconEarth from '../assets/icons/earth.png';
-
 // Icons object
 const icons = {
-    darkness: iconDarkness,
-    death: iconDeath,
-    earth: iconEarth,
-    fire: iconFire,
-    gravity: iconGravity,
-    time: iconTime,
-    water: iconWater,
-    life: iconLife,
-    aether: iconAether,
-    air: iconAir,
-    entropy: iconEntropy,
-    light: iconLight,
+    darkness: '/assets/images/icons/darkness.png',
+    death: '/assets/images/icons/death.png',
+    earth: '/assets/images/icons/earth.png',
+    fire: '/assets/images/icons/fire.png',
+    gravity: '/assets/images/icons/gravity.png',
+    time: '/assets/images/icons/time.png',
+    water: '/assets/images/icons/water.png',
+    life: '/assets/images/icons/life.png',
+    aether: '/assets/images/icons/aether.png',
+    air: '/assets/images/icons/air.png',
+    entropy: '/assets/images/icons/entropy.png',
+    light: '/assets/images/icons/light.png',
 };
 
 const DeckEdit = () => {

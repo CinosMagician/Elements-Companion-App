@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
 import Auth from './utils/auth';
 import './App.css'
-import './assets/fonts/fonts.css';
+import './fonts.css';
 import { UserProvider } from './utils/UserContext';
 
 

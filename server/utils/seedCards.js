@@ -1144,7 +1144,7 @@ const cardData = [
     name: 'Fire Shield',
     text: "Shield: 1 damage is dealt to any attacking creature",
     hasFlavourText: false,
-    imageUrl: '/assets/images/cardArt/firesheild.jpeg',
+    imageUrl: '/assets/images/cardArt/fireshield.jpeg',
     element: 'Fire',
     cost: 6,
     type: 'Permanent'
@@ -1260,10 +1260,764 @@ const cardData = [
     attack: 1,
     health: 6
   },
-// Water
-// Light
-// Wind
+ // Water
+  {
+    name: 'Mark of Water',
+    text: 'Each turn  [icon:watersmall]  is generated',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/markofwater.png',
+    element: 'Water',
+    type: 'Permanent',
+  },
+  {
+    name: 'Water Pillar',
+    text: 'Each turn  [icon:watersmall]  is generated',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/waterpillar.jpeg',
+    element: 'Water',
+    type: 'Permanent',
+  },
+  {
+    name: 'Water Pendulum',
+    text: 'Alternately generates  [icon:watersmall]  and 1 quantum matching your mark.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/waterpendulum.jpeg',
+    element: 'Water',
+    type: 'Permanent',
+  },
+  {
+    name: 'Chrysaora',
+    text: '[icon:deathsmall] : Poison\nInflict 1 poison damage at the end of every turn. Cause poisoning if ingested.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/chrysaora.jpeg',
+    element: 'Water',
+    cost: 1,
+    type: 'Creature',
+    attack: 0,
+    health: 2
+  },
+  {
+    name: 'Blue Crawler',
+    text: 'flavour text',
+    hasFlavourText: true,
+    imageUrl: '/assets/images/cardArt/bluecrawler.jpeg',
+    element: 'Water',
+    cost: 3,
+    type: 'Creature',
+    attack: 3,
+    health: 3
+  },
+  {
+    name: 'Freeze',
+    text: 'Freeze the target creature for 3 turns. Frozen creatures can not attack or use skills.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/freeze.jpeg',
+    element: 'Water',
+    cost: 1,
+    type: 'Spell'
+  },
+  {
+    name: 'Ice Bolt',
+    text: 'Deals 2 damage to the target for each 10 water quantums in your possession. Ice Bolt might freeze the target.',
+    // Chances to freeze target increase by 5% for each point of damage dealt. If player is targeted, Ice Bolt might freeze the player's weapon.
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/icebolt.jpeg',
+    element: 'Water',
+    cost: 2,
+    type: 'Spell'
+  },
+  {
+    name: 'Ice Shield',
+    text: "Shield: damage dealt to you from physical damage sources is reduced by 1. Attacking creatures might freeze",
+    // Freeze chance is 30%
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/gravityshield.jpeg',
+    element: 'Water',
+    cost: 6,
+    type: 'Permanent'
+  },
+  {
+    name: 'Purify',
+    text: 'Remove poison and sacrifice status from the target. Heals 2 damage per turn. Cumulative.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/purify.jpeg',
+    element: 'Water',
+    cost: 2,
+    type: 'Spell'
+  },
+  {
+    name: 'Ice Dragon',
+    text: "flavour text",
+    hasFlavourText: true,
+    imageUrl: '/assets/images/cardArt/icedragon.jpeg',
+    element: 'Water',
+    cost: 10,
+    type: 'Creature',
+    attack: 9,
+    health: 6
+  },
+  {
+    name: 'Toadfish',
+    text: '[icon:airsmall] : inflate\n Inflict 1 poison damage to a target creature. Cause poisoning if ingested.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/toadfish.jpeg',
+    element: 'Water',
+    cost: 5,
+    type: 'Creature',
+    attack: 6,
+    health: 4
+  },
+  {
+    name: 'Mind Flayer',
+    text: "[icon:aethersmall] : Psionic wave\nRemove any skill from the target creature.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/mindflayer.jpeg',
+    element: 'Water',
+    cost: 2,
+    type: 'Creature',
+    attack: 2,
+    health: 2
+  },
+  {
+    name: 'Steam Machine',
+    text: '[icon:firesmall] [icon:firesmall] : Steam\nGain 5 charges (+5|+0). Remove 1 charge per turn.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/steammachine.jpeg',
+    element: 'Water',
+    cost: 4,
+    type: 'Creature',
+    attack: 0,
+    health: 6
+  },
+  {
+    name: "Nymph's Tears",
+    text: "Turn one of your pillars or pendulums into a Nymph. The Nymph will inherit the target's element.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/nymphstears.jpeg',
+    element: 'Water',
+    cost: 7,
+    type: 'Spell'
+  },
+  {
+    name: 'Flooding',
+    text: 'Kill any creature along the edges of the field. Water and neutral creatures are immune. Absorb  [icon:watersmall]  per turn.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/flooding.jpeg',
+    element: 'Water',
+    cost: 3,
+    type: 'Permanent',
+  },
+  {
+    name: 'Arctic Squid',
+    text: '[icon:watersmall] [icon:watersmall] : Freeze\nFreeze the target creature',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/arcticsquid.jpeg',
+    element: 'Water',
+    cost: 3,
+    type: 'Creature',
+    attack: 1,
+    health: 2
+  },
+  {
+    name: 'Trident',
+    text: "Weapon: Deal 4 damage\n[icon:earthsmall] [icon:earthsmall] [icon:earthsmall] : Destroy up to 3 pillars / pendulums in the target cluster",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/trident.jpeg',
+    element: 'Water',
+    cost: 3,
+    type: 'Permanent',
+    attack: 4,
+    health: 9
+  },
+  {
+    name: 'Shard of Patience',
+    text: 'Your creatures do not attack and gain +2/+2; [icon:watersmall] creatures in a flooded area gain +5/+5. Remove : destroy this card. ',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/shardofpatience.jpeg',
+    element: 'Water',
+    cost: 3,
+    type: 'Permanent'
+  },
+  {
+    name: 'Nymph Queen',
+    text: "[icon:watersmall] [icon:watersmall] [icon:watersmall] [icon:watersmall] : Nymph's tears\nTurn one of your pillars into a Nymph.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/nymphqueen.jpeg',
+    element: 'Water',
+    cost: 8,
+    type: 'Creature',
+    attack: 5,
+    health: 6
+  },
+ // Light
+  {
+    name: 'Mark of Light',
+    text: 'Each turn  [icon:lightsmall]  is generated',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/markoflight.png',
+    element: 'Light',
+    type: 'Permanent',
+  },
+  {
+    name: 'Light Pillar',
+    text: 'Each turn  [icon:lightsmall]  is generated',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/lightpillar.jpeg',
+    element: 'Light',
+    type: 'Permanent',
+  },
+  {
+    name: 'Light Pendulum',
+    text: 'Alternately generates  [icon:lightsmall]  and 1 quantum matching your mark.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/lightpendulum.jpeg',
+    element: 'Light',
+    type: 'Permanent',
+  },
+  {
+    name: 'Photon',
+    text: 'flavor text',
+    hasFlavourText: true,
+    imageUrl: '/assets/images/cardArt/photon.jpeg',
+    element: 'Light',
+    type: 'Creature',
+    attack: 1,
+    health: 1
+  },
+  {
+    name: 'Golden Dragon',
+    text: 'flavour text',
+    hasFlavourText: true,
+    imageUrl: '/assets/images/cardArt/goldendragon.jpeg',
+    element: 'Light',
+    cost: 12,
+    type: 'Creature',
+    attack: 10,
+    health: 10
+  },
+  {
+    name: 'Pegasus',
+    text: '[icon:airsmall] : Dive\nThe damage dealt is doubled for 1 turn.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/pegasus.jpeg',
+    element: 'Light',
+    cost: 4,
+    type: 'Creature',
+    attack: 3,
+    health: 2
+  },
+  {
+    name: 'Holy Light',
+    text: "Heal the target for up to 10 HP's. If the target's element is [icon:deathsmall]  or  [icon:darknesssmall] , damage is dealt instead.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/holylight.jpeg',
+    element: 'Light',
+    cost: 1,
+    type: 'Spell'
+  },
+  {
+    name: 'Solar Shield',
+    text: "Shield: Physical damage reduced by 1, the damage absorbed is converted to  [icon:lightsmall]",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/gravityshield.jpeg',
+    element: 'Light',
+    cost: 3,
+    type: 'Permanent'
+  },
+  {
+    name: 'Reflective Shield',
+    text: 'Shield: Any damage from spells is reflected against your opponent. Can not be destroyed or stolen.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/reflectiveshield.jpeg',
+    element: 'Light',
+    cost: 1,
+    type: 'Permanent'
+  },
+  {
+    name: 'Hope',
+    text: "Shield: Physical damage reduced by N. N is the number of your light emitting creatures. Immaterial.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/hope.jpeg',
+    element: 'Light',
+    cost: 7,
+    type: 'Permanent'
+  },
+  {
+    name: 'Guardian Angel',
+    text: "[icon:lightsmall] : Heal\nHeal the target creature up to 5 HP's",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/guardianangel.jpeg',
+    element: 'Light',
+    cost: 3,
+    type: 'Creature',
+    attack: 1,
+    health: 3
+  },
+  {
+    name: 'Blessing',
+    text: "The target creature gains\n+3/+3",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/blessing.jpeg',
+    element: 'Light',
+    cost: 3,
+    type: 'Spell'
+  },
+  {
+    name: 'Luciferin',
+    text: "All of your creatures without a skill gain 'bioluminescence' (Light: each turn  [icon:lightsmall]  is generated). Heal yourself for up to 10 HP's.",
+    // normally cost 2 random quanta, might rework to cost 2 light instead. could also add a new variable to make it so cards with random costs dont show icons.
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/luciferin.jpeg',
+    element: 'Light',
+    cost: 2,
+    type: 'Spell',
+  },
+  {
+    name: "Crusader",
+    text: "[icon:lightsmall] [icon:lightsmall] [icon:lightsmall] : Endow\nGain the target weapon's ability and +X|+2. X is the weapon's attack.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/crusader.jpeg',
+    element: 'Light',
+    cost: 5,
+    type: 'Creature',
+    attack: 2,
+    health: 4
+  },
+  {
+    name: 'Sanctuary',
+    text: "Your quanta pool and your hand can not be altered during your opponent's turn. Heal 4 HP per turn.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/sanctuary.jpeg',
+    element: 'Light',
+    cost: 4,
+    type: 'Permanent',
+  },
+  {
+    name: 'Miracle',
+    text: 'Heal yourself to maximum health minus 1. This spell consumes all your light quanta left.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/miracle.jpeg',
+    element: 'Light',
+    cost: 15,
+    type: 'Spell'
+  },
+  {
+    name: 'Morning Star',
+    text: "Weapon: Deal 7 damage at the end of every turn. Cannot be destroyed or stolen",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/morningstar.jpeg',
+    element: 'Light',
+    cost: 5,
+    type: 'Permanent',
+    attack: 7,
+    health: 7
+  },
+  {
+    name: 'Shard of Divinity',
+    text: "Add 16 HP's to your maximum health. 24 if your mark is  [icon:lightsmall].",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/shardofdivinity.jpeg',
+    element: 'Light',
+    cost: 3,
+    type: 'Spell'
+  },
+  {
+    name: 'White Nymph',
+    text: "[icon:lightsmall] [icon:lightsmall] [icon:lightsmall] [icon:lightsmall] : Luciferin\nAll your creatures without a skill gain 'bioluminescence'. Heal yourself for up to 10 HP",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/whitenymph.jpeg',
+    element: 'Light',
+    cost: 9,
+    type: 'Creature',
+    attack: 6,
+    health: 9
+  },
+ // Air
+  {
+    name: 'Mark of Air',
+    text: 'Each turn  [icon:airsmall]  is generated',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/markofair.png',
+    element: 'Air',
+    type: 'Permanent',
+  },
+  {
+    name: 'Wind Pillar',
+    text: 'Each turn  [icon:airsmall]  is generated',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/windpillar.jpeg',
+    element: 'Air',
+    type: 'Permanent',
+  },
+  {
+    name: 'Air Pendulum',
+    text: 'Alternately generates  [icon:airsmall]  and 1 quantum matching your mark.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/airpendulum.jpeg',
+    element: 'Air',
+    type: 'Permanent',
+  },
+  {
+    name: 'Dragonfly',
+    text: 'Each turn  [icon:airsmall]  is generated',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/dragonfly.jpeg',
+    element: 'Air',
+    cost: 1,
+    type: 'Creature',
+    attack: 1,
+    health: 1
+  },
+  {
+    name: 'Wyrm',
+    text: '[icon:airsmall] [icon:airsmall] : Dive\nThe damage dealt is doubled for 1 turn.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/wyrm.jpeg',
+    element: 'Air',
+    cost: 4,
+    type: 'Creature',
+    attack: 3,
+    health: 3
+  },
+  {
+    name: 'Azure Dragon',
+    text: 'flavour text.',
+    hasFlavourText: true,
+    imageUrl: '/assets/images/cardArt/azuredragon.jpeg',
+    element: 'Air',
+    cost: 10,
+    type: 'Creature',
+    attack: 9,
+    health: 6
+  },
+  {
+    name: 'Fog Sheild',
+    text: "Sheild: The attacking creatures have a 40% chance to miss you. d10 1-4 is a miss.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/fogshield.jpeg',
+    element: 'Air',
+    cost: 2,
+    type: 'Permanent'
+  },
+  {
+    name: 'Wings',
+    text: "Shield: Only flying or ranged creatures can harm you. Lasts 5 turns.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/wings.jpeg',
+    element: 'Air',
+    cost: 4,
+    type: 'Permanent'
+  },
+  {
+    name: 'Sky Blitz',
+    text: 'Double the attack power of all your airborne creatures for 1 turn. All the remaining air quanta is consumed.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/skyblitz.jpeg',
+    element: 'Air',
+    cost: 9,
+    type: 'Spell'
+  },
+  {
+    name: 'Thunderstorm',
+    text: "Deals 2 damage to every enemy creature",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/thunderstorm.jpeg',
+    element: 'Air',
+    cost: 2,
+    type: 'Spell'
+  },
+  {
+    name: 'Flying Weapon',
+    text: "Turn your weapon into a creature ",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/flyingweapon.jpeg',
+    element: 'Air',
+    cost: 1,
+    type: 'Spell'
+  },
+  {
+    name: 'Firefly Queen',
+    text: "[icon:lifesmall] [icon:lifesmall] : Firefly\nGenerate a firefly.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/fireflyqueen.jpeg',
+    element: 'Air',
+    cost: 6,
+    type: 'Creature',
+    attack: 3,
+    health: 7
+  },
+  {
+    name: 'Volcanic Firefly Queen',
+    text: "[icon:lifesmall] [icon:lifesmall] : Firefly\nGenerate a Volcanic Firefly.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/fireflyqueen.jpeg',
+    element: 'Air',
+    cost: 6,
+    type: 'Creature',
+    attack: 3,
+    health: 7
+  },
+  {
+    name: 'Firefly',
+    text: "Bioluminescence\nEach turn  [icon:lightsmall]  is generated.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/firefly.jpeg',
+    element: 'Air',
+    cost: 3,
+    type: 'Creature',
+    attack: 3,
+    health: 2
+  },
+  {
+    name: 'Volcanic Firefly',
+    text: "Incandescence\nEach turn  [icon:firesmall]  is generated.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/firefly.jpeg',
+    element: 'Air',
+    cost: 3,
+    type: 'Creature',
+    attack: 3,
+    health: 2
+  },
+  {
+    name: 'Unstable Gas',
+    text: "[icon:firesmall] : Ignite (Sacrifice card)\nInflict 20 damages to your opponent and 1 damage to all the creatures on the field.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/unstablegas.jpeg',
+    element: 'Air',
+    cost: 6,
+    type: 'Permanent',
+  },
+  {
+    name: 'Shockwave',
+    text: 'Deal 4 damage to a target creature. Instantly kill the creature or destroy the weapon if frozen.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/shockwave.jpeg',
+    element: 'Air',
+    cost: 2,
+    type: 'Spell'
+  },
+  {
+    name: "Owl's Eye",
+    text: "Weapon: Deal 5 damage at the end of every turn.\n[icon:airsmall] [icon:airsmall] : Deal 3 damage to the target creature.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/owlseye.jpeg',
+    element: 'Air',
+    cost: 5,
+    type: 'Permanent',
+    attack: 5,
+    health: 7
+  },
+  {
+    name: 'Shard of Freedom',
+    text: "Airborne creatures gain a 25% chance to deal +50% damage, ignore shields and evade targeting if  [icon:airsmall].",
+    // roll a d4 on each attack, if its a 4 then it triggers, each extra shard adds to the success, meaning a 3 or 4 with 2 shards, a 2,3 or 4 with 3 shards, and with 4-6 shards its 100% chance to trigger.,
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/shardoffreedom.jpeg',
+    element: 'Air',
+    cost: 2,
+    type: 'Permanent'
+  },
+  {
+    name: 'Blue Nymph',
+    text: "[icon:airsmall] [icon:airsmall] [icon:airsmall] : Unstable Gas\nGenerate unstable gas",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/bluenymph.jpeg',
+    element: 'Air',
+    cost: 8,
+    type: 'Creature',
+    attack: 6,
+    health: 5
+  },
 // Time
+  {
+    name: 'Mark of Time',
+    text: 'Each turn  [icon:timesmall]  is generated',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/markoftime.png',
+    element: 'Time',
+    type: 'Permanent',
+  },
+  {
+    name: 'Time Factory',
+    text: 'Each turn  [icon:timesmall]  is generated',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/timefactory.jpeg',
+    element: 'Time',
+    type: 'Permanent',
+  },
+  {
+    name: 'Time Pendulum',
+    text: 'Alternately generates  [icon:timesmall]  and 1 quantum matching your mark.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/timependulum.jpeg',
+    element: 'Time',
+    type: 'Permanent',
+  },
+  {
+    name: 'Deja Vu',
+    text: '[icon:timesmall] : Deja Vu\nDeja Vu creates a copy of itself',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/dejavu.jpeg',
+    element: 'Time',
+    cost: 1,
+    type: 'Creature',
+    attack: 1,
+    health: 1
+  },
+  {
+    name: 'Fate Egg',
+    text: '[icon:timesmall] : Hatch\nThe Fate Egg turns into a random creature. See Random Tab for Randomised Creature.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/fateegg.jpeg',
+    element: 'Time',
+    cost: 3,
+    type: 'Creature',
+    attack: 0,
+    health: 1
+  },
+  {
+    name: 'Procrastination',
+    text: 'Shield: Any creature that damaged you is stuck in a time bubble for 1 turn.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/procrastination.jpeg',
+    element: 'Time',
+    cost: 6,
+    type: 'Permanent'
+  },
+  {
+    name: 'Reverse Time',
+    text: "The target creature is placed on top of the creature owner's deck.",
+    hasFlavourText: true,
+    imageUrl: '/assets/images/cardArt/reversetime.jpeg',
+    element: 'Air',
+    cost: 2,
+    type: 'Spell'
+  },
+  {
+    name: 'Golden Hourglass',
+    text: "[icon:timesmall] [icon:timesmall] : Hasten\nDraw a card from your deck.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/goldenhourglass.jpeg',
+    element: 'Time',
+    cost: 4,
+    type: 'Permanent'
+  },
+  {
+    name: 'Devonian Dragon',
+    text: "Flavour text",
+    hasFlavourText: true,
+    imageUrl: '/assets/images/cardArt/devoniandragon.jpeg',
+    element: 'Time',
+    cost: 10,
+    type: 'Creature',
+    attack: 10,
+    health: 5
+  },
+  {
+    name: 'Anubis',
+    text: "[icon:aethersmall] [icon:aethersmall] : Immortality\nThe target creature is now immortal (untargetable).",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/anubis.jpeg',
+    element: 'Time',
+    cost: 8,
+    type: 'Creature',
+    attack: 5,
+    health: 8
+  },
+  {
+    name: 'Sundial',
+    text: "Stasis: Creatures do not attack for 1 turn.\n[icon:lightsmall] : Hasten\nDraw a card from your deck.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/sundial.jpeg',
+    element: 'Time',
+    cost: 1,
+    type: 'Permanent'
+  },
+  {
+    name: 'Scarab',
+    text: "The Scarab's HP is equal to the number of Scarabs you control (min 1).\n[icon:gravitysmall] : Devour",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/scarab.jpeg',
+    element: 'Time',
+    cost: 2,
+    type: 'Creature',
+    attack: 2,
+    health: 0
+  },
+  {
+    name: 'Precognition',
+    text: "You can see your opponent's hand. Draw a card.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/precognition.jpeg',
+    element: 'Time',
+    cost: 2,
+    type: 'Spell'
+  },
+  {
+    name: 'Dune Scorpion',
+    text: "Neurotoxin: Add 1 neurotoxin damage to each successful attack, 1 extra poison for each card played by afflicted player.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/dunescorpion.jpeg',
+    element: 'Time',
+    cost: 3,
+    type: 'Creature',
+    attack: 0,
+    health: 1
+  },
+  {
+    name: 'Ghost of the Past',
+    text: "Obsession: Inflict 10 damage to the owner of this card if discarded.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/ghostofthepast.jpeg',
+    element: 'Time',
+    cost: 6,
+    type: 'Creature',
+    attack: 7,
+    health: 4
+  },
+  {
+    name: 'Pharaoh',
+    text: '[icon:timesmall] [icon:timesmall] : Scarab\nGenerate a Scarab.',
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/pharaoh.jpeg',
+    element: 'Time',
+    cost: 9,
+    type: 'Creature',
+    attack: 4,
+    health: 9
+  },
+  {
+    name: "Eternity",
+    text: "Weapon: Deal 4 damage at the end of every turn.\n[icon:timesmall] [icon:timesmall] [icon:timesmall] : Put a creature back on top its owner's deck.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/eternity.jpeg',
+    element: 'Time',
+    cost: 6,
+    type: 'Permanent',
+    attack: 4,
+    health: 8
+  },
+  {
+    name: 'Shard of Readiness',
+    text: "The target creature's skill cost is now zero. [icon:timesmall]  creatures can use their skill twice this turn.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/shardofreadiness.jpeg',
+    element: 'Time',
+    cost: 3,
+    type: 'Spell'
+  },
+  {
+    name: 'Golden Nymph',
+    text: "[icon:timesmall] [icon:timesmall] : Precognition\nYou can see your opponent's hand. Draw a card.",
+    hasFlavourText: false,
+    imageUrl: '/assets/images/cardArt/goldennymph.jpeg',
+    element: 'Time',
+    cost: 8,
+    type: 'Creature',
+    attack: 6,
+    health: 8
+  },
 // Darkness
 // Aether
   {
@@ -1274,14 +2028,6 @@ const cardData = [
     element: 'Aether',
     cost: 10,
     type: 'Spell'
-  },
-  {
-    name: 'Water Pillar',
-    text: 'Each turn [icon:watersmall] is generated',
-    hasFlavourText: false,
-    imageUrl: '/assets/images/cardArt/waterpillar.jpeg',
-    element: 'Water',
-    type: 'Permanent',
   },
   {
     name: 'Psion',

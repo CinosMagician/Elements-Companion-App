@@ -1,37 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Import all icons here
-import iconFire from '../assets/icons/firesmall.png';
-import iconLife from '../assets/icons/lifesmall.png';
-import iconAether from '../assets/icons/aethersmall.png';
-import iconLight from '../assets/icons/lightsmall.png';
-import iconWater from '../assets/icons/watersmall.png';
-import iconNormal from '../assets/icons/normalsmall.png';
-import iconGravity from '../assets/icons/gravitysmall.png';
-import iconDeath from '../assets/icons/deathsmall.png';
-import iconTime from '../assets/icons/timesmall.png';
-import iconEntropy from '../assets/icons/entropysmall.png';
-import iconDarkness from '../assets/icons/darknesssmall.png';
-import iconAir from '../assets/icons/airsmall.png';
-import iconEarth from '../assets/icons/earthsmall.png';
-// Import other icons as needed
-
+// Icons object
 const icons = {
-    firesmall: iconFire,
-    lifesmall: iconLife,
-    aethersmall: iconAether,
-    lightsmall: iconLight,
-    watersmall: iconWater,
-    normalsmall: iconNormal,
-    gravitysmall: iconGravity,
-    deathsmall: iconDeath,
-    timesmall: iconTime,
-    entropysmall: iconEntropy,
-    darknesssmall: iconDarkness,
-    airsmall: iconAir,
-    earthsmall: iconEarth,
-    // Add other icons to the mapping
+    darkness: '/assets/images/icons/darkness.png',
+    death: '/assets/images/icons/death.png',
+    earth: '/assets/images/icons/earth.png',
+    fire: '/assets/images/icons/fire.png',
+    gravity: '/assets/images/icons/gravity.png',
+    time: '/assets/images/icons/time.png',
+    water: '/assets/images/icons/water.png',
+    life: '/assets/images/icons/life.png',
+    aether: '/assets/images/icons/aether.png',
+    air: '/assets/images/icons/air.png',
+    entropy: '/assets/images/icons/entropy.png',
+    light: '/assets/images/icons/light.png',
 };
 
 const TextWithIcons = ({ text, hasFlavourText, style }) => {
