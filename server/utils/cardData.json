@@ -19,7 +19,7 @@
       "name": "Chroma Pendulum",
       "text": "Alternately generates 3 random quantums and 1 quantum matching your mark.",
       "hasFlavourText": false,
-      "imageUrl": "/assets/images/cardArt/chromapendulum.",
+      "imageUrl": "/assets/images/cardArt/chromapendulum.png",
       "element": "None",
       "type": "Permanent"
     },
@@ -1327,7 +1327,7 @@
       "text": "Shield: damage dealt to you from physical damage sources is reduced by 1. Attacking creatures might freeze",
       "desc": "Freeze chance is 30%",
       "hasFlavourText": false,
-      "imageUrl": "/assets/images/cardArt/gravityshield.jpeg",
+      "imageUrl": "/assets/images/cardArt/iceshield.jpeg",
       "element": "Water",
       "cost": 6,
       "type": "Permanent"
@@ -1523,7 +1523,7 @@
       "name": "Solar Shield",
       "text": "Shield: Physical damage reduced by 1, the damage absorbed is converted to  [icon:lightsmall]",
       "hasFlavourText": false,
-      "imageUrl": "/assets/images/cardArt/gravityshield.jpeg",
+      "imageUrl": "/assets/images/cardArt/solarshield.jpeg",
       "element": "Light",
       "cost": 3,
       "type": "Permanent"
@@ -1869,7 +1869,7 @@
     },
     {
       "name": "Fate Egg",
-      "text": "[icon:timesmall] : Hatch\nThe Fate Egg turns into a random creature. See Random Tab for Randomised Creature.",
+      "text": "[icon:timesmall] : Hatch\nThe Fate Egg turns into a random creature. See Random Tab for Creature.",
       "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/fateegg.jpeg",
       "element": "Time",
@@ -1892,7 +1892,7 @@
       "text": "The target creature is placed on top of the creature owner's deck.",
       "hasFlavourText": true,
       "imageUrl": "/assets/images/cardArt/reversetime.jpeg",
-      "element": "Air",
+      "element": "Time",
       "cost": 2,
       "type": "Spell"
     },
