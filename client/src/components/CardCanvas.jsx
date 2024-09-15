@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
+const URL = 'https://elements-companion-app.onrender.com';
+
 const CardCanvas = ({ card }) => {
     const canvasRef = useRef(null);
 
@@ -12,7 +14,7 @@ const CardCanvas = ({ card }) => {
             const img = new Image();
             img.onload = () => resolve(img);
             img.onerror = reject;
-            img.src = src;
+            img.src = URL+src;
         });
 
         const drawCard = async () => {
