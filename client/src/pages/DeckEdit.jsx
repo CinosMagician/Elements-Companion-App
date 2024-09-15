@@ -23,6 +23,7 @@ const icons = {
     air: '/assets/images/icons/air.png',
     entropy: '/assets/images/icons/entropy.png',
     light: '/assets/images/icons/light.png',
+    chroma: '/assets/images/icons/chroma.png',
 };
 
 const DeckEdit = () => {
@@ -31,7 +32,7 @@ const DeckEdit = () => {
     const { state } = useMyContext(); // Get user context
     const [deckName, setDeckName] = useState('');
     const [deckCards, setDeckCards] = useState([]);
-    const [selectedMark, setSelectedMark] = useState('life'); // Default to 'life'
+    const [selectedMark, setSelectedMark] = useState('chroma'); // Default to 'chroma'
     const [cards, setCards] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [showFilterModal, setShowFilterModal] = useState(false);

@@ -17,8 +17,9 @@ const DeckCardCanvas = ({ card }) => {
 
         const drawCard = async () => {
             try {
+                let lowerCaseElement = card.element.toLowerCase()
                 const backgroundSrc = '/assets/images/icons/bigframe.png'
-                const cardElementFrameSrc = card.element === 'None' ? '/assets/images/icons/normalBanner.png' : `/assets/images/icons/${card.element}Banner.png`;
+                const cardElementFrameSrc = card.element === 'None' ? '/assets/images/icons/normalBanner.png' : `/assets/images/icons/${lowerCaseElement}Banner.png`;
                 const background = await loadImage(backgroundSrc);
                 const cardElementFrame = await loadImage(cardElementFrameSrc);
                 const cardArt = await loadImage(card.imageUrl);                
