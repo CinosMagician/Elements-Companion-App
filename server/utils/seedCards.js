@@ -24,7 +24,7 @@ const cardData = [
     name: 'Chroma Pendulum',
     text: 'Alternately generates 3 random quantums and 1 quantum matching your mark.',
     hasFlavourText: false,
-    imageUrl: '/assets/images/cardArt/chromapendulum.png',
+    imageUrl: '/assets/images/cardArt/chromapendulum.',
     element: 'None',
     type: 'Permanent',
   },
@@ -251,7 +251,7 @@ const cardData = [
   },
   {
     name: 'Butterfly Effect',
-    text: "Target a low attack power creature (less than 3). The creature's skill is now                [icon:entropysmall] [icon:entropysmall] [icon:entropysmall] : Destroy.",
+    text: "Target a low attack power creature (less than 3). The creature's skill is now\n[icon:entropysmall] [icon:entropysmall] [icon:entropysmall] : Destroy.",
     hasFlavourText: false,
     imageUrl: '/assets/images/cardArt/butterflyeffect.jpeg',
     element: 'Entropy',

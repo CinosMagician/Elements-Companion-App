@@ -45,7 +45,7 @@ const CardCanvas = ({ card }) => {
                     ctx.drawImage(typeIcon, 240, 260, 25, 26);
                 }
 
-                const textColor = backgroundSrc.includes('light') ? '#000000' : '#FFFFFF';
+                const textColor = backgroundSrc.includes('light') ? '#FFFFFF' : '#FFFFFF';
 
                 ctx.font = '25px Gill Sans';
                 ctx.fillStyle = textColor;
