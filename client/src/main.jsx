@@ -19,7 +19,7 @@ import DeckCreate from "./pages/DeckCreate.jsx";
 
 // Initialize Apollo Client
 const client = new ApolloClient({
-  uri: 'http://localhost:3001/graphql', // Replace with your GraphQL server URI
+  uri: import.meta.env.VITE_REACT_APP_GRAPHQL_ENDPOINT ?? 'http://localhost:3001/graphql', // Replace with your GraphQL server URI
   cache: new InMemoryCache(),
 });
 

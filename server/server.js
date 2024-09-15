@@ -7,7 +7,7 @@ const { authMiddleware } = require("./utils/auth");
 const db = require("./config/connection");
 const cors = require('cors'); // Import CORS middleware
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT ?? 3001;
 const app = express();
 
 // Create a new Apollo server and pass in schema data
@@ -25,7 +25,7 @@ const startApolloServer = async () => {
 
   // Apply CORS middleware before applying GraphQL middleware
   app.use(cors({
-    origin: 'http://localhost:3000', // Replace with your frontend's origin
+    origin: process.env.FRONTEND_URL ?? 'http://localhost:3000', // Replace with your frontend's origin
     methods: 'GET,POST', // Allow these methods
     credentials: true, // Allow credentials
   }));
