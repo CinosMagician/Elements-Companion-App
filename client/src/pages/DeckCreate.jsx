@@ -23,6 +23,7 @@ const icons = {
     air: '/assets/images/icons/air.png',
     entropy: '/assets/images/icons/entropy.png',
     light: '/assets/images/icons/light.png',
+    chroma: '/assets/images/icons/chroma.png',
 };
 
 const DeckCreate = () => {
