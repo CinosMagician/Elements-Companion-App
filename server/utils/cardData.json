@@ -1386,6 +1386,15 @@
       "health": 6
     },
     {
+        "name": "Dry Spell",
+        "text": "Deals 1 damage to every creature on the field. Gain  [icon:watersmall]  for every creature damaged. Removes Invisibility.",
+        "hasFlavourText": false,
+        "imageUrl": "/assets/images/cardArt/dryspell.jpeg",
+        "element": "Water",
+        "cost": 2,
+        "type": "Spell"
+      },
+    {
       "name": "Nymph's Tears",
       "text": "Turn one of your pillars or pendulums into a Nymph. The Nymph will inherit the target's element.",
       "hasFlavourText": false,
