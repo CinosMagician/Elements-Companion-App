@@ -58,8 +58,6 @@ const DeckCreate = () => {
         if (!cardLoading && !cardError && cardData) {
             // Filter out cards with isToken: true
             const nonTokenCards = cardData.cards.filter(card => !card.isToken);
-            console.log("original cards:", cardData);
-            console.log("non tokens cards:", nonTokenCards);
             setCards(nonTokenCards);
             setFilteredCards(nonTokenCards); // Initially, all non-token cards are shown
         }
