@@ -33,7 +33,7 @@ const DeckCreate = () => {
     const { state, setUser } = useMyContext(); 
     const [deckName, setDeckName] = useState('');
     const [deckCards, setDeckCards] = useState([]); 
-    const [selectedMark, setSelectedMark] = useState('life'); 
+    const [selectedMark, setSelectedMark] = useState('chroma'); 
     const [cards, setCards] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [showFilterModal, setShowFilterModal] = useState(false);
