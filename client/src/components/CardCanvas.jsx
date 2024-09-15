@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 
-const URL = 'https://elements-companion-app.onrender.com';
-
 const CardCanvas = ({ card }) => {
     const canvasRef = useRef(null);
 
@@ -14,12 +12,13 @@ const CardCanvas = ({ card }) => {
             const img = new Image();
             img.onload = () => resolve(img);
             img.onerror = reject;
-            img.src = URL+src;
+            img.src = import.meta.env.VITE_BACKEND_URL+src;
         });
 
         const drawCard = async () => {
             try {
-                const backgroundSrc = card.element === 'None' ? '/assets/images/cardBacks/normal.png' : `/assets/images/cardBacks/${card.element}.png`;
+                let lowerCaseElement = card.element.toLowerCase()
+                const backgroundSrc = card.element === 'None' ? '/assets/images/cardbacks/normal.png' : `/assets/images/cardbacks/${lowerCaseElement}.png`;
                 const background = await loadImage(backgroundSrc);
                 const cardArt = await loadImage(card.imageUrl);
                 
@@ -32,7 +31,7 @@ const CardCanvas = ({ card }) => {
 
                 let elementIcon = null;
                 if (card.cost && card.cost > 0) {
-                    elementIcon = await loadImage(card.element === 'None' ? '/assets/images/icons/normalsmall.png' : `/assets/images/icons/${card.element}small.png`);
+                    elementIcon = await loadImage(card.element === 'None' ? '/assets/images/icons/normalsmall.png' : `/assets/images/icons/${lowerCaseElement}small.png`);
                 }
 
                 ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
