@@ -285,44 +285,24 @@ const DeckCreate = () => {
 
             {/* Modal for selecting Mark */}
             {showModal && (
-                <div style={{
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    zIndex: 9999
-                }}>
-                    <div style={{
-                        backgroundColor: 'white',
-                        padding: '20px',
-                        borderRadius: '10px',
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(4, 1fr)',
-                        gap: '10px',
-                        maxWidth: '600px',
-                        textAlign: 'center'
-                    }}>
-                        {Object.entries(icons).map(([key, icon]) => (
-                            <div
-                                key={key}
-                                onClick={() => handleMarkSelect(key)}
-                                style={{
-                                    cursor: 'pointer',
-                                    padding: '10px',
-                                    border: selectedMark === key ? '2px solid #007bff' : '2px solid transparent',
-                                    borderRadius: '10px'
-                                }}
-                            >
-                                <img src={icon} alt={key} style={{ width: '50px', height: '50px' }} />
-                                <p>{key.charAt(0).toUpperCase() + key.slice(1)}</p>
-                            </div>
-                        ))}
-                        <button onClick={() => setShowModal(false)}>Close</button>
+                <div style={{ position: 'fixed', top: '0', left: '0', right: '0', bottom: '0', backgroundColor: 'rgba(0,0,0,0.5)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <div style={{ backgroundColor: '#fff', padding: '20px', borderRadius: '8px', width: '80%', maxWidth: '600px' }}>
+                        <h2>Select an Element</h2>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
+                            {Object.keys(icons).map((key) => (
+                                <div 
+                                    key={key} 
+                                    onClick={() => handleMarkSelect(key)} 
+                                    style={{ cursor: 'pointer', textAlign: 'center' }}
+                                >
+                                    <img src={icons[key]} alt={key} style={{ width: '60px', height: '60px' }} />
+                                    <p>{key.charAt(0).toUpperCase() + key.slice(1)}</p>
+                                </div>
+                            ))}
+                        </div>
+                        <button onClick={() => setShowModal(false)} style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#333', color: '#fff', border: 'none', cursor: 'pointer' }}>
+                            Close
+                        </button>
                     </div>
                 </div>
             )}
