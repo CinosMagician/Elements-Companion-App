@@ -40,7 +40,10 @@ const startApolloServer = async () => {
 
   // Serve static files from the "server/assets" directory
   // app.use('/assets', express.static(path.join(__dirname, 'assets')));
-  app.use('/assets', express.static('assets'));
+  app.use('/assets', (req, res, next) => {
+    res.send({ message: 'mock asset response' });
+    console.log("here")
+  });
 
   // Serve static files in production
   if (process.env.NODE_ENV === "production") {
