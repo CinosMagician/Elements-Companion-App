@@ -183,6 +183,17 @@
       "type": "Spell"
     },
     {
+      "name": "Chaos Power",
+      "text": "A random bonus in attack power and health is granted to the target",
+      "Desc": "The random bonus is at least +1/+1, +5/+5 maximum.",
+      "hasFlavourText": false,
+      "isToken": true,
+      "imageUrl": "/assets/images/cardArt/chaospower.jpeg",
+      "element": "Entropy",
+      "cost": 1,
+      "type": "Spell"
+    },
+    {
       "name": "Nova",
       "text": "Generate 12 quanta. 1 for each element. Do not cast more than twice per turn.",
       "hasFlavourText": false,

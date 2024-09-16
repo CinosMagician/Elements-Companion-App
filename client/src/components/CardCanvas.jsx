@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
+// const localImageTesting = 'http://localhost:3001';
+
 const CardCanvas = ({ card }) => {
     const canvasRef = useRef(null);
 
@@ -13,6 +15,7 @@ const CardCanvas = ({ card }) => {
             img.onload = () => resolve(img);
             img.onerror = reject;
             img.src = import.meta.env.VITE_BACKEND_URL+src;
+            // img.src = localImageTesting+src;
         });
 
         const drawCard = async () => {
@@ -66,22 +69,22 @@ const CardCanvas = ({ card }) => {
                 if (card.type === 'Creature') {
                     if (card.attack !== null && card.health !== null) {
                         ctx.font = '22px Gill Sans';
-                        if (card.attack > 9) {
+                        if (card.attack >= 10 && card.health < 10) {
                             ctx.fillText(`${card.attack}`, 210, 280);
                             ctx.fillText('|', 240, 278);
-                        } else {
-                            ctx.fillText(`${card.attack}`, 220, 280);
-                        }
-
-                        if (card.health > 9) {
-                            ctx.fillText(`${card.health}`, 240, 280);
-                            ctx.fillText('|', 235, 278);
-                        } else {
                             ctx.fillText(`${card.health}`, 250, 280);
-                        }
-
-                        if (card.health < 10 && card.attack < 10) {
+                        } else if (card.attack < 10 && card.health < 10){
+                            ctx.fillText(`${card.attack}`, 220, 280);
                             ctx.fillText('|', 240, 278);
+                            ctx.fillText(`${card.health}`, 250, 280);
+                        } else if (card.attack >= 10 && card.health >= 10){
+                            ctx.fillText(`${card.attack}`, 210, 280);
+                            ctx.fillText('|', 235, 278);
+                            ctx.fillText(`${card.health}`, 240, 280);
+                        } else if (card.attack < 10 && card.health >= 10){ //Could have used else here, but wanted to just track all use cases more easily.
+                            ctx.fillText(`${card.attack}`, 220, 280);
+                            ctx.fillText('|', 235, 278);
+                            ctx.fillText(`${card.health}`, 240, 280);
                         }
                     }
                 }

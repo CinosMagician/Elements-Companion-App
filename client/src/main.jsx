@@ -18,6 +18,9 @@ import DeckEdit from "./pages/DeckEdit.jsx";
 import DeckCreate from "./pages/DeckCreate.jsx";
 import CardDetail from "./components/ChaosSeedPage.jsx";
 import ChaosSeedPage from "./components/ChaosSeedPage.jsx";
+import PandemoniumPage from "./components/PandemoniumPage.jsx";
+import SingularityPage from "./components/SingularityPage.jsx";
+import ShardGolemPage from "./components/ShardGolemPage.jsx";
 
 // Initialize Apollo Client
 const client = new ApolloClient({
@@ -67,6 +70,18 @@ const router = createBrowserRouter([
       {
         path: "random/chaos_seed",
         element: <ChaosSeedPage />,
+      },
+      {
+        path: "random/singularity",
+        element: <SingularityPage />,
+      },
+      {
+        path: "random/pandemonium",
+        element: <PandemoniumPage />,
+      },
+      {
+        path: "random/shard_golem",
+        element: <ShardGolemPage />,
       },
       {
         path: 'card/:id',
