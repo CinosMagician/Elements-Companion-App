@@ -28,7 +28,7 @@ const RandomEffects = () => {
     // Function to handle navigation
     const handleCardClick = (cardName) => {
         // Generate path from card name
-        const path = `/${cardName.toLowerCase().replace(/ /g, '_')}`;
+        const path = `/random/${cardName.toLowerCase().replace(/ /g, '_')}`;
         navigate(path);
     };
 
