@@ -17,6 +17,65 @@ const RandomEffects = () => {
         'Ice Shield', 'Shard of Freedom', 'Fate Egg', 'Dusk Mantle'
     ];
 
+    const cardUsecases = [
+        {
+            name: 'Chaos Seed',
+            useCase: 'Used to randomly select the effect triggered by Chaos Seed'
+        },
+        {
+            name: 'Singularity',
+            useCase: 'Selects which random effect to apply to itself'
+        },
+        {
+            name: 'Mutation',
+            useCase: ''
+        },
+        {
+            name: 'Pandemonium',
+            useCase: ''
+        },
+        {
+            name: 'Skull Shield',
+            useCase: ''
+        },
+        {
+            name: 'Catapult',
+            useCase: ''
+        },
+        {
+            name: 'Shard Golem',
+            useCase: ''
+        },
+        {
+            name: 'Thorn Carapace',
+            useCase: ''
+        },
+        {
+            name: 'Adrenaline',
+            useCase: ''
+        },
+        {
+            name: 'Ice Bolt',
+            useCase: ''
+        },
+        {
+            name: 'Ice Shield',
+            useCase: ''
+        },
+        {
+            name: 'Shard of Freedom',
+            useCase: ''
+        },
+        {
+            name: 'Fate Egg',
+            useCase: ''
+        },
+        {
+            name: 'Dusk Mantle',
+            useCase: ''
+        }
+    ];
+
     // Filter specific cards from the fetched data
     useEffect(() => {
         if (!loading && !error && data) {
@@ -32,6 +91,12 @@ const RandomEffects = () => {
         navigate(path);
     };
 
+    // Function to find the use case for a given card name
+    const getUseCase = (cardName) => {
+        const card = cardUsecases.find(c => c.name === cardName);
+        return card ? card.useCase : '';
+    };
+
     if (loading) return <p>Loading cards...</p>;
     if (error) return <p>Error loading cards</p>;
 
@@ -44,27 +109,13 @@ const RandomEffects = () => {
                     onClick={() => handleCardClick(card.name)} // Add click handler
                     style={{ cursor: 'pointer' }} // Indicate it's clickable
                 >
-                    {index % 2 === 0 ? (
-                        <>
-                            <div className="card-section">
-                                <CardCanvas card={card} />
-                            </div>
-                            <div className="text-section">
-                                <h3>{card.name}</h3>
-                                <p>{/* Add description text related to the card's effect */}</p>
-                            </div>
-                        </>
-                    ) : (
-                        <>
-                            <div className="text-section">
-                                <h3>{card.name}</h3>
-                                <p>{/* Add description text related to the card's effect */}</p>
-                            </div>
-                            <div className="card-section">
-                                <CardCanvas card={card} />
-                            </div>
-                        </>
-                    )}
+                    <div className="card-section">
+                        <CardCanvas card={card} />
+                    </div>
+                    <div className="text-section">
+                        <h3>{card.name}</h3>
+                        <p>{getUseCase(card.name)}</p>
+                    </div>
                 </div>
             ))}
         </div>

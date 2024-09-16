@@ -2068,6 +2068,17 @@
       "type": "Spell"
     },
     {
+      "name": "Lobotomizer",
+      "text": "Weapon: deal 5 damage at the end of every turn.\n\n[icon:aethersmall] [icon:aethersmall] : remove any skill from the target creature.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/lobotomizer.jpeg",
+      "element": "Aether",
+      "cost": 3,
+      "type": "Permanent",
+      "attack": 5,
+      "health": 4
+    },
+    {
       "name": "Parallel Universe",
       "text": "Summon an exact copy of the target creature",
       "hasFlavourText": false,
