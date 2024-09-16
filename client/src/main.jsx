@@ -16,6 +16,8 @@ import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx';
 import DeckEdit from "./pages/DeckEdit.jsx";
 import DeckCreate from "./pages/DeckCreate.jsx";
+import CardDetail from "./components/ChaosSeedPage.jsx";
+import ChaosSeedPage from "./components/ChaosSeedPage.jsx";
 
 // Initialize Apollo Client
 const client = new ApolloClient({
@@ -61,6 +63,10 @@ const router = createBrowserRouter([
       {
         path: "random",
         element: <RandomEffects />,
+      },
+      {
+        path: "random/chaos_seed",
+        element: <ChaosSeedPage />,
       },
       {
         path: 'card/:id',

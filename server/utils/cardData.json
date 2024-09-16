@@ -2044,9 +2044,36 @@
       "name": "Dusk Mantle",
       "text": "The attacking creatures have a 50% chance to miss you. Roll any dice, odds are a miss, evens are a hit.",
       "hasFlavourText": false,
-      "imageUrl": "/assets/images/cardArt/duskmantle.png",
+      "imageUrl": "/assets/images/cardArt/duskmantle.jpeg",
       "element": "Darkness",
       "cost": 6,
       "type": "Permanent"
+    },
+    {
+      "name": "Drain Life",
+      "text": "Drains 2 HP's from the target for each 10 darkness quantums in your possession.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/drainlife.jpeg",
+      "element": "Darkness",
+      "cost": 3,
+      "type": "Spell"
+    },
+    {
+      "name": "Lightning",
+      "text": "Deals 5 damage to the target.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/lightning.jpeg",
+      "element": "Aether",
+      "cost": 2,
+      "type": "Spell"
+    },
+    {
+      "name": "Parallel Universe",
+      "text": "Summon an exact copy of the target creature",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/paralleluniverse.jpeg",
+      "element": "Aether",
+      "cost": 7,
+      "type": "Spell"
     }
   ]
