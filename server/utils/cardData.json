@@ -163,7 +163,7 @@
     },
     {
       "name": "Lycanthrope",
-      "text": "[icon:darknesssmall] [icon:darknesssmall] Lycanthropy:\n The Lycanthrope gains +5/+5 permanently. Can only be used Once.",
+      "text": "[icon:darknesssmall] [icon:darknesssmall] Lycanthropy:\nThe Lycanthrope gains +5/+5 permanently. Can only be used Once.",
       "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/lycanthrope.jpeg",
       "element": "Entropy",
@@ -245,7 +245,7 @@
     },
     {
       "name": "Butterfly Effect",
-      "text": "Target a low attack power creature (less than 3). The creature's skill is now\n[icon:entropysmall] [icon:entropysmall] [icon:entropysmall] : Destroy.",
+      "text": "Target a low attack power creature (less than 3). The creature's skill is now\n\n\n[icon:entropysmall] [icon:entropysmall] [icon:entropysmall] : Destroy.",
       "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/butterflyeffect.jpeg",
       "element": "Entropy",
@@ -647,7 +647,7 @@
     },
     {
       "name": "Acceleration",
-      "text": "Replace the target creature skill with acceleration: gain\n+2 / -1 per turn.",
+      "text": "Replace the target creature skill with acceleration: gain\n\n+2 / -1 per turn.",
       "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/acceleration.jpeg",
       "element": "Gravity",
@@ -867,7 +867,7 @@
     },
     {
       "name": "Pulverizer",
-      "text": "Weapon: Deal 5 damage at the end of every turn. [icon:gravitysmall] [icon:gravitysmall] [icon:gravitysmall] : Shatter the target permanent.",
+      "text": "Weapon: Deal 5 damage at the end of every turn.\n\n[icon:gravitysmall] [icon:gravitysmall] [icon:gravitysmall] : Shatter the target permanent.",
       "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/pulverizer.jpeg",
       "element": "Earth",
@@ -1062,7 +1062,7 @@
     },
     {
       "name": "Green Nymph",
-      "text": "[icon:lifesmall] [icon:lifesmall] : Adrenaline\n The target creature attacks multiple times per turn.",
+      "text": "[icon:lifesmall] [icon:lifesmall] : Adrenaline\nThe target creature attacks multiple times per turn.",
       "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/greennymph.jpeg",
       "element": "Life",
@@ -1120,7 +1120,7 @@
     {
       "name": "Fire Spirit",
       "text": "[icon:firesmall] : Ablaze\nThe Fire Spirit gains +2/+0",
-      "hasFlavourText": true,
+      "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/firespirit.jpeg",
       "element": "Fire",
       "cost": 2,
@@ -1228,7 +1228,7 @@
     },
     {
       "name": "Fahrenheit",
-      "text": "Weapon: Deal 4+X damage at the end of every turn. X is the number of [icon:firesmall] you own, divided by 5.",
+      "text": "Weapon: Deal 4+X damage at the end of every turn. X is the number of  [icon:firesmall] you own, divided by 5.",
       "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/fahrenheit.jpeg",
       "element": "Fire",
@@ -1239,7 +1239,7 @@
     },
     {
       "name": "Shard of Bravery",
-      "text": "Your opponent draws 2 cards, 3 if your mark is [icon:firesmall] . Draw an equal amount of cards.",
+      "text": "Your opponent draws 2 cards, 3 if your mark is  [icon:firesmall] . Draw an equal amount of cards.",
       "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/shardofbravery.jpeg",
       "element": "Fire",
@@ -1354,7 +1354,7 @@
     },
     {
       "name": "Toadfish",
-      "text": "[icon:airsmall] : inflate\n Inflict 1 poison damage to a target creature. Cause poisoning if ingested.",
+      "text": "[icon:airsmall] : inflate\nInflict 1 poison damage to a target creature. Cause poisoning if ingested.",
       "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/toadfish.jpeg",
       "element": "Water",
@@ -1568,7 +1568,7 @@
     },
     {
       "name": "Luciferin",
-      "text": "All of your creatures without a skill gain 'bioluminescence' (Light: each turn  [icon:lightsmall]  is generated). Heal yourself for up to 10 HP.",
+      "text": "All of your creatures without a skill gain 'bioluminescence' (Light: each turn  [icon:lightsmall]  is generated). You heal 10 HP.",
       "desc": "normally cost 2 random quanta, might rework to cost 2 light instead. could also add a new variable to make it so cards with random costs dont show icons.",
       "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/luciferin.jpeg",
@@ -1753,7 +1753,7 @@
       "name": "Volcanic Firefly Queen",
       "text": "[icon:lifesmall] [icon:lifesmall] : Firefly\nGenerate a Volcanic Firefly.",
       "hasFlavourText": false,
-      "imageUrl": "/assets/images/cardArt/fireflyqueen.jpeg",
+      "imageUrl": "/assets/images/cardArt/volcanicfireflyqueen.jpeg",
       "element": "Air",
       "cost": 6,
       "type": "Creature",
@@ -1775,7 +1775,7 @@
       "name": "Volcanic Firefly",
       "text": "Incandescence\nEach turn  [icon:firesmall]  is generated.",
       "hasFlavourText": false,
-      "imageUrl": "/assets/images/cardArt/firefly.jpeg",
+      "imageUrl": "/assets/images/cardArt/volcanicfirefly.jpeg",
       "element": "Air",
       "cost": 3,
       "type": "Creature",
@@ -1802,7 +1802,7 @@
     },
     {
       "name": "Owl's Eye",
-      "text": "Weapon: Deal 5 damage at the end of every turn.\n[icon:airsmall] [icon:airsmall] : Deal 3 damage to the target creature.",
+      "text": "Weapon: Deal 5 damage at the end of every turn.\n\n[icon:airsmall] [icon:airsmall] : Deal 3 damage to the target creature.",
       "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/owlseye.jpeg",
       "element": "Air",
@@ -1890,7 +1890,7 @@
     {
       "name": "Reverse Time",
       "text": "The target creature is placed on top of the creature owner's deck.",
-      "hasFlavourText": true,
+      "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/reversetime.jpeg",
       "element": "Time",
       "cost": 2,
@@ -1929,7 +1929,7 @@
     },
     {
       "name": "Sundial",
-      "text": "Stasis: Creatures do not attack for 1 turn.\n[icon:lightsmall] : Hasten\nDraw a card from your deck.",
+      "text": "Stasis: Creatures do not attack for 1 turn.\n\n[icon:lightsmall] : Hasten\nDraw a card from your deck.",
       "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/sundial.jpeg",
       "element": "Time",
@@ -1938,7 +1938,7 @@
     },
     {
       "name": "Scarab",
-      "text": "The Scarab's HP is equal to the number of Scarabs you control (min 1).\n[icon:gravitysmall] : Devour",
+      "text": "The Scarab's HP is equal to the number of Scarabs you control (min 1).\n\n\n[icon:gravitysmall] : Devour",
       "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/scarab.jpeg",
       "element": "Time",
@@ -1991,7 +1991,7 @@
     },
     {
       "name": "Eternity",
-      "text": "Weapon: Deal 4 damage at the end of every turn.\n[icon:timesmall] [icon:timesmall] [icon:timesmall] : Put a creature back on top its owner's deck.",
+      "text": "Weapon: Deal 4 damage at the end of every turn.\n\n[icon:timesmall] [icon:timesmall] [icon:timesmall] : Put a creature back on top its owner's deck.",
       "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/eternity.jpeg",
       "element": "Time",
@@ -2041,14 +2041,12 @@
       "health": 4
     },
     {
-      "name": "CinosMagician",
-      "text": "[icon:lightsmall] [icon:darknesssmall] : Chaos Blast.\nDeal 4 damage to target creature",
+      "name": "Dusk Mantle",
+      "text": "The attacking creatures have a 50% chance to miss you. Roll any dice, odds are a miss, evens are a hit.",
       "hasFlavourText": false,
-      "imageUrl": "/assets/images/cardArt/cinosmagician.png",
-      "element": "Entropy",
-      "cost": 9,
-      "type": "Creature",
-      "attack": 9,
-      "health": 4
+      "imageUrl": "/assets/images/cardArt/duskmantle.png",
+      "element": "Darkness",
+      "cost": 6,
+      "type": "Permanent"
     }
   ]

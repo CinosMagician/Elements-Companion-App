@@ -10,7 +10,7 @@ import Calculator from './pages/Calculator';
 import Decks from './pages/Decks';
 import Library from './pages/Library';
 import HardLibrary from './pages/HardcodeLibrary';
-import Random from './pages/Random';
+import RandomEffects from './pages/Random';
 import CardDetails from './pages/CardDetails';
 import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx';
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
       },
       {
         path: "random",
-        element: <Random />,
+        element: <RandomEffects />,
       },
       {
         path: 'card/:id',
