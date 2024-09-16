@@ -10,7 +10,7 @@ import Calculator from './pages/Calculator';
 import Decks from './pages/Decks';
 import Library from './pages/Library';
 import HardLibrary from './pages/HardcodeLibrary';
-import RandomEffects from './pages/Random';
+import RandomEffects from './pages/RandomEffects';
 import CardDetails from './pages/CardDetails';
 import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx';
