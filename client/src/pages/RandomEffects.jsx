@@ -20,19 +20,19 @@ const RandomEffects = () => {
     const cardUsecases = [
         {
             name: 'Chaos Seed',
-            useCase: 'Used to randomly select the effect triggered by Chaos Seed'
+            useCase: 'Used to randomly select the effect triggered by Chaos Seed. It can also be decided using a d12. (effects list will be posted inside Chaos Seed page later)'
         },
         {
             name: 'Singularity',
-            useCase: 'Selects which random effect to apply to itself'
+            useCase: 'Selects which random effect to apply to itself. User first selects the current attack as Antimatter always triggers when above 1'
         },
         {
             name: 'Mutation',
-            useCase: ''
+            useCase: 'Used to find out what a creature will turn into once mutated, also use this if a mutant has the hatch ability to hatch into another mutant.'
         },
         {
             name: 'Pandemonium',
-            useCase: ''
+            useCase: 'Enter the amount of creatures alive in play and watch as random effects get generated equal to the number of creatures in play'
         },
         {
             name: 'Skull Shield',

@@ -22,6 +22,7 @@ import PandemoniumPage from "./components/PandemoniumPage.jsx";
 import SingularityPage from "./components/SingularityPage.jsx";
 import ShardGolemPage from "./components/ShardGolemPage.jsx";
 import MutationPage from "./components/MutationPage.jsx";
+import SkullShieldPage from "./components/SkullShieldPage.jsx";
 
 // Initialize Apollo Client
 const client = new ApolloClient({
@@ -83,6 +84,10 @@ const router = createBrowserRouter([
       {
         path: "random/pandemonium",
         element: <PandemoniumPage />,
+      },
+      {
+        path: "random/skull_shield",
+        element: <SkullShieldPage />,
       },
       {
         path: "random/shard_golem",
