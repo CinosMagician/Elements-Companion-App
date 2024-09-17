@@ -48,7 +48,7 @@ const MutationPage = () => {
                 name: `Deceased`,
                 text: 'The creature has died.',
                 hasFlavourText: false,
-                imageUrl: 'assets/images/cardArt/boneyard.jpeg',
+                imageUrl: '/assets/images/cardArt/boneyard.jpeg',
                 element: death,
                 type: "Creature"
             });
@@ -60,7 +60,7 @@ const MutationPage = () => {
                 name: 'Mutant',
                 text: `${randomAbility}`,
                 hasFlavourText: false,
-                imageUrl: 'assets/images/cardArt/fallenelf.jpeg',
+                imageUrl: '/assets/images/cardArt/fallenelf.jpeg',
                 cost: selectedCard.cost,
                 element: selectedCard.element,
                 type: "Creature",
@@ -72,7 +72,7 @@ const MutationPage = () => {
                 name: 'Abomination',
                 text: 'A hideous mutation of the original creature.',
                 hasFlavourText: true,
-                imageUrl: 'assets/images/cardArt/abomination.jpeg',
+                imageUrl: '/assets/images/cardArt/abomination.jpeg',
                 cost: 5,
                 element: 'Entropy',
                 type: "Creature",

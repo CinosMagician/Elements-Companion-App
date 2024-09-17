@@ -2330,7 +2330,7 @@
     },
     {
       "name": "Mindgate",
-      "text": "[icon:aethersmall] [icon:aethersmall] : Duality\nDraw 1 from the opponent's deck, either add it to your hand or place it back on top of their deck.",
+      "text": "[icon:aethersmall] [icon:aethersmall] : Duality\nDraw 1 from the opponent's deck, keep it or place it on the top or bottom of their deck.",
       "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/mindgate.jpeg",
       "element": "Aether",
