@@ -49,7 +49,7 @@ const MutationPage = () => {
                 text: 'The creature has died.',
                 hasFlavourText: false,
                 imageUrl: '/assets/images/cardArt/boneyard.jpeg',
-                element: death,
+                element: "Death",
                 type: "Creature"
             });
         } else if (chance < 0.5) { // 40% chance to become a Mutant
