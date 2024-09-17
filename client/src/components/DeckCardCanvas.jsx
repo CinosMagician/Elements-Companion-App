@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
+// const localImageTesting = 'http://localhost:3001';
+
 const DeckCardCanvas = ({ card }) => {
     const canvasRef = useRef(null);
 
@@ -12,6 +14,7 @@ const DeckCardCanvas = ({ card }) => {
             const img = new Image();
             img.onload = () => resolve(img);
             img.onerror = reject;
+            // img.src = localImageTesting+src;
             img.src = src;
         });
 

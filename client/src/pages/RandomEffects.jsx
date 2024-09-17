@@ -12,7 +12,7 @@ const RandomEffects = () => {
 
     // List of specific card names
     const cardNames = [
-        'Chaos Seed', 'Singularity', 'Mutation', 'Pandemonium', 'Skull Shield',
+        'Chaos Seed', 'Singularity', 'Mutation', 'Pandemonium', 'Skull Shield', 'Skeleton',
         'Catapult', 'Shard Golem', 'Thorn Carapace', 'Adrenaline', 'Ice Bolt',
         'Ice Shield', 'Shard of Freedom', 'Fate Egg', 'Dusk Mantle'
     ];
@@ -40,7 +40,7 @@ const RandomEffects = () => {
         },
         {
             name: 'Catapult',
-            useCase: ''
+            useCase: 'Calculate the Damage when using Catapult'
         },
         {
             name: 'Shard Golem',
@@ -49,6 +49,10 @@ const RandomEffects = () => {
         {
             name: 'Thorn Carapace',
             useCase: ''
+        },
+        {
+            name: 'Skeleton',
+            useCase: 'Find out what Creature Skeleton turns into'
         },
         {
             name: 'Adrenaline',

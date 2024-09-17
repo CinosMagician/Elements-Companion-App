@@ -205,6 +205,7 @@
       "name": "Singularity",
       "text": "At the end of your turn, apply 1 effect from the Random Effects tab.",
       "hasFlavourText": false,
+      "isToken": true,
       "imageUrl": "/assets/images/cardArt/singularity.jpeg",
       "element": "Entropy",
       "cost": 10,
@@ -2032,12 +2033,317 @@
       "health": 8
     },
     {
+      "name": "Mark of Darkness",
+      "text": "Each turn  [icon:darknesssmall]  is generated",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/markofdarkness.png",
+      "element": "Darkness",
+      "type": "Permanent"
+    },
+    {
+      "name": "Obsidian Pillar",
+      "text": "Each turn  [icon:darknesssmall]  is generated",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/obsidianpillar.jpeg",
+      "element": "Darkness",
+      "type": "Permanent"
+    },
+    {
+      "name": "Darkness Pendulum",
+      "text": "Alternately generates  [icon:darknesssmall]  and 1 quantum matching your mark.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/darknesspendulum.jpeg",
+      "element": "Darkness",
+      "type": "Permanent"
+    },
+    {
+      "name": "Black Dragon",
+      "text": "flavour text",
+      "hasFlavourText": true,
+      "imageUrl": "/assets/images/cardArt/blackdragon.jpeg",
+      "element": "Darkness",
+      "cost": 10,
+      "type": "Creature",
+      "attack": 10,
+      "health": 5
+    },
+    {
+      "name": "Devourer",
+      "text": "Absorb 1 quantum from your opponent per turn and return a [icon:darknesssmall]  to you\n\n\n[icon:earthsmall] : Burrow",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/devourer.jpeg",
+      "element": "Darkness",
+      "cost": 2,
+      "type": "Creature",
+      "attack": 0,
+      "health": 2
+    },
+    {
+      "name": "Parasite",
+      "text": "[icon:deathsmall] : Infection\nInflict 1 Poison damage to a target creature.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/parasite.jpeg",
+      "element": "Darkness",
+      "cost": 2,
+      "type": "Creature",
+      "attack": 1,
+      "health": 1
+    },
+    {
+      "name": "Dusk Mantle",
+      "text": "The attacking creatures have a 50% chance to miss you. Roll any dice, odds are a miss, evens are a hit.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/duskmantle.jpeg",
+      "element": "Darkness",
+      "cost": 6,
+      "type": "Permanent"
+    },
+    {
+      "name": "Steal",
+      "text": "Steal a permanent",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/steal.jpeg",
+      "element": "Darkness",
+      "cost": 4,
+      "type": "Spell"
+    },
+    {
+      "name": "Nightfall",
+      "text": "All the  [icon:deathsmall]  or  [icon:darknesssmall]  creatures gain +1/+1",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/nightfall.jpeg",
+      "element": "Darkness",
+      "cost": 3,
+      "type": "Permanent"
+    },
+    {
+      "name": "Drain Life",
+      "text": "Drains 2 HP's from the target for each 10 darkness quantums in your possession.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/drainlife.jpeg",
+      "element": "Darkness",
+      "cost": 3,
+      "type": "Spell"
+    },
+    {
+      "name": "Minor Vampire",
+      "text": "Vampire:\nThe damage dealt is returned to you as healing.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/minorvampire.jpeg",
+      "element": "Darkness",
+      "cost": 3,
+      "type": "Creature",
+      "attack": 2,
+      "health": 2
+    },
+    {
+      "name": "Liquid Shadow",
+      "text": "The target creature is poisoned and gains the vampire ability. Previous skills are removed.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/liquidshadow.jpeg",
+      "element": "Darkness",
+      "cost": 4,
+      "type": "Spell"
+    },
+    {
+      "name": "Gargoyle",
+      "text": "[icon:earthsmall] : Stone Form\nGargoyle Gains +0/+20. Can only be used once.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/gargoyle.jpeg",
+      "element": "Darkness",
+      "cost": 5,
+      "type": "Creature",
+      "attack": 0,
+      "health": 16
+    },
+    {
+      "name": "Voodoo Doll",
+      "text": "Voodoo: If this creature survives an attack, damage and status is inflicted to your opponent as well.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/voodoodoll.jpeg",
+      "element": "Darkness",
+      "cost": 2,
+      "type": "Creature",
+      "attack": 2,
+      "health": 2
+    },
+    {
+      "name": "Nightmare",
+      "text": "Fill your opponent's hand with copies of the target creature's card. Drain 2 HP for each card added.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/nightmare.jpeg",
+      "element": "Darkness",
+      "cost": 2,
+      "type": "Spell"
+    },
+    {
+      "name": "Cloak",
+      "text": "Your creatures and your permanents are invisible for 3 turns. (Cannot be targeted)",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/cloak.jpeg",
+      "element": "Darkness",
+      "cost": 4,
+      "type": "Permanent"
+    },
+    {
+      "name": "Vampire Stiletto",
+      "text": "Weapon: Deal 4 damage at the end of every turn. The damage dealt is returned to you as healing.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/vampirestiletto.jpeg",
+      "element": "Darkness",
+      "cost": 1,
+      "type": "Permanent",
+      "attack": 4,
+      "health": 4
+    },
+    {
+      "name": "Shard of Void",
+      "text": "Reduce your opponent's max HP by 2 per turn. 3 if your mark is  [icon:darknesssmall]",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/shardofvoid.jpeg",
+      "element": "Darkness",
+      "cost": 2,
+      "type": "Permanent"
+    },
+    {
+      "name": "Black Nymph",
+      "text": "[icon:darknesssmall] [icon:darknesssmall] : Liquid Shadow\nThe target creature is poisoned and its skill switched to 'vampire'.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/purplenymph.jpeg",
+      "element": "Darkness",
+      "cost": 8,
+      "type": "Creature",
+      "attack": 3,
+      "health": 5
+    },
+    {
+      "name": "Mark of Aether",
+      "text": "Each turn  [icon:aethersmall]  is generated",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/markofaether.png",
+      "element": "Aether",
+      "type": "Permanent"
+    },
+    {
+      "name": "Aether Pillar",
+      "text": "Each turn  [icon:aethersmall]  is generated",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/aetherpillar.jpeg",
+      "element": "Aether",
+      "type": "Permanent"
+    },
+    {
+      "name": "Aether Pendulum",
+      "text": "Alternately generates  [icon:aethersmall]  and 1 quantum matching your mark.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/aetherpendulum.jpeg",
+      "element": "Aether",
+      "type": "Permanent"
+    },
+    {
+      "name": "Spark",
+      "text": "flavour text",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/spark.jpeg",
+      "element": "Aether",
+      "type": "Creature",
+      "attack": 3,
+      "health": 0
+    },
+    {
+      "name": "Lightning",
+      "text": "Deals 5 damage to the target.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/lightning.jpeg",
+      "element": "Aether",
+      "cost": 2,
+      "type": "Spell"
+    },
+    {
+      "name": "Parallel Universe",
+      "text": "Summon an exact copy of the target creature",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/paralleluniverse.jpeg",
+      "element": "Aether",
+      "cost": 7,
+      "type": "Spell"
+    },
+    {
+      "name": "Immortal",
+      "text": "Immaterial:\nThe Immortal can not be targeted.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/immortal.jpeg",
+      "element": "Aether",
+      "cost": 6,
+      "type": "Creature",
+      "attack": 4,
+      "health": 3
+    },
+    {
+      "name": "Dimensional Shield",
+      "text": "Shield: Shift out of phase for 3 turns. Physical attacks are unable to hit you while this shield is in play.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/dimensionalshield.jpeg",
+      "element": "Aether",
+      "cost": 6,
+      "type": "Permanent"
+    },
+    {
+      "name": "Phase Dragon",
+      "text": "Immaterial:\nPhase Dragon can not be targeted.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/phasedragon.jpeg",
+      "element": "Aether",
+      "cost": 13,
+      "type": "Creature",
+      "attack": 8,
+      "health": 6
+    },
+    {
+      "name": "Phase Spider",
+      "text": "[icon:airsmall] : Web\nThe target creature loses its 'airborne' skill",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/phasespider.jpeg",
+      "element": "Aether",
+      "cost": 3,
+      "type": "Creature",
+      "attack": 4,
+      "health": 2
+    },
+    {
+      "name": "Quintessence",
+      "text": "Grant immortality to the target creature. The target creature can no longer be targeted.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/quintessence.jpeg",
+      "element": "Aether",
+      "cost": 4,
+      "type": "Spell"
+    },
+    {
       "name": "Fractal",
       "text": "Fill your hand with copies of the target creature's card. All the remaining aether quanta is consumed.",
       "hasFlavourText": false,
       "imageUrl": "/assets/images/cardArt/fractal.jpeg",
       "element": "Aether",
       "cost": 10,
+      "type": "Spell"
+    },
+    {
+      "name": "Mindgate",
+      "text": "[icon:aethersmall] [icon:aethersmall] : Duality\nDraw 1 from the opponent's deck, either add it to your hand or place it back on top of their deck.",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/mindgate.jpeg",
+      "element": "Aether",
+      "cost": 5,
+      "type": "Permanent"
+    },
+    {
+      "name": "Silence",
+      "text": "The opponent can not play any cards during the next turn",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/silence.jpeg",
+      "element": "Aether",
+      "cost": 3,
       "type": "Spell"
     },
     {
@@ -2052,31 +2358,15 @@
       "health": 4
     },
     {
-      "name": "Dusk Mantle",
-      "text": "The attacking creatures have a 50% chance to miss you. Roll any dice, odds are a miss, evens are a hit.",
+      "name": "Phase Salvager",
+      "text": "Salvaging: a permanent destroyed by your opponent is returned to your hand.",
       "hasFlavourText": false,
-      "imageUrl": "/assets/images/cardArt/duskmantle.jpeg",
-      "element": "Darkness",
-      "cost": 6,
-      "type": "Permanent"
-    },
-    {
-      "name": "Drain Life",
-      "text": "Drains 2 HP's from the target for each 10 darkness quantums in your possession.",
-      "hasFlavourText": false,
-      "imageUrl": "/assets/images/cardArt/drainlife.jpeg",
-      "element": "Darkness",
-      "cost": 3,
-      "type": "Spell"
-    },
-    {
-      "name": "Lightning",
-      "text": "Deals 5 damage to the target.",
-      "hasFlavourText": false,
-      "imageUrl": "/assets/images/cardArt/lightning.jpeg",
+      "imageUrl": "/assets/images/cardArt/phasesalvager.jpeg",
       "element": "Aether",
-      "cost": 2,
-      "type": "Spell"
+      "cost": 1,
+      "type": "Creature",
+      "attack": 4,
+      "health": 0
     },
     {
       "name": "Lobotomizer",
@@ -2090,12 +2380,23 @@
       "health": 4
     },
     {
-      "name": "Parallel Universe",
-      "text": "Summon an exact copy of the target creature",
+      "name": "Shard of Wisdom",
+      "text": "The target creature gains +4/+0 and now deals spell damage if immortal.",
       "hasFlavourText": false,
-      "imageUrl": "/assets/images/cardArt/paralleluniverse.jpeg",
+      "imageUrl": "/assets/images/cardArt/shardofwisdom.jpeg",
       "element": "Aether",
-      "cost": 7,
+      "cost": 3,
       "type": "Spell"
+    },
+    {
+      "name": "Turquoise Nymph",
+      "text": "[icon:aethersmall] [icon:aethersmall] [icon:aethersmall] : Immortality\nThe target creature is now immortal (untargetable).",
+      "hasFlavourText": false,
+      "imageUrl": "/assets/images/cardArt/turquoisenymph.jpeg",
+      "element": "Aether",
+      "cost": 8,
+      "type": "Creature",
+      "attack": 7,
+      "health": 4
     }
   ]
