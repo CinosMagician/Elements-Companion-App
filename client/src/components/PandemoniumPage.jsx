@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_CARDS } from '../utils/queries';
 import CardCanvas from './CardCanvas';
+import './PandemoniumPage.css'; // Import the CSS for grid styles
 
 const PandemoniumPage = () => {
     // List of card names to select from
@@ -137,26 +138,25 @@ const PandemoniumPage = () => {
             </div>
 
             <p>Click the button to reveal random card effects:</p>
-            
-            {/* Display the selected effects */}
-            {selectedEffects.length > 0 && (
-                <div>
-                    {selectedEffects.map((item, index) => (
-                        <div key={index}>
-                            <h2>Selected Effect: {item.effect.skillName}</h2>
-                            <p>Effect: {item.effect.effect}</p>
-                            <div className="card-section">
-                                <CardCanvas card={item.card} />
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            )}
-            
             {/* Button to select random effects */}
             <button onClick={selectRandomEffects} disabled={loading || error || specificCards.length === 0}>
                 Reveal Random Effects
             </button>
+            
+            {/* Grid container for the selected effects */}
+            {selectedEffects.length > 0 && (
+                <div className="effects-grid">
+                    {selectedEffects.map((item, index) => (
+                        <div className="effect-item" key={index}>
+                            <h2>Triggered Effect:</h2><h2 className='titleFont subTitle'>{item.effect.skillName}</h2>
+                            <div className="card-section">
+                                <CardCanvas card={item.card} />
+                            </div>
+                            <p>Effect: {item.effect.effect}</p>
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
     );
 };

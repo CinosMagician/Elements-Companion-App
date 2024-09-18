@@ -15,7 +15,7 @@ const CardCanvas = ({ card }) => {
             img.onload = () => resolve(img);
             img.onerror = reject;
             img.src = import.meta.env.VITE_BACKEND_URL+src;
-            // img.src = localImageTesting+src;
+            img.src = localImageTesting+src;
         });
 
         const drawCard = async () => {

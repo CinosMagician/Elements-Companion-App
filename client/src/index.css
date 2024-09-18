@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Evanescent', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -22,13 +22,31 @@ a:hover {
   color: #535bf2;
 }
 
+.titleFont {
+  font-family: 'Evanescent';
+  color: orange;
+  text-shadow: 
+      /* Vertical and horizontal shadow offsets, followed by blur radius and color */
+      -2px -2px 0 brown, 
+       2px -2px 0 brown,
+      -2px  2px 0 brown,
+       2px  2px 0 brown;
+}
+
+.mainTitle{
+  font-size: 10rem;
+}
+
+.subTitle{
+  font-size: 5rem;
+}
 body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-image: url('/src/assets/background.jpeg'); /* Replace with the path to your image */
+  background-image: url('/assets/images/cardArt/repeatmainback.png'); /* Replace with the path to your image */
   background-size: 2000px auto; /* Ensure the background covers the entire viewport */
   background-position: center; /* Center the background image */
   background-repeat: repeat-y; /* Prevent the background from repeating */

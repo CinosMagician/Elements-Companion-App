@@ -117,7 +117,7 @@ const RandomEffects = () => {
                         <CardCanvas card={card} />
                     </div>
                     <div className="text-section">
-                        <h3>{card.name}</h3>
+                        <h3 className='titleFont subTitle'>{card.name}</h3>
                         <p>{getUseCase(card.name)}</p>
                     </div>
                 </div>

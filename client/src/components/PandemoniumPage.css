@@ -1,0 +1,15 @@
+.effects-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 1rem; /* Adjust gap between items as needed */
+}
+
+.effect-item {
+    border: 1px solid #ddd; /* Optional: add a border around each item */
+    padding: 1rem; /* Optional: add padding inside each item */
+    background-image: url("/assets/images/cardArt/repeatingbackground.png");
+    background-size: auto; /* Ensure the background covers the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: repeat; /* Prevent the background from repeating */
+}

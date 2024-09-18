@@ -60,7 +60,7 @@ const Decks = () => {
 
   return (
     <div>
-      <h1>Your Decks</h1>
+      <h1 className='titleFont subTitle'>Your Decks</h1>
       <button onClick={handleCreateDeck}>Create New Deck</button>
       <div>
         {userDecks.length === 0 ? (

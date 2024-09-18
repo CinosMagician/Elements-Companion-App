@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import './Calculator.css'; // Ensure your CSS file is correctly imported
-import MaxHPModal from '../components/MaxHPModal'; // Import the MaxHPModal component
+import './Calculator.css';
+import MaxHPModal from '../components/MaxHPModal';
+import RemoveQuantaModal from '../components/RemoveQuantaModal';
+import AddQuantaModal from '../components/AddQuantaModal';
 
 const Calculator = () => {
     // State for dynamic values
@@ -30,6 +32,10 @@ const Calculator = () => {
     // Status states
     const [status, setStatus] = useState({ type: 'none', count: 0 });
 
+    // State for modals
+    const [isRemoveQuantaModalOpen, setIsRemoveQuantaModalOpen] = useState(false);
+    const [isAddQuantaModalOpen, setIsAddQuantaModalOpen] = useState(false);
+
     // Increment and decrement functions with boundary checks
     const increment = (key, value) => {
         setValues(prev => ({
@@ -49,23 +55,29 @@ const Calculator = () => {
     const handleButtonClick = (value) => {
         if (value === '=') {
             try {
-                const evaluatedValue = eval(input);
-                if (input === '' || input === 'Error') {
-                    return setInput('');
+                // Evaluate the expression safely
+                const evaluatedValue = new Function('return ' + input)();
+                
+                // Check for valid result
+                if (isNaN(evaluatedValue) || input === '' || input === 'Error') {
+                    setInput('Error');
+                } else {
+                    // Update the hp state
+                    setHp(prevHp => {
+                        const newHp = prevHp + evaluatedValue;
+                        const clampedHp = Math.max(0, Math.min(newHp, maxHP));
+                        updatePreviewHP(clampedHp);
+                        return clampedHp;
+                    });
+                    setInput(''); // Clear the input field after calculation
                 }
-                setHp(prevHp => {
-                    const newHp = prevHp + evaluatedValue;
-                    const clampedHp = Math.max(0, Math.min(newHp, maxHP));
-                    updatePreviewHP(clampedHp);
-                    return clampedHp;
-                });
-                setInput(''); // Clear the input field after calculation
             } catch {
                 setInput('Error');
             }
         } else if (value === 'C') {
             setInput(''); // Clear input if C is pressed
         } else {
+            // Append the clicked value to the input
             setInput(prevInput => prevInput + value);
         }
     };
@@ -163,6 +175,9 @@ const Calculator = () => {
                 newPreviewType = 'damage';
                 setStatus({ type: 'neurotoxin', count: status.count + 1 });
             }
+        } else if (newStatus === 'none') {
+            newPreviewType = 'none';
+            setStatus({ type: 'none', count: 0 });
         }
 
         setPreviewHP(newPreviewHP);
@@ -188,6 +203,51 @@ const Calculator = () => {
         updatePreviewHP(Math.min(newMaxHP, hp)); // Update preview HP based on new max HP
     };
 
+    // Calculate total quanta
+    const calculateTotalQuanta = () => {
+        return Object.values(values).reduce((total, count) => total + count, 0);
+    };
+
+    // Remove random quanta
+    const removeRandomQuanta = (quantity) => {
+        const quantaKeys = Object.keys(values);
+        let remainingQuantity = quantity;
+        let updatedValues = { ...values };
+
+        while (remainingQuantity > 0) {
+            const nonZeroKeys = quantaKeys.filter(key => updatedValues[key] > 0);
+            if (nonZeroKeys.length === 0) break; // No more quanta to remove
+
+            const randomKey = nonZeroKeys[Math.floor(Math.random() * nonZeroKeys.length)];
+            if (updatedValues[randomKey] > 0) {
+                updatedValues[randomKey] = Math.max(0, updatedValues[randomKey] - 1);
+                remainingQuantity -= 1;
+            }
+        }
+
+        setValues(updatedValues);
+    };
+
+    // Add random quanta
+    const addRandomQuanta = (quantity) => {
+        const quantaKeys = Object.keys(values);
+        let remainingQuantity = quantity;
+        let updatedValues = { ...values };
+
+        while (remainingQuantity > 0) {
+            const nonFullKeys = quantaKeys.filter(key => updatedValues[key] < 75);
+            if (nonFullKeys.length === 0) break; // All elements are full
+
+            const randomKey = nonFullKeys[Math.floor(Math.random() * nonFullKeys.length)];
+            if (updatedValues[randomKey] < 75) {
+                updatedValues[randomKey] = Math.min(75, updatedValues[randomKey] + 1);
+                remainingQuantity -= 1;
+            }
+        }
+
+        setValues(updatedValues);
+    };
+
     return (
         <div className="calculator-container">
             <div className="calculator">
@@ -203,6 +263,16 @@ const Calculator = () => {
                             <button className="plus-button" onClick={() => increment(key, 1)}>+</button>
                         </div>
                     ))}
+                    <div className="container">
+                        <div className='icon-text'>
+                            <img src={`/assets/images/icons/blank.png`} className="icon" />
+                            <img src={`/assets/images/icons/blank.png`} className="icon" />
+                            <img src={`/assets/images/icons/blank.png`} className="icon" />
+                            <button className="text-button" onClick={() => setIsRemoveQuantaModalOpen(true)}>Remove Random Quanta</button>
+                            <img src={`/assets/images/icons/chroma.png`} alt="Element Icon" className="icon" />
+                            <button className="text-button" onClick={() => setIsAddQuantaModalOpen(true)}>Add Random Quanta</button>
+                        </div>
+                    </div>
                 </div>
                 <div className="block-right">
                     {/* Calculator grid */}
@@ -211,20 +281,24 @@ const Calculator = () => {
                         <div className="button" onClick={() => handleButtonClick('2')}>2</div>
                         <div className="button" onClick={() => handleButtonClick('3')}>3</div>
                         <img src='/assets/images/icons/water.png' className="button" onClick={() => handleStatusChange('purify')} alt="Purify"/>
+                        <div className="button" onClick={() => handleButtonClick('*')}>*</div>
 
                         <div className="button" onClick={() => handleButtonClick('4')}>4</div>
                         <div className="button" onClick={() => handleButtonClick('5')}>5</div>
                         <div className="button" onClick={() => handleButtonClick('6')}>6</div>
                         <img src='/assets/images/icons/death.png' className="button" onClick={() => handleStatusChange('toxin')} alt="Toxin"/>
+                        <div className="button" onClick={() => handleButtonClick('/')}>/</div>
 
                         <div className="button" onClick={() => handleButtonClick('7')}>7</div>
                         <div className="button" onClick={() => handleButtonClick('8')}>8</div>
                         <div className="button" onClick={() => handleButtonClick('9')}>9</div>
                         <img src='/assets/images/icons/neurotoxin.png' className="button" onClick={() => handleStatusChange('neurotoxin')} alt="Neurotoxin"/>
+                        <div className="button" onClick={() => handleButtonClick('C')}>C</div>
 
                         <div className="button" onClick={() => handleButtonClick('-')}>-</div>
                         <div className="button" onClick={() => handleButtonClick('0')}>0</div>
                         <div className="button" onClick={() => handleButtonClick('+')}>+</div>
+                        <img src='/assets/images/icons/none.png' className="button" onClick={() => handleStatusChange('none')} alt="Clear Status"/>
                         <div className="button" onClick={() => handleButtonClick('=')}>=</div>
                     </div>
 
@@ -242,7 +316,10 @@ const Calculator = () => {
                         <div className="hp-progress-bar">
                             <div
                                 className="hp-progress"
-                                style={{ width: `${(hp / maxHP) * 100}%`, backgroundColor: 'green' }}
+                                style={{
+                                    width: `${(hp / maxHP) * 100}%`,
+                                    backgroundColor: 'green'
+                                }}
                             ></div>
                             {previewHP !== null && previewType === 'healing' && previewHP > hp && (
                                 <div
@@ -251,7 +328,7 @@ const Calculator = () => {
                                         width: `${((previewHP - hp) / maxHP) * 100}%`,
                                         backgroundColor: 'blue',
                                         position: 'absolute',
-                                        left: `${(hp / maxHP) * 100}%`,
+                                        left: `${(hp / maxHP) * 100}%`
                                     }}
                                 ></div>
                             )}
@@ -262,7 +339,7 @@ const Calculator = () => {
                                         width: `${((hp - previewHP) / maxHP) * 100}%`,
                                         backgroundColor: 'yellow',
                                         position: 'absolute',
-                                        left: `${(previewHP / maxHP) * 100}%`,
+                                        left: `${(previewHP / maxHP) * 100}%`
                                     }}
                                 ></div>
                             )}
@@ -274,11 +351,11 @@ const Calculator = () => {
                         <button className="hp-button" onClick={handleEndTurn}>End Turn</button>
                         <button className="hp-button" onClick={() => setIsModalOpen(true)}>Change Max HP</button>
                         <div>
-                            {status.type !== 'none' && (
+                            {(
                                 <div className="status">
                                     <img src={`/assets/images/icons/${status.type}.png`} alt={`${status.type} Icon`} className="status-icon" />
                                     <span className="status-text">
-                                        {status.type === 'purify' ? `+${status.count}` : `-${status.count}`}
+                                        {status.type === 'none' ? '0' : status.type === 'purify' ? `+${status.count}` : `-${status.count}`}
                                     </span>
                                 </div>
                             )}
@@ -293,6 +370,21 @@ const Calculator = () => {
                 onClose={() => setIsModalOpen(false)}
                 onConfirm={handleMaxHPChange}
                 maxHP={maxHP}
+            />
+
+            {/* Remove Quanta Modal */}
+            <RemoveQuantaModal
+                isOpen={isRemoveQuantaModalOpen}
+                onClose={() => setIsRemoveQuantaModalOpen(false)}
+                onConfirm={removeRandomQuanta}
+                totalQuanta={calculateTotalQuanta()}
+            />
+
+            {/* Add Quanta Modal */}
+            <AddQuantaModal
+                isOpen={isAddQuantaModalOpen}
+                onClose={() => setIsAddQuantaModalOpen(false)}
+                onConfirm={addRandomQuanta}
             />
         </div>
     );

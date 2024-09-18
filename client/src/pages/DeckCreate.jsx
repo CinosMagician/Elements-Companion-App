@@ -82,7 +82,7 @@ const DeckCreate = () => {
                 return prevDeckCards;
             }
     
-            if (cardName.includes("pillar") || cardName.includes("pendulum") || cardCount < 6) {
+            if (cardName.includes("pillar") || cardName.includes("factory") || cardName.includes("pendulum") || cardCount < 6) {
                 console.log(deckCards);
                 const updatedDeck = [...prevDeckCards, card];
                 // Sort the deck based on the order of the cards in the filtered library
@@ -184,11 +184,11 @@ const DeckCreate = () => {
                     value={deckName} 
                     onChange={(e) => setDeckName(e.target.value)} 
                     placeholder="Deck Name" 
-                    style={{ fontSize: '24px', marginRight: '10px', flex: 1 }}
+                    style={{ fontSize: '24px', marginRight: '10px', marginTop: '20px', flex: 1 }}
                 />
                 <button 
                     onClick={() => setShowModal(true)} 
-                    style={{ border: 'none', background: 'none', padding: '0', cursor: 'pointer' }}
+                    style={{ border: 'none', background: 'none', padding: '0',  marginTop: '20px', cursor: 'pointer' }}
                 >
                     <img 
                         src={icons[selectedMark]} 

@@ -3,7 +3,10 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-image: url("/assets/images/cardArt/repeatingbackground.png");
+    background-size: auto; /* Ensure the background covers the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: repeat; /* Prevent the background from repeating */
 }
 
 /* Calculator container that holds both blocks */
@@ -46,6 +49,30 @@
     height: 150%;
 }
 
+.text-button{
+    font-size: 11px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+.uniqueRow-container {
+    display: flex;
+    justify-content: center; /* Center .uniqueRow horizontally */
+    width: 100%;
+}
+
+/* Styling for the uniqueRow */
+.uniqueRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
 /* The text inside the icon */
 .icon-text .text {
     position: absolute;
@@ -72,7 +99,7 @@
 /* Calculator grid styling */
 .calculator-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 10px;
 }
@@ -97,7 +124,8 @@
 
 /* Result box styling */
 .result-box {
-    background-color: white;
+    background-color: black;
+    color: rgb(0, 255, 0);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -254,7 +282,7 @@
     }
 
     .calculator-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         gap: 8px;
     }
 
