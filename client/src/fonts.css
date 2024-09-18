@@ -1,6 +1,16 @@
 @font-face {
-    font-family: 'Gill Sans';
-    src: url('/fonts/Gill Sans.otf') format('otf');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: 'Gill Sans';
+  src: url('/fonts/Gill Sans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Evanescent';
+  src: url('/fonts/Evanescent.woff2') format('woff2'),
+       url('/fonts/Evanescent.woff') format('woff'),
+       url('/fonts/Evanescent.ttf') format('truetype'),
+       url('/fonts/Evanescent.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

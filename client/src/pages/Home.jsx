@@ -1,3 +1,5 @@
+import './Home.css';
+
 export default function Home() {
-    return <div>Home</div>
+    return <div><img className='imageSettings' src="/../public/title.png"></img></div>
 }

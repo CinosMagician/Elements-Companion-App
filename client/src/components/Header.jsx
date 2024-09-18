@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useMyContext } from '../utils/UserContext'; // Use the custom hook
 import './Header.css';
 
@@ -32,20 +32,25 @@ const Header = () => {
         navigate('/login');
     };
 
+    // New function to handle general navigation
+    const handleNavigate = (path) => {
+        navigate(path);
+    };
+
     return (
         <div className='navHeader'>
             <ul>
-                <li><Link to="/">Home</Link></li>
+                <li><button onClick={() => handleNavigate('/')}>Home</button></li>
                 <li><button onClick={handleDecksClick}>Decks</button></li>
-                <li><Link to="/calculator">Calculator</Link></li>
-                <li><Link to="/library">Library</Link></li>
-                <li><Link to="/random">Random</Link></li>
+                <li><button onClick={() => handleNavigate('/calculator')}>Calculator</button></li>
+                <li><button onClick={() => handleNavigate('/library')}>Library</button></li>
+                <li><button onClick={() => handleNavigate('/random')}>Random</button></li>
                 {state.isAuthenticated ? (
                     <li><button onClick={handleLogout}>Logout</button></li>
                 ) : (
                     <>
-                        <li><Link to="/login">Login</Link></li>
-                        <li><Link to="/signup">Signup</Link></li>
+                        <li><button onClick={() => handleNavigate('/login')}>Login</button></li>
+                        <li><button onClick={() => handleNavigate('/signup')}>Signup</button></li>
                     </>
                 )}
             </ul>
