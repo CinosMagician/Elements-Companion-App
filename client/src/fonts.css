@@ -7,10 +7,10 @@
 
 @font-face {
   font-family: 'Evanescent';
-  src: url('/fonts/Evanescent.woff2') format('woff2'),
-       url('/fonts/Evanescent.woff') format('woff'),
-       url('/fonts/Evanescent.ttf') format('truetype'),
-       url('/fonts/Evanescent.otf') format('opentype');
+  src: url('/fonts/45_Evanescent.woff2') format('woff2'),
+       url('/fonts/45_Evanescent.woff') format('woff'),
+       url('/fonts/45_Evanescent.ttf') format('truetype'),
+       url('/fonts/45_Evanescent.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
