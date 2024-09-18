@@ -66,31 +66,34 @@ const MutationPage = () => {
         } else if (chance < 0.5) { // 40% chance to become a Mutant
             const randomCard = getRandomCreatureCard();
 
+            const lowerCaseElement = randomCard.element.toLowerCase();
+            console.log(lowerCaseElement);
+
             // List of possible mutant abilities
             const abilities = [
-              `[icon:${randomCard.element}small] : Hatch\nThis creature will hatch into another random mutant`,
-              `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Freeze\nFreeze the target creature`,
-              `[icon:${randomCard.element}small] : Burrow\nThe ${randomCard.name} cannot be targeted, but its damage is halved.`,
-              `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Destroy\nDestroy the targeted permanent`,
-              `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Steal\nSteal a permanent`,
-              `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Dive\nThe damage is doubled for 1 turn.`,
-              `[icon:${randomCard.element}small] : Heal\nHeal the target creature up to 5 HP`,
+              `[icon:${lowerCaseElement}small] : Hatch\nThis creature will hatch into another random mutant`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Freeze\nFreeze the target creature`,
+              `[icon:${lowerCaseElement}small] : Burrow\nThe ${randomCard.name} cannot be targeted, but its damage is halved.`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Destroy\nDestroy the targeted permanent`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Steal\nSteal a permanent`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Dive\nThe damage is doubled for 1 turn.`,
+              `[icon:${lowerCaseElement}small] : Heal\nHeal the target creature up to 5 HP`,
               "Momentum: The creature ignores shield effects",
-              `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Paradox\nKill the target creature if its attack is higher than its defence`,
-              `[icon:${randomCard.element}small] : Lycanthropy\nThe ${randomCard.name} gains +5/+5 permanently. Can only be used Once.`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Paradox\nKill the target creature if its attack is higher than its defence`,
+              `[icon:${lowerCaseElement}small] : Lycanthropy\nThe ${randomCard.name} gains +5/+5 permanently. Can only be used Once.`,
               `Scavenger\nEvery time a creature dies, ${randomCard.name} gains +1/+1`,
-              `[icon:${randomCard.element}small] : Infection\nInflict 1 poison damage to a target creature.`,
-              `[icon:${randomCard.element}small] : Gravity Pull\nThe damage inflicted to you is redirected on ${randomCard.name}.`,
-              `Devour\nAbsorb 1 quantum from your opponent per turn and return a  [icon:${randomCard.element}small] to you`,
-              `[icon:${randomCard.element}small] : Mutation\nthe target creature into an abomination, unless it dies... or turn into someting weird.`,
-              `[icon:${randomCard.element}small] : Growth\nThe ${randomCard.name} gains +2/+2`,
-              `[icon:${randomCard.element}small] : Ablaze\nThe ${randomCard.name} gains +2/+0`,
-              `[icon:${randomCard.element}small] : Poison\nInflict 1 poison damage to the opponent.`,
-              `[icon:${randomCard.element}small] : Deja Vu\nRemove this ability, then ${randomCard.name} creates a copy of itself`,
-              `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Immaterial\nThe target creature is now immortal (untargetable).`,
-              `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Endow\n Gain the target weapon's ability and +X/+2. X is the weapon's attack.`,
-              `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Guard (Do not attack)\nDelay the target creature for 1 turn (cumulative) and attack it unless it is airborne.`,
-              `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Mitosis\nGenerate a daughter creature.`,
+              `[icon:${lowerCaseElement}small] : Infection\nInflict 1 poison damage to a target creature.`,
+              `[icon:${lowerCaseElement}small] : Gravity Pull\nThe damage inflicted to you is redirected on ${randomCard.name}.`,
+              `Devour\nAbsorb 1 quantum from your opponent per turn and return a  [icon:${lowerCaseElement}small] to you`,
+              `[icon:${lowerCaseElement}small] : Mutation\nthe target creature into an abomination, unless it dies... or turn into someting weird.`,
+              `[icon:${lowerCaseElement}small] : Growth\nThe ${randomCard.name} gains +2/+2`,
+              `[icon:${lowerCaseElement}small] : Ablaze\nThe ${randomCard.name} gains +2/+0`,
+              `[icon:${lowerCaseElement}small] : Poison\nInflict 1 poison damage to the opponent.`,
+              `[icon:${lowerCaseElement}small] : Deja Vu\nRemove this ability, then ${randomCard.name} creates a copy of itself`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Immaterial\nThe target creature is now immortal (untargetable).`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Endow\n Gain the target weapon's ability and +X/+2. X is the weapon's attack.`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Guard (Do not attack)\nDelay the target creature for 1 turn (cumulative) and attack it unless it is airborne.`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Mitosis\nGenerate a daughter creature.`,
             ];
 
             // Get a random ability from the list
@@ -133,12 +136,34 @@ const MutationPage = () => {
     const hatchMutantCreature = () => {
             const randomCard = getRandomCreatureCard();
 
+            const lowerCaseElement = randomCard.element.toLowerCase();
+            console.log(lowerCaseElement);
+
             // List of possible mutant abilities
             const abilities = [
-                `[icon:${randomCard.element}small] : Hatch\nThis creature will hatch into another random mutant`, `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Freeze`, `[icon:${randomCard.element}small] : Burrow`, `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Destroy`, `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Steal`, `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Dive`, `[icon:${randomCard.element}small] : Heal`, 
-                'Momentum', `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Paradox`, `[icon:${randomCard.element}small] : Lycanthropy`, 'Scavenger', `[icon:${randomCard.element}small] : Infection`, 
-                `[icon:${randomCard.element}small] : Gravity Pull`, 'Devour', `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Mutation`, `[icon:${randomCard.element}small] : Growth`, `[icon:${randomCard.element}small] : Ablaze`, `[icon:${randomCard.element}small] : Poison`, 
-                `[icon:${randomCard.element}small] : Deja Vu`, `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Immaterial`, `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Endow`, `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Guard`, `[icon:${randomCard.element}small] [icon:${randomCard.element}small] : Mitosis`
+              `[icon:${lowerCaseElement}small] : Hatch\nThis creature will hatch into another random mutant`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Freeze\nFreeze the target creature`,
+              `[icon:${lowerCaseElement}small] : Burrow\nThe ${randomCard.name} cannot be targeted, but its damage is halved.`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Destroy\nDestroy the targeted permanent`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Steal\nSteal a permanent`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Dive\nThe damage is doubled for 1 turn.`,
+              `[icon:${lowerCaseElement}small] : Heal\nHeal the target creature up to 5 HP`,
+              "Momentum: The creature ignores shield effects",
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Paradox\nKill the target creature if its attack is higher than its defence`,
+              `[icon:${lowerCaseElement}small] : Lycanthropy\nThe ${randomCard.name} gains +5/+5 permanently. Can only be used Once.`,
+              `Scavenger\nEvery time a creature dies, ${randomCard.name} gains +1/+1`,
+              `[icon:${lowerCaseElement}small] : Infection\nInflict 1 poison damage to a target creature.`,
+              `[icon:${lowerCaseElement}small] : Gravity Pull\nThe damage inflicted to you is redirected on ${randomCard.name}.`,
+              `Devour\nAbsorb 1 quantum from your opponent per turn and return a  [icon:${lowerCaseElement}small] to you`,
+              `[icon:${lowerCaseElement}small] : Mutation\nthe target creature into an abomination, unless it dies... or turn into someting weird.`,
+              `[icon:${lowerCaseElement}small] : Growth\nThe ${randomCard.name} gains +2/+2`,
+              `[icon:${lowerCaseElement}small] : Ablaze\nThe ${randomCard.name} gains +2/+0`,
+              `[icon:${lowerCaseElement}small] : Poison\nInflict 1 poison damage to the opponent.`,
+              `[icon:${lowerCaseElement}small] : Deja Vu\nRemove this ability, then ${randomCard.name} creates a copy of itself`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Immaterial\nThe target creature is now immortal (untargetable).`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Endow\n Gain the target weapon's ability and +X/+2. X is the weapon's attack.`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Guard (Do not attack)\nDelay the target creature for 1 turn (cumulative) and attack it unless it is airborne.`,
+              `[icon:${lowerCaseElement}small] [icon:${lowerCaseElement}small] : Mitosis\nGenerate a daughter creature.`,
             ];
 
             // Get a random ability from the list
