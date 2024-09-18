@@ -1,7 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useQuery } from '@apollo/client';
+import { GET_CARDS } from '../utils/queries';
 import CardCanvas from './CardCanvas'; // Import your CardCanvas component
+import DeckCardCanvas from './DeckCardCanvas';
+import "./ShardGolemPage.css"
 
 const ShardGolemPage = () => {
+    const { loading: cardLoading, error: cardError, data: cardData } = useQuery(GET_CARDS);
+    const [specificCards, setSpecificCards] = useState([]);
+
+    const shortName = 'Shard of ';
+
+    const cardNames = [
+      `${shortName}Integrity`,
+      `${shortName}Serendipity`,
+      `${shortName}Sacrifice`,
+      `${shortName}Focus`,
+      `${shortName}Gratitude`,
+      `${shortName}Bravery`,
+      `${shortName}Patience`,
+      `${shortName}Divinity`,
+      `${shortName}Freedom`,
+      `${shortName}Readiness`,
+      `${shortName}Void`,
+      `${shortName}Wisdom`,
+    ];
+
+    console.log(cardNames);
+
     const [shards, setShards] = useState({
         Integrity: 1,
         Serendipity: 0,
@@ -16,7 +42,41 @@ const ShardGolemPage = () => {
         Void: 0,
         Wisdom: 0,
     });
+
+    useEffect(() => {
+        if (!cardLoading && !cardError && cardData) {
+            // Filter and sort cards based on the order defined in cardNames
+            const filteredCards = cardData.cards
+                .filter(card => cardNames.includes(card.name))
+                .sort((a, b) => {
+                    // Sort according to the order in cardNames
+                    return cardNames.indexOf(a.name) - cardNames.indexOf(b.name);
+                });
+
+            setSpecificCards(filteredCards);
+            console.log(filteredCards);
+        }
+    }, [cardLoading, cardError, cardData]); // Added dependencies to the useEffect
+
     const [card, setCard] = useState(null);
+
+    // Increment function to increase shard count
+    const increment = (shardName, amount) => {
+        const shardKey = shardName.replace('Shard of ', ''); // Extract the key
+        setShards((prev) => ({
+            ...prev,
+            [shardKey]: Math.min(prev[shardKey] + amount, 8), // Max limit set to 8
+        }));
+    };
+
+    // Decrement function to decrease shard count
+    const decrement = (shardName, amount) => {
+        const shardKey = shardName.replace('Shard of ', ''); // Extract the key
+        setShards((prev) => ({
+            ...prev,
+            [shardKey]: Math.max(prev[shardKey] - amount, 0), // Minimum limit set to 0
+        }));
+    };
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -141,7 +201,7 @@ const ShardGolemPage = () => {
             }
         });
 
-        const cardData = {
+        const shardGolemData = {
             name: "Shard Golem",
             text: `${activeSkill}\n${passiveSkills.join(', ')}`,
             hasFlavourText: false,
@@ -154,32 +214,29 @@ const ShardGolemPage = () => {
             health: totalHealth,
         };
 
-        setCard(cardData);
+        setCard(shardGolemData);
     };
 
     return (
         <div>
             <h1>Shard Golem Creator</h1>
+            <button className='genButton' onClick={calculateStatsAndSkills}>Generate Shard Golem</button>
             <div>
-            {card && <CardCanvas card={card} />}
+                {card && <CardCanvas card={card} />}
             </div>
-            {Object.keys(shards).map((shard) => (
-                <div key={shard}>
-                    <label>
-                        {shard}:
-                        <input
-                            type="number"
-                            name={shard}
-                            value={shards[shard]}
-                            min="0"
-                            max="8" // Max hand size limit
-                            onChange={handleChange}
-                        />
-                    </label>
-                </div>
-            ))}
-            <button onClick={calculateStatsAndSkills}>Generate Shard Golem</button>
-
+            <div className="block-left-shards">
+                {/* Existing dynamic counters */}
+                {specificCards.map((card) => (
+                    <div className="row" key={card.name}>
+                        <button className="minus-button" onClick={() => decrement(card.name, 1)}>-</button>
+                        <div className="icon-text-shards">
+                            <DeckCardCanvas card={card} className="deck-card-canvas" />
+                            <span className="text">{shards[card.name.replace('Shard of ', '')]}</span>
+                        </div>
+                        <button className="plus-button" onClick={() => increment(card.name, 1)}>+</button>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

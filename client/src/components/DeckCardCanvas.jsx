@@ -14,7 +14,6 @@ const DeckCardCanvas = ({ card }) => {
             const img = new Image();
             img.onload = () => resolve(img);
             img.onerror = reject;
-            // img.src = localImageTesting+src;
             img.src = src;
         });
 

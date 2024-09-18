@@ -16,7 +16,6 @@ import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx';
 import DeckEdit from "./pages/DeckEdit.jsx";
 import DeckCreate from "./pages/DeckCreate.jsx";
-import CardDetail from "./components/ChaosSeedPage.jsx";
 import ChaosSeedPage from "./components/ChaosSeedPage.jsx";
 import PandemoniumPage from "./components/PandemoniumPage.jsx";
 import SingularityPage from "./components/SingularityPage.jsx";

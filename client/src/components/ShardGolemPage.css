@@ -1,0 +1,29 @@
+.icon-text-shards{
+    display: flex;
+    justify-content: center; /* Center text inside the icon */
+    position: relative;
+}
+
+.icon-text-shards .text {
+    position: absolute;
+    color: white; /* Set text color to contrast with the icon */
+    font-weight: bold;
+    font-size: 28px;
+    text-shadow: 2px 2px 2px black;;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block-left-shards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.genButton{
+    margin-bottom: 15px;
+}
