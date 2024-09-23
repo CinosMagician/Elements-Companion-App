@@ -50,3 +50,30 @@
 .right-card {
     flex-direction: row-reverse; /* Card on the right, text on the left */
 }
+
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+    .card {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+    .card {
+        padding: 0rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .card-grid {
+        grid-template-columns:repeat(2, 1fr); /* 1 column */
+    }
+    .card {
+        padding: 0rem;
+    }
+}

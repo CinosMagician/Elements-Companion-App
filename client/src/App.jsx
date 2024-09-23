@@ -7,6 +7,7 @@ import Auth from './utils/auth';
 import './App.css'
 import './fonts.css';
 import { UserProvider } from './utils/UserContext';
+import NavTabs from './components/Header';
 
 
 // Create an HTTP link to the GraphQL server
@@ -36,7 +37,7 @@ const App = () => {
   return (
     <ApolloProvider client={client}>
       <UserProvider>
-          <Header />
+          <NavTabs />
           <main className="flex-grow-1 py-4">
             <div className="container">
               <Outlet />

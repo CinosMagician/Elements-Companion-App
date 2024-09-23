@@ -66,11 +66,17 @@
     .card-grid {
         grid-template-columns: repeat(4, 1fr); /* 4 columns */
     }
+    .card {
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
     .card-grid {
         grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+    .card {
+        padding: 1rem;
     }
 }
 
@@ -78,11 +84,17 @@
     .card-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 columns */
     }
+    .card {
+        padding: 0rem;
+    }
 }
 
 @media (max-width: 400px) {
     .card-grid {
-        grid-template-columns: 1fr; /* 1 column */
+        grid-template-columns:repeat(2, 1fr); /* 1 column */
+    }
+    .card {
+        padding: 0rem;
     }
 }
 

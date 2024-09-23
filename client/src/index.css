@@ -49,7 +49,7 @@ body {
   background-image: url('/assets/images/cardArt/repeatmainback.png'); /* Replace with the path to your image */
   background-size: 2000px auto; /* Ensure the background covers the entire viewport */
   background-position: center; /* Center the background image */
-  background-repeat: repeat-y; /* Prevent the background from repeating */
+  background-repeat: repeat; /* Prevent the background from repeating */
 }
 
 h1 {
@@ -86,5 +86,16 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+@media (max-width: 576px) {
+  .mainTitle{
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .mainTitle{
+    font-size: 3rem;
   }
 }

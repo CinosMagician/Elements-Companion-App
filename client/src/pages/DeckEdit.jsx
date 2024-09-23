@@ -199,7 +199,7 @@ const DeckEdit = () => {
 
     return (
         <div style={{ padding: '20px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+            <div className='deckName'>
                 <input 
                     type="text" 
                     value={deckName} 
@@ -218,10 +218,10 @@ const DeckEdit = () => {
                     />
                 </button>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <div className='flexBox'>
                 {/* Deck Display */}
-                <div style={{ border: '1px solid #ccc', padding: '10px', width: '70%', height: "fit-content" }}>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(10, 1fr)', gap: '10px' }}>
+                <div className='deckZone'>
+                    <div className='deck-grid'>
                         {deckCards.map((card, index) => (
                             <div key={index} onClick={() => handleCardClick(card)} style={{ cursor: 'pointer' }} className='card-deck'>
                               <DeckCardCanvas card={card}/>

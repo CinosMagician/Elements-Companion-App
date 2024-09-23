@@ -1,5 +1,5 @@
 .library-container {
-    padding: 20px;
+    padding: 5px;
 }
 
 .search-filter-container {
@@ -13,6 +13,25 @@
     padding: 10px;
     font-size: 16px;
 }
+
+.flexBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.deckZone {
+    border: solid 1px #ccc;
+    padding: 10px;
+    height: fit-content;
+    /* width: 70%; */
+}
+
+.deckName {
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+}
+
 
 .filter-button {
     padding: 10px;
@@ -30,9 +49,9 @@
 
 .card-grid-deck {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 6 columns of equal width */
-    gap: 10px; /* Space between cards */
-    padding: 10px; /* Space around the grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Space around the grid */
     box-sizing: border-box;
 }
 
@@ -53,35 +72,44 @@
     height: auto;
 }
 
+.deck-grid{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+}
+
 /* Media Queries */
 @media (max-width: 1200px) {
-    .card-grid-deck {
-        grid-template-columns: repeat(3, 1fr); /* 5 columns */
+    .flexBox {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
     }
 }
 
 @media (max-width: 992px) {
-    .card-grid-deck {
-        grid-template-columns: repeat(2, 1fr); /* 4 columns */
-    }
 }
 
 @media (max-width: 768px) {
-    .card-grid-deck {
-        grid-template-columns: repeat(2, 1fr); /* 3 columns */
-    }
 }
 
 @media (max-width: 576px) {
-    .card-grid-deck {
-        grid-template-columns: repeat(1, 1fr); /* 2 columns */
+    .filter-modal-content {
+        background: white;
+        padding: 2px;
+        border-radius: 10px;
+        max-width: 500px;
+        width: 70%;
     }
+    .deck-grid{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+    }
+    
 }
 
 @media (max-width: 400px) {
-    .card-grid-deck {
-        grid-template-columns: 1fr; /* 1 column */
-    }
 }
 
 .filter-modal {

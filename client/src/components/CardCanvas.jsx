@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
-// const localImageTesting = 'http://localhost:3001'; // used to access the images on local testing
+// const localImageTesting = 'http://localhost:3001'; 
+// used to access the images on local testing
 
 const CardCanvas = ({ card }) => {
     const canvasRef = useRef(null);
