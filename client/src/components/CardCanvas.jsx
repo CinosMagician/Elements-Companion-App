@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-const localImageTesting = 'http://localhost:3001';
+// const localImageTesting = 'http://localhost:3001';
 // used to access the images on local testing
 
 const CardCanvas = ({ card }) => {
@@ -15,8 +15,8 @@ const CardCanvas = ({ card }) => {
             const img = new Image();
             img.onload = () => resolve(img);
             img.onerror = reject;
-            // img.src = import.meta.env.VITE_BACKEND_URL+src;
-            img.src = localImageTesting+src; 
+            img.src = import.meta.env.VITE_BACKEND_URL+src;
+            // img.src = localImageTesting+src; 
             // used for local testing
         });
 
