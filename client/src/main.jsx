@@ -22,6 +22,8 @@ import SingularityPage from "./components/SingularityPage.jsx";
 import ShardGolemPage from "./components/ShardGolemPage.jsx";
 import MutationPage from "./components/MutationPage.jsx";
 import SkullShieldPage from "./components/SkullShieldPage.jsx";
+import SkeletonPage from "./components/SkeletonPage.jsx";
+import CatapultPage from "./components/CatapultPage.jsx";
 
 // Initialize Apollo Client
 const client = new ApolloClient({
@@ -87,6 +89,14 @@ const router = createBrowserRouter([
       {
         path: "random/skull_shield",
         element: <SkullShieldPage />,
+      },
+      {
+        path: "random/skeleton",
+        element: <SkeletonPage />,
+      },
+      {
+        path: 'random/catapult',
+        element: <CatapultPage />,
       },
       {
         path: "random/shard_golem",

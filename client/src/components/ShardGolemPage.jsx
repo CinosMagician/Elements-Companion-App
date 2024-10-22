@@ -8,6 +8,7 @@ import "./ShardGolemPage.css"
 const ShardGolemPage = () => {
     const { loading: cardLoading, error: cardError, data: cardData } = useQuery(GET_CARDS);
     const [specificCards, setSpecificCards] = useState([]);
+    const [showPlaceholder, setShowPlaceholder] = useState(true); // State to manage placeholder visibility
 
     const shortName = 'Shard of ';
 
@@ -215,6 +216,7 @@ const ShardGolemPage = () => {
         };
 
         setCard(shardGolemData);
+        setShowPlaceholder(false); // Hide the placeholder after generating the Shard Golem
     };
 
     return (
@@ -222,10 +224,13 @@ const ShardGolemPage = () => {
             <h1>Shard Golem Creator</h1>
             <button className='genButton' onClick={calculateStatsAndSkills}>Generate Shard Golem</button>
             <div>
-                {card && <CardCanvas card={card} />}
+                {showPlaceholder ? (
+                    <img src="/assets/images/cardbacks/backcard.png" alt="Card Back" className="card-placeholder" />
+                ) : (
+                    card && <CardCanvas card={card} />
+                )}
             </div>
             <div className="block-left-shards">
-                {/* Existing dynamic counters */}
                 {specificCards.map((card) => (
                     <div className="row" key={card.name}>
                         <button className="minus-button" onClick={() => decrement(card.name, 1)}>-</button>
