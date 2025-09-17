@@ -1,0 +1,53 @@
+.card-creator-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.card-editor {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 10px;
+}
+
+.editor-label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+.editor-sublabel {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.editor-group {
+    display: flex;
+    gap: 10px;
+    /* width: 300px; */
+}
+
+.sub-label {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+}
+
+.card-canvas {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cardCanvas {
+    border: 1px solid #ddd; /* Optional: Add a border around the canvas */
+}

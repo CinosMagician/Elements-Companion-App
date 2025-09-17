@@ -12,6 +12,7 @@ import Library from './pages/Library';
 import HardLibrary from './pages/HardcodeLibrary';
 import RandomEffects from './pages/RandomEffects';
 import CardDetails from './pages/CardDetails';
+import CardCreator from './pages/CardCreator';
 import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx';
 import DeckEdit from "./pages/DeckEdit.jsx";
@@ -105,6 +106,10 @@ const router = createBrowserRouter([
       {
         path: 'card/:id',
         element: <CardDetails />,
+      },
+      {
+        path: 'card-creator',
+        element: <CardCreator />,
       },
       {
         path: 'login',

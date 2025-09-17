@@ -24,7 +24,7 @@ const cardData = [
     name: 'Chroma Pendulum',
     text: 'Alternately generates 3 random quantums and 1 quantum matching your mark.',
     hasFlavourText: false,
-    imageUrl: '/assets/images/cardArt/chromapendulum.',
+    imageUrl: '/assets/images/cardArt/chromapendulum.png',
     element: 'None',
     type: 'Permanent',
   },
@@ -1898,7 +1898,7 @@ const cardData = [
     text: "The target creature is placed on top of the creature owner's deck.",
     hasFlavourText: true,
     imageUrl: '/assets/images/cardArt/reversetime.jpeg',
-    element: 'Air',
+    element: 'Time',
     cost: 2,
     type: 'Spell'
   },
