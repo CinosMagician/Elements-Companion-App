@@ -61,7 +61,9 @@ const MutationPage = () => {
                 hasFlavourText: false,
                 imageUrl: '/assets/images/cardArt/boneyard.jpeg',
                 element: "Death",
-                type: "Creature"
+                type: "Creature",
+                attack: 0,
+                health: 0
             });
         } else if (chance < 0.5) { // 40% chance to become a Mutant
             const randomCard = getRandomCreatureCard();
@@ -200,7 +202,7 @@ const MutationPage = () => {
             {/* <CardSearch cards={data.cards} onSelect={handleCardSelect} /> */}
 
 
-                <div>
+                <div className='gap'> 
                     {/* <h2>Selected Creature</h2> */}
                     {/* <div><DeckCardCanvas card={selectedCard}/></div> */}
                     <button onClick={mutateCreature}>Mutate Creature</button>

@@ -1,8 +1,8 @@
 .effects-grid {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 1rem; /* Adjust gap between items as needed */
+    margin-inline: auto;
 }
 
 .effect-item {
@@ -12,4 +12,6 @@
     background-size: auto; /* Ensure the background covers the entire viewport */
     background-position: center; /* Center the background image */
     background-repeat: repeat; /* Prevent the background from repeating */
+    grid-template-rows: repeat(1, 1fr);
+    display: grid;
 }

@@ -16,6 +16,7 @@
     border-radius: 8px;
     width: 300px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-image: url(/assets/images/cardArt/repeatmainback.png);
 }
 
 .modal-content h2 {

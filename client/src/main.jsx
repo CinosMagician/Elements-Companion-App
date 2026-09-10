@@ -25,6 +25,8 @@ import MutationPage from "./components/MutationPage.jsx";
 import SkullShieldPage from "./components/SkullShieldPage.jsx";
 import SkeletonPage from "./components/SkeletonPage.jsx";
 import CatapultPage from "./components/CatapultPage.jsx";
+import Lobby from "./pages/Lobby.jsx";
+import Game from "./pages/Game.jsx";
 
 // Initialize Apollo Client
 const client = new ApolloClient({
@@ -118,6 +120,14 @@ const router = createBrowserRouter([
       {
         path: 'signup',
         element: <Signup />,
+      },
+      {
+        path: 'play',
+        element: <Lobby />,
+      },
+      {
+        path: 'game',
+        element: <Game />,
       }
     ],
   },

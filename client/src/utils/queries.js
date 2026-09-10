@@ -14,6 +14,7 @@ export const GET_ME = gql`
           name
           text
           hasFlavourText
+          isUpped
           imageUrl
           element
           cost
@@ -116,6 +117,7 @@ export const GET_CARDS = gql`
       name
       text
       hasFlavourText
+      isUpped
       isToken
       imageUrl
       element
@@ -134,6 +136,7 @@ export const GET_CARD = gql`
       name
       text
       hasFlavourText
+      isUpped
       isToken
       imageUrl
       element

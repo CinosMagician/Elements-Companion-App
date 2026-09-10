@@ -59,6 +59,11 @@
     align-items: center; /* Center items horizontally */
 }
 
+.container.bottom-row {
+    grid-column: span 2;
+    justify-content: end;
+}
+
 .uniqueRow-container {
     display: flex;
     justify-content: center; /* Center .uniqueRow horizontally */

@@ -16,11 +16,13 @@
     border-radius: 10px;
     max-width: 500px;
     width: 100%;
+    background-image: url(/assets/images/cardArt/repeatmainback.png);
 }
 
 .filter-modal-content h3 {
     margin-top: 0;
     text-align: center;
+    color: orange;
 }
 
 .filter-modal-content .filter-row {
@@ -28,6 +30,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+    color: orange;
 }
 
 .filter-modal-content label {

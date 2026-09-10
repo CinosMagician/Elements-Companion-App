@@ -16,6 +16,7 @@
     border-radius: 8px;
     text-align: center;
     width: 300px;
+    background-image: url(/assets/images/cardArt/repeatmainback.png);
 }
 
 .modal-content h2 {

@@ -199,7 +199,7 @@ const DeckCreate = () => {
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 {/* Deck Display */}
-                <div style={{ border: '1px solid #ccc', padding: '10px', width: '70%', height: "fit-content" }}>
+                <div class="deckZone">
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(10, 1fr)', gap: '10px' }}>
                         {deckCards.map((card, index) => (
                             <div key={index} onClick={() => handleCardClick(card)} style={{ cursor: 'pointer' }} className='card-deck'>

@@ -263,11 +263,8 @@ const Calculator = () => {
                             <button className="plus-button" onClick={() => increment(key, 1)}>+</button>
                         </div>
                     ))}
-                    <div className="container">
+                    <div className="container bottom-row">
                         <div className='icon-text'>
-                            <img src={`/assets/images/icons/blank.png`} className="icon" />
-                            <img src={`/assets/images/icons/blank.png`} className="icon" />
-                            <img src={`/assets/images/icons/blank.png`} className="icon" />
                             <button className="text-button" onClick={() => setIsRemoveQuantaModalOpen(true)}>Remove Random Quanta</button>
                             <img src={`/assets/images/icons/chroma.png`} alt="Element Icon" className="icon" />
                             <button className="text-button" onClick={() => setIsAddQuantaModalOpen(true)}>Add Random Quanta</button>

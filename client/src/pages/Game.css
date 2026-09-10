@@ -1,0 +1,220 @@
+.game {
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-board {
+    width: 1920px;
+    height: 1080px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    transform-origin: center center;
+}
+
+#enemy-side,
+#player-side {
+    width: 100%;
+    height: 540px;
+
+    border: 2px solid orange;
+    display: flex;
+
+    box-sizing: border-box;
+}
+
+.stats-area {
+    width: 15%;
+    border: 2px solid red;
+    height: 100%;
+}
+
+.hand-area {
+    width: 15%;
+    border: 2px solid blue;
+    height: 100%;
+}
+
+.play-area {
+    width: 70%;
+    border: 2px solid purple;
+    height: 100%;
+}
+
+.quanta-cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5px;
+    padding-inline: 10px;
+    padding-block: 5px;
+}
+
+.quanta-cols > :nth-child(even) {
+    margin-top: 20px;
+}
+
+.quanta-zone {
+    width: auto;
+    height: 40px;
+    display: flex;
+    padding: 5px;
+    position: relative;
+}
+
+.stat-icon {
+    width: 45px;
+    position: absolute;
+    top: -3px;
+    left: -10px;
+}
+
+.quanta-tracker {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-items: self-end;
+    border: 1px solid white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: 0px;
+    margin-bottom: 10px;
+    font-family: 'Playfair';
+    font-weight: bold;
+    font-size: 22px;
+    padding-left: 15px;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+.quanta-bar {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.quanta-bar-fill {
+    height: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: -10px;
+    margin-right: 10px;
+    background: linear-gradient(
+        to bottom,
+        color-mix(in srgb, var(--quanta-colour), white 50%) 0%,
+        var(--quanta-colour) 50%,
+        color-mix(in srgb, var(--quanta-colour), white 50%) 100%
+    );
+    transition: width 0.2s ease;
+}
+
+.hp-deck {
+    display: flex;
+    height: 100px;
+    border: 1px solid red;
+}
+
+.hp-zone {
+    width: 70%;
+    height: 100%;
+    border: 1px solid lime;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.hp-zone-enemy {
+    width: 70%;
+    height: 100%;
+    border: 1px solid lime;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deck-zone {
+    width: 30%;
+    height: 100%;
+    border: 1px solid brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.deck-icon {
+    height: 75px;
+    border: 1px solid white;
+}
+
+.deck-count {
+    position: absolute;
+    font-family: 'Playfair';
+    font-size: 33px;
+    bottom: 0px;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+.hp-text {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+    position: absolute;
+    top: 15px;
+    z-index: 2;
+}
+
+.hp-text > p {
+    font-family: 'Playfair';
+    font-size: 20px;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+.hp-text-enemy {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+    position: absolute;
+    top: -15px;
+    z-index: 2;
+}
+
+.hp-text-enemy > p {
+    font-family: 'Playfair';
+    font-size: 20px;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+#player-hp, #enemy-hp {
+    color: #65FE98;
+    font-size: 25px;
+    bottom: -5px;
+    right: 0px;
+    position: absolute;
+}
+
+.hp-game-bar {
+    width: 75%;
+    background: linear-gradient(
+        to bottom,
+        #7CFF7B 0%,
+        #03C102 50%,
+        #7CFF7B 100%
+    );
+    border-radius: 5px;
+    height: 20px;
+    margin-bottom: 15px;
+}

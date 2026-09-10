@@ -102,9 +102,11 @@ const NavTabs = () => {
   const menuItems = [
     { name: 'Home', path: '/' },
     { name: 'Decks', onClick: handleDecksClick }, // Remove path and use only onClick handler
+    { name: 'Card Creator', path: '/card-creator' },
     { name: 'Calculator', path: '/calculator' },
     { name: 'Library', path: '/library' },
     { name: 'Random Effects', path: '/random' },
+    { name: 'Play', path: '/play' },
   ];
 
   const authItems = state.isAuthenticated

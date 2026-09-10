@@ -20,6 +20,7 @@ const typeDefs = gql`
     name: String!            # Name of the card
     text: String!            # Text displayed on the card
     hasFlavourText: Boolean! # Indicates if the card has flavor text
+    isUpped: Boolean         # Shows if the card is upgraded
     isToken: Boolean         # Checks if card is playable in main deck
     imageUrl: String         # Card art image
     element: String!         # Element of the card

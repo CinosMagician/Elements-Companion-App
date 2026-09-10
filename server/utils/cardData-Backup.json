@@ -1,6 +1,5 @@
 [
     {
-      "_id": "???",
       "name": "Mark of Chroma",
       "text": "Each turn  [icon:chromasmall] [icon:chromasmall] [icon:chromasmall]  random quantums are generated",
       "hasFlavourText": false,
@@ -9,7 +8,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "4sa",
       "name": "Quantum Pillar",
       "text": "Each turn  [icon:chromasmall] [icon:chromasmall] [icon:chromasmall]  random quantums are generated",
       "hasFlavourText": false,
@@ -18,7 +16,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "???",
       "name": "Chroma Pendulum",
       "text": "Alternately generates\n[icon:chromasmall] [icon:chromasmall] [icon:chromasmall]  random quantums and 1 quantum matching your mark.",
       "hasFlavourText": false,
@@ -27,7 +24,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "4t3",
       "name": "Dagger",
       "text": "Weapon: Deal 2 damage at the end of every turn. Deal 1 extra damage if you have a Death or Darkness mark.",
       "hasFlavourText": false,
@@ -38,7 +34,6 @@
       "health": 1
     },
     {
-      "_id": "4t4",
       "name": "Shortsword",
       "text": "Weapon: Deal 3 damage at the end of every turn",
       "hasFlavourText": false,
@@ -50,7 +45,6 @@
       "health": 2
     },
     {
-      "_id": "4t5",
       "name": "Hammer",
       "text": "Weapon: Deal 3 damage at the end of every turn. Deal 1 extra damage if you have a Gravity or Earth mark.",
       "hasFlavourText": false,
@@ -62,7 +56,6 @@
       "health": 4
     },
     {
-      "_id": "4tb",
       "name": "Short Bow",
       "text": "Weapon: Deal 3 damage at the end of every turn. Deal 1 extra damage if you have an Air mark.",
       "hasFlavourText": false,
@@ -74,7 +67,6 @@
       "health": 3
     },
     {
-      "_id": "4tc",
       "name": "Shield",
       "text": "Shield: Reduce damage by 1.",
       "hasFlavourText": false,
@@ -84,7 +76,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "4t8",
       "name": "Malignant Cell",
       "text": "Infest:\nGenerates a new malignant cell every turn.",
       "hasFlavourText": false,
@@ -96,7 +87,6 @@
       "health": 1
     },
     {
-      "_id": "4t9",
       "name": "Relic",
       "text": "The remains of what was once a valued creature or artifact. Probably still worth a few coins.",
       "hasFlavourText": true,
@@ -106,7 +96,6 @@
       "type": "Spell"
     },
     {
-      "_id": "???",
       "name": "Prismatic Elixir",
       "text": "Target creature's ability is replaced with Chromatic Charge 10  [icon:chromasmall] : Gain +1/+1.",
       "hasFlavourText": false,
@@ -116,7 +105,6 @@
       "type": "Spell"
     },
     {
-      "_id": "???",
       "name": "Prismatic Edge",
       "text": "Weapon: Deal 5 + X damage at the end of every turn. X is the number of each element Quanta with count 20 or more",
       "hasFlavourText": false,
@@ -128,7 +116,6 @@
       "health": 3
     },
     {
-      "_id": "???",
       "name": "Shard of Chromance",
       "text": "Chromance: Return one of your creatures to your hand and transform it into a Shard matching that element.",
       "hasFlavourText": false,
@@ -138,7 +125,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "???",
       "name": "Rainbow Nymph",
       "text": "[icon:chromasmall] [icon:chromasmall] [icon:chromasmall] [icon:chromasmall]  : Prism Elixir Target creature's ability is replaced with Chromatic Charge 10 [icon:chromasmall]: Gain +1/+1.",
       "hasFlavourText": false,
@@ -150,7 +136,6 @@
       "health": 6
     },
     {
-      "_id": "8pj",
       "name": "Mark of Entropy",
       "text": "Each turn [icon:entropysmall] is generated",
       "hasFlavourText": false,
@@ -159,7 +144,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "4vc",
       "name": "Amethyst Pillar",
       "text": "Each turn [icon:entropysmall] is generated",
       "hasFlavourText": false,
@@ -168,7 +152,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "50u",
       "name": "Entropy Pendulum",
       "text": "Alternately generates  [icon:entropysmall]  and 1 quantum matching your mark.",
       "hasFlavourText": false,
@@ -177,7 +160,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "4vd",
       "name": "Maxwell's Demon",
       "text": "[icon:entropysmall] [icon:entropysmall] Paradox:\nKill the target creature if its attack is higher than its defence",
       "hasFlavourText": false,
@@ -189,7 +171,6 @@
       "health": 2
     },
     {
-      "_id": "4ve",
       "name": "Abomination",
       "text": "flavour text",
       "hasFlavourText": true,
@@ -201,7 +182,6 @@
       "health": 5
     },
     {
-      "_id": "4vf",
       "name": "Purple Dragon",
       "text": "flavour text.",
       "hasFlavourText": true,
@@ -213,7 +193,6 @@
       "health": 5
     },
     {
-      "_id": "4vg",
       "name": "Dissapation Shield",
       "text": "Shield: Use 1 [icon:entropysmall] to absorb 3 damages from physical damage sources.",
       "hasFlavourText": false,
@@ -223,7 +202,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "4vh",
       "name": "Lycanthrope",
       "text": "[icon:darknesssmall] [icon:darknesssmall] Lycanthropy:\nThe Lycanthrope gains +5/+5 permanently. Can only be used Once.",
       "hasFlavourText": false,
@@ -235,7 +213,6 @@
       "health": 1
     },
     {
-      "_id": "4vi",
       "name": "Chaos Seed",
       "text": "A random effect is inflicted on the target. See Random Effects tab to apply affect.",
       "Desc": "One of the following effects is applied to the target: Infect, Lightning, Ice Bolt, Fire Bolt, Freeze, Parallel Universe, Lobotomize, Drain Life, Sniper, Shock Wave, Reverse Time, Gravity Pull",
@@ -246,7 +223,6 @@
       "type": "Spell"
     },
     {
-      "_id": "???",
       "name": "Chaos Power",
       "text": "A random bonus in attack power and health is granted to the target",
       "Desc": "The random bonus is at least +1/+1, +5/+5 maximum.",
@@ -258,7 +234,6 @@
       "type": "Spell"
     },
     {
-      "_id": "4vj",
       "name": "Nova",
       "text": "Generate 12 quanta. 1 for each element. Do not cast more than twice per turn.",
       "hasFlavourText": false,
@@ -267,7 +242,6 @@
       "type": "Spell"
     },
     {
-      "_id": "4vr",
       "name": "Singularity",
       "text": "At the end of your turn, apply 1 effect from the Random Effects tab.",
       "hasFlavourText": false,
@@ -280,7 +254,6 @@
       "health": 3
     },
     {
-      "_id": "4vk",
       "name": "Mutation",
       "text": "Mutate the target creature into an abomination, unless it dies... or turn into something weird.",
       "desc": "Abomination chance = 50%, Mutant chance = 40%, Death chance = 10",
@@ -291,7 +264,6 @@
       "type": "Spell"
     },
     {
-      "_id": "???",
       "name": "Mutant Token",
       "text": "Used for when a creature is turned into a Mutant. See Random Effects tab for stat calculation.",
       "hasFlavourText": false,
@@ -303,7 +275,6 @@
       "health": 0
     },
     {
-      "_id": "4vm",
       "name": "Fallen Elf",
       "text": "[icon:lifesmall] Mutation:\nthe target creature into an abomination, unless it dies... or turn into something weird.",
       "desc": "Abomination chance = 50%, Mutant chance = 40%, Death chance = 10%",
@@ -316,7 +287,6 @@
       "health": 2
     },
     {
-      "_id": "4vn",
       "name": "Antimatter",
       "text": "Invert the attack power of the target creature (the creature inflict heals instead of damage)",
       "hasFlavourText": false,
@@ -326,7 +296,6 @@
       "type": "Spell"
     },
     {
-      "_id": "4vo",
       "name": "Butterfly Effect",
       "text": "Target a low attack power creature (less than 3). The creature's skill is now\n\n\n[icon:entropysmall] [icon:entropysmall] [icon:entropysmall] : Destroy.",
       "hasFlavourText": false,
@@ -336,7 +305,6 @@
       "type": "Spell"
     },
     {
-      "_id": "4vp",
       "name": "Pandemonium",
       "text": "A random effect is inflicted to every creature on the field. Removes invisibility.",
       "desc": "One of the following effects is applied to the target: Infect, Lightning, Ice Bolt, Fire Bolt, Freeze, Parallel Universe, Lobotomize, Drain Life, Sniper, Shock Wave, Reverse Time, Gravity Pull",
@@ -347,7 +315,6 @@
       "type": "Spell"
     },
     {
-      "_id": "4vq",
       "name": "Schrödinger's Cat",
       "text": "[icon:entropysmall] Dead and Alive:\nKill this creature; death effects are triggered. This creature is still alive.",
       "hasFlavourText": false,
@@ -359,7 +326,6 @@
       "health": 1
     },
     {
-      "_id": "4vl",
       "name": "Discord",
       "text": "Weapon: Deal 4 damage and randomly convert 4 of the opponent's quantums into other elements.",
       "hasFlavourText": false,
@@ -371,7 +337,6 @@
       "health": 3
     },
     {
-      "_id": "50a",
       "name": "Shard of Serendipity",
       "text": "Add 1 [icon:entropysmall] card from your deck to your hand except Shard of Serendipity. Shuffle your deck and draw 2 cards.",
       "hasFlavourText": false,
@@ -381,7 +346,6 @@
       "type": "Spell"
     },
     {
-      "_id": "500",
       "name": "Purple Nymph",
       "text": "[icon:entropysmall] [icon:entropysmall] [icon:entropysmall] [icon:entropysmall] : Antimatter\nInvert the attack power of the target creature.",
       "hasFlavourText": false,
@@ -393,7 +357,6 @@
       "health": 1
     },
     {
-      "_id": "8pk",
       "name": "Mark of Death",
       "text": "Each turn  [icon:deathsmall]  is generated",
       "hasFlavourText": false,
@@ -402,7 +365,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "52g",
       "name": "Bone Pillar",
       "text": "Each turn  [icon:deathsmall]  is generated",
       "hasFlavourText": false,
@@ -411,7 +373,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "542",
       "name": "Death Pendulum",
       "text": "Alternately generates  [icon:deathsmall]  and 1 quantum matching your mark.",
       "hasFlavourText": false,
@@ -420,7 +381,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "52h",
       "name": "Bone Dragon",
       "text": "flavour text",
       "hasFlavourText": true,
@@ -432,7 +392,6 @@
       "health": 5
     },
     {
-      "_id": "52i",
       "name": "Virus",
       "text": "Infect:\nSacrifice Virus to inflict 1 poison to a target creature",
       "hasFlavourText": false,
@@ -444,7 +403,6 @@
       "health": 1
     },
     {
-      "_id": "52j",
       "name": "Flesh Spider",
       "text": "[icon:airsmall] : Web\nThe target creature loses its airborne skill",
       "hasFlavourText": false,
@@ -456,7 +414,6 @@
       "health": 3
     },
     {
-      "_id": "52k",
       "name": "Vulture",
       "text": "Scavenger:\nEvery time a creature dies, Vulture gains +1/+1",
       "hasFlavourText": false,
@@ -468,7 +425,6 @@
       "health": 1
     },
     {
-      "_id": "52l",
       "name": "Skull Shield",
       "text": "Shield: Reduce damage by 1. Attacking creatures have a small chance to die and turn into skeletons.",
       "desc": "Chance: 50%/Current creature HP",
@@ -479,7 +435,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "52m",
       "name": "Skeleton",
       "text": "Undead: Skeleton turns into a random creature if targeted with reverse time.",
       "hasFlavourText": false,
@@ -491,7 +446,6 @@
       "health": 1
     },
     {
-      "_id": "52n",
       "name": "Boneyard",
       "text": "Every time a creature is killed, boneyard generates 1 skeleton.",
       "hasFlavourText": false,
@@ -501,7 +455,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "52o",
       "name": "Poison",
       "text": "Inflicts 2 poison damage (to your opponent) at the end of every turn. Poison damage is cumulative.",
       "hasFlavourText": false,
@@ -511,7 +464,6 @@
       "type": "Spell"
     },
     {
-      "_id": "52p",
       "name": "Plague",
       "text": "Infect every enemey creature (+1 Poison). Removes invisibility.",
       "hasFlavourText": false,
@@ -521,7 +473,6 @@
       "type": "Spell"
     },
     {
-      "_id": "52r",
       "name": "Bone Wall",
       "text": "Shield: Place 7 bone shields on this card that absorb damage from a single source. Gains 2 shields when a creature dies.",
       "hasFlavourText": false,
@@ -531,7 +482,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "52s",
       "name": "Aflatoxin",
       "text": "Poison the target creature\n(+2 Poison). If the target creature dies, it turns into a malignant cell.",
       "hasFlavourText": false,
@@ -541,7 +491,6 @@
       "type": "Spell"
     },
     {
-      "_id": "52t",
       "name": "Mummy",
       "text": "Mummy turns into a Pharaoh if targeted with reverse time.",
       "hasFlavourText": false,
@@ -553,7 +502,6 @@
       "health": 3
     },
     {
-      "_id": "52u",
       "name": "Deathstalker",
       "text": "Deadly Venom:\nAdd 2 poison damage to each successful attack. Cause poisoning if ingested.",
       "hasFlavourText": false,
@@ -565,7 +513,6 @@
       "health": 1
     },
     {
-      "_id": "52v",
       "name": "Soul Catcher",
       "text": "Every time a creature\nis killed, Soul Catcher generates  [icon:deathsmall] [icon:deathsmall]",
       "hasFlavourText": false,
@@ -574,7 +521,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "52q",
       "name": "Arsenic",
       "text": "Weapon: Deal 2 damage and 1 poison at the end of every turn. Poison damage is cumulative",
       "hasFlavourText": false,
@@ -586,7 +532,6 @@
       "health": 7
     },
     {
-      "_id": "53e",
       "name": "Shard of Sacrifice",
       "text": "Inflict 48 damage to yourself and remove all but your  [icon:deathsmall]  quanta. Swap damage with healing. Lasts 2 turns.",
       "hasFlavourText": false,
@@ -596,7 +541,6 @@
       "type": "Spell"
     },
     {
-      "_id": "534",
       "name": "Grey Nymph",
       "text": "[icon:deathsmall] : Aflatoxin, Poison the target creature (+2 poison). If the target creature dies, it turns into a malignant cell.",
       "hasFlavourText": false,
@@ -608,7 +552,6 @@
       "health": 8
     },
     {
-      "_id": "8pl",
       "name": "Mark of Gravity",
       "text": "Each turn  [icon:gravitysmall]  is generated",
       "hasFlavourText": false,
@@ -617,7 +560,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "55k",
       "name": "Gravity Pillar",
       "text": "Each turn  [icon:gravitysmall]  is generated",
       "hasFlavourText": false,
@@ -626,7 +568,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "576",
       "name": "Gravity Pendulum",
       "text": "Alternately generates  [icon:gravitysmall]  and 1 quantum matching your mark.",
       "hasFlavourText": false,
@@ -635,7 +576,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "55l",
       "name": "Sapphire Charger",
       "text": "Momentum:\nThe damage caused by the Sapphire Charger can not be reduced, shields are ignored.",
       "hasFlavourText": false,
@@ -647,7 +587,6 @@
       "health": 5
     },
     {
-      "_id": "55m",
       "name": "Armagio",
       "text": "[icon:gravitysmall] : Gravity Pull\nThe damage inflicted to you is redirected on Armagio.",
       "hasFlavourText": false,
@@ -659,7 +598,6 @@
       "health": 25
     },
     {
-      "_id": "55n",
       "name": "Graviton Mercenary",
       "text": "flavour text",
       "hasFlavourText": true,
@@ -671,7 +609,6 @@
       "health": 5
     },
     {
-      "_id": "55o",
       "name": "Colossal Dragon",
       "text": "flavour text",
       "hasFlavourText": true,
@@ -683,7 +620,6 @@
       "health": 15
     },
     {
-      "_id": "55p",
       "name": "Gravity Shield",
       "text": "Shield:\nAny creature that has more than 5 HP is unable to reach you",
       "hasFlavourText": false,
@@ -693,7 +629,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "55q",
       "name": "Momentum",
       "text": "The target creature ignores shield effects and gains +1/+1",
       "hasFlavourText": false,
@@ -703,7 +638,6 @@
       "type": "Spell"
     },
     {
-      "_id": "55r",
       "name": "Otyugh",
       "text": "[icon:gravitysmall] : Devour\nSwallow a smaller (less HP) creature and gain +1/+1",
       "hasFlavourText": false,
@@ -715,7 +649,6 @@
       "health": 3
     },
     {
-      "_id": "55t",
       "name": "Gravity Pull",
       "text": "The creature enchanted with gravity pull will absorb all the damage directed against its owner.",
       "hasFlavourText": false,
@@ -725,7 +658,6 @@
       "type": "Spell"
     },
     {
-      "_id": "55u",
       "name": "Graviton Fire Eater",
       "text": "[icon:firesmall] : Ablaze\nGraviton Fire Eater gains\n+2/+0",
       "hasFlavourText": false,
@@ -737,7 +669,6 @@
       "health": 5
     },
     {
-      "_id": "55v",
       "name": "Black Hole",
       "text": "Absorb 3 quanta per element from the opponent. Gain 1 HP per absorbed quantum.",
       "hasFlavourText": false,
@@ -747,7 +678,6 @@
       "type": "Spell"
     },
     {
-      "_id": "560",
       "name": "Chimera",
       "text": "Combine all your creatures in a single one. Gravity pull, Momentum",
       "hasFlavourText": false,
@@ -759,7 +689,6 @@
       "health": 0
     },
     {
-      "_id": "561",
       "name": "Catapult",
       "text": "[icon:gravitysmall] [icon:gravitysmall] : Sacrifice the target creature and damage your opponent. Larger creatures inflict more damage.",
       "hasFlavourText": false,
@@ -769,7 +698,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "562",
       "name": "Acceleration",
       "text": "Replace the target creature skill with acceleration: gain\n\n+2 / -1 per turn.",
       "hasFlavourText": false,
@@ -779,7 +707,6 @@
       "type": "Spell"
     },
     {
-      "_id": "563",
       "name": "Graviton Salvager",
       "text": "Salvaging: a permanent destroyed by your opponent is returned to your hand.",
       "hasFlavourText": false,
@@ -791,7 +718,6 @@
       "health": 5
     },
     {
-      "_id": "55s",
       "name": "Titan",
       "text": "Weapon: Deal 7 damages at the end of every turn. Momentum: Shield effects are ignored.",
       "hasFlavourText": false,
@@ -803,7 +729,6 @@
       "health": 50
     },
     {
-      "_id": "56i",
       "name": "Shard of Focus",
       "text": "Accretion:\nDestroy a permanent and gain +0/+15. Turn into a black hole if HP>45.",
       "hasFlavourText": false,
@@ -815,7 +740,6 @@
       "health": 1
     },
     {
-      "_id": "568",
       "name": "Amber Nymph",
       "text": "[icon:gravitysmall] [icon:gravitysmall] [icon:gravitysmall] : Black Hole\nAbsorb 3 quanta per element from the opponent. Gain 1 HP per absorbed quantum.",
       "hasFlavourText": false,
@@ -827,7 +751,6 @@
       "health": 3
     },
     {
-      "_id": "8pm",
       "name": "Mark of Earth",
       "text": "Each turn  [icon:earthsmall]  is generated",
       "hasFlavourText": false,
@@ -836,7 +759,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "58o",
       "name": "Stone Pillar",
       "text": "Each turn  [icon:earthsmall]  is generated",
       "hasFlavourText": false,
@@ -845,7 +767,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5aa",
       "name": "Earth Pendulum",
       "text": "Alternately generates  [icon:earthsmall]  and 1 quantum matching your mark.",
       "hasFlavourText": false,
@@ -854,7 +775,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "58p",
       "name": "Antlion",
       "text": "[icon:earthsmall] : Burrow\nThe Antlion can not be targeted, but its damage is halved.",
       "hasFlavourText": false,
@@ -866,7 +786,6 @@
       "health": 3
     },
     {
-      "_id": "58q",
       "name": "Hematite Golem",
       "text": "flavour text",
       "hasFlavourText": true,
@@ -878,7 +797,6 @@
       "health": 6
     },
     {
-      "_id": "58r",
       "name": "Stone Dragon",
       "text": "This mighty dragon of stone is no joke, with its raw power in both its attack and defense.",
       "hasFlavourText": true,
@@ -890,7 +808,6 @@
       "health": 10
     },
     {
-      "_id": "58s",
       "name": "Titanium Shield",
       "text": "Shield:\nThe damage dealt to you from physical damage sources is reduced by 2.",
       "hasFlavourText": false,
@@ -900,7 +817,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "58t",
       "name": "Plate Armor",
       "text": "The target creature gains +0/+3",
       "hasFlavourText": false,
@@ -910,7 +826,6 @@
       "type": "Spell"
     },
     {
-      "_id": "58u",
       "name": "Gnome Rider",
       "text": "Each turn  [icon:earthsmall]  is generated",
       "hasFlavourText": false,
@@ -922,7 +837,6 @@
       "health": 2
     },
     {
-      "_id": "590",
       "name": "Graboid",
       "text": "[icon:timesmall] : Evolve\nTurn the Graboid into a Shrieker. Graboid enters the game burrowed.",
       "hasFlavourText": false,
@@ -934,7 +848,6 @@
       "health": 3
     },
     {
-      "_id": "591",
       "name": "Shrieker",
       "text": "[icon:earthsmall] : Burrow\nThe Shrieker can not be targeted, but its damage is halved.",
       "hasFlavourText": false,
@@ -946,7 +859,6 @@
       "health": 3
     },
     {
-      "_id": "592",
       "name": "Enchant Artifact",
       "text": "The target permanent can not be target of any skill. It does not work on creatures.",
       "hasFlavourText": false,
@@ -956,7 +868,6 @@
       "type": "Spell"
     },
     {
-      "_id": "593",
       "name": "Earthquake",
       "text": "Destroy up to 3 pillars in the target cluster.",
       "hasFlavourText": false,
@@ -966,7 +877,6 @@
       "type": "Spell"
     },
     {
-      "_id": "594",
       "name": "Stone Skin",
       "text": "Add X HP to your maximum life points. X is the number of  [icon:earthsmall]  that you own.",
       "hasFlavourText": false,
@@ -976,7 +886,6 @@
       "type": "Spell"
     },
     {
-      "_id": "595",
       "name": "Basilisk Blood",
       "text": "The target creature gains +0/+20 but can not attack or use skills for 6 turns",
       "hasFlavourText": false,
@@ -986,7 +895,6 @@
       "type": "Spell"
     },
     {
-      "_id": "596",
       "name": "Iridium Warden",
       "text": "[icon:earthsmall] : Guard (Do not attack) Delay the target creature for 1 turn (cumulative) and attack it unless it is airborne.",
       "hasFlavourText": false,
@@ -998,7 +906,6 @@
       "health": 3
     },
     {
-      "_id": "597",
       "name": "Shard Golem",
       "text": "Reassemble your last shard golem. See Random Effects tab for Shard Golem Stats",
       "hasFlavourText": false,
@@ -1011,7 +918,6 @@
       "health": 0
     },
     {
-      "_id": "58v",
       "name": "Pulverizer",
       "text": "Weapon: Deal 5 damage at the end of every turn.\n\n[icon:gravitysmall] [icon:gravitysmall] [icon:gravitysmall] : Shatter the target permanent.",
       "hasFlavourText": false,
@@ -1023,7 +929,6 @@
       "health": 12
     },
     {
-      "_id": "59m",
       "name": "Shard of Integrity",
       "text": "Combine all the shards in your hand to form and summon a shard golem.",
       "hasFlavourText": false,
@@ -1033,7 +938,6 @@
       "type": "Spell"
     },
     {
-      "_id": "59c",
       "name": "Auburn Nymph",
       "text": "[icon:earthsmall] [icon:earthsmall] [icon:earthsmall] : Petrify\nThe target creature gains +0/+20 but can not attack or use skills for 6 turns.",
       "hasFlavourText": false,
@@ -1045,7 +949,6 @@
       "health": 8
     },
     {
-      "_id": "8pn",
       "name": "Mark of Life",
       "text": "Each turn  [icon:lifesmall]  is generated",
       "hasFlavourText": false,
@@ -1054,7 +957,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5bs",
       "name": "Emerald Pillar",
       "text": "Each turn  [icon:lifesmall]  is generated",
       "hasFlavourText": false,
@@ -1063,7 +965,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5de",
       "name": "Life Pendulum",
       "text": "Alternately generates  [icon:lifesmall]  and 1 quantum matching your mark.",
       "hasFlavourText": false,
@@ -1072,7 +973,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5bt",
       "name": "Emerald Dragon",
       "text": "flavour text",
       "hasFlavourText": true,
@@ -1084,7 +984,6 @@
       "health": 6
     },
     {
-      "_id": "5bu",
       "name": "Horned Frog",
       "text": "flavour text",
       "hasFlavourText": true,
@@ -1096,7 +995,6 @@
       "health": 3
     },
     {
-      "_id": "5bv",
       "name": "Rustler",
       "text": "[icon:lightsmall] : Photosynthesis.\nGain [icon:lifesmall] [icon:lifesmall] . This skill can be used multiple times per turn.",
       "hasFlavourText": false,
@@ -1108,7 +1006,6 @@
       "health": 1
     },
     {
-      "_id": "5c0",
       "name": "Cockatrice",
       "text": "flavour text",
       "hasFlavourText": true,
@@ -1120,7 +1017,6 @@
       "health": 4
     },
     {
-      "_id": "5c1",
       "name": "Forest Spirit",
       "text": "[icon:watersmall] : Growth.\nThe Forest Spirit gains +2/+2",
       "hasFlavourText": false,
@@ -1132,7 +1028,6 @@
       "health": 1
     },
     {
-      "_id": "5c2",
       "name": "Heal",
       "text": "Heal yourself for up to 20 HP",
       "hasFlavourText": false,
@@ -1142,7 +1037,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5c3",
       "name": "Thorn Carapace",
       "text": "Shield: the attacking creatures have a 75% chance to be infected (Roll a d4, a 4 is safe, else +1 Poison)",
       "hasFlavourText": false,
@@ -1152,7 +1046,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5c4",
       "name": "Emerald Shield",
       "text": "Shield: Reduce damage by 1. Spells are reflected against your opponent. Can not be destroyed or stolen.",
       "hasFlavourText": false,
@@ -1162,7 +1055,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5c6",
       "name": "Empathic Bond",
       "text": "Every creature in your possession heals you for 1 HP at the end of every turn",
       "hasFlavourText": false,
@@ -1172,7 +1064,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5c7",
       "name": "Adrenaline",
       "text": "The target creature attacks multiple times per turn. Smaller creatures gain more extra attacks.",
       "hasFlavourText": false,
@@ -1182,7 +1073,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5c8",
       "name": "Forest Scorpion",
       "text": "Venom:\nAdd 1 poison damage to each successful attack. Cause poisoning if ingested.",
       "hasFlavourText": false,
@@ -1194,7 +1084,6 @@
       "health": 2
     },
     {
-      "_id": "5c9",
       "name": "Mitosis",
       "text": "The non-weapon creature skill is now mitosis: generate a daughter creature. The skill cost matches the card cost.",
       "hasFlavourText": false,
@@ -1204,7 +1093,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5c5",
       "name": "Druidic Staff",
       "text": "Weapon: Deal 2 damages at the end of every turn. Heal yourself for up to 5 HP",
       "hasFlavourText": false,
@@ -1216,7 +1104,6 @@
       "health": 7
     },
     {
-      "_id": "5cq",
       "name": "Shard of Gratitude",
       "text": "Heal yourself for up to 3 HP at the end of every turn. 5 if your mark is [icon:lifesmall] .",
       "hasFlavourText": false,
@@ -1226,7 +1113,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5cg",
       "name": "Green Nymph",
       "text": "[icon:lifesmall] [icon:lifesmall] : Adrenaline\nThe target creature attacks multiple times per turn.",
       "hasFlavourText": false,
@@ -1238,7 +1124,6 @@
       "health": 6
     },
     {
-      "_id": "8po",
       "name": "Mark of Fire",
       "text": "Each turn  [icon:firesmall]  is generated",
       "hasFlavourText": false,
@@ -1247,7 +1132,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5f0",
       "name": "Burning Pillar",
       "text": "Each turn  [icon:firesmall]  is generated",
       "hasFlavourText": false,
@@ -1256,7 +1140,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5gi",
       "name": "Fire Pendulum",
       "text": "Alternately generates  [icon:firesmall]  and 1 quantum matching your mark.",
       "hasFlavourText": false,
@@ -1265,7 +1148,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5f1",
       "name": "Ash Eater",
       "text": "flavour text",
       "hasFlavourText": true,
@@ -1277,7 +1159,6 @@
       "health": 1
     },
     {
-      "_id": "5f2",
       "name": "Crimson Dragon",
       "text": "This mighty dragon of flames is no joke, with its raw power in both its attack and heat.",
       "hasFlavourText": true,
@@ -1289,7 +1170,6 @@
       "health": 3
     },
     {
-      "_id": "5f3",
       "name": "Fire Spirit",
       "text": "[icon:firesmall] : Ablaze\nThe Fire Spirit gains +2/+0",
       "hasFlavourText": false,
@@ -1301,7 +1181,6 @@
       "health": 2
     },
     {
-      "_id": "5f4",
       "name": "Fire Bolt",
       "text": "Deals 3 damage to the target for each 10 fire quantums in your possession.",
       "hasFlavourText": false,
@@ -1311,7 +1190,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5f5",
       "name": "Fire Shield",
       "text": "Shield: 1 damage is dealt to any attacking creature",
       "hasFlavourText": false,
@@ -1321,7 +1199,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5f6",
       "name": "Deflagration",
       "text": "Destroy the targeted permanent",
       "hasFlavourText": false,
@@ -1331,7 +1208,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5f8",
       "name": "Rain of Fire",
       "text": "Deals 3 damages to every enemy creature. Removes invisibility.",
       "hasFlavourText": false,
@@ -1341,7 +1217,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5f9",
       "name": "Immolation",
       "text": "Sacrifice a creature to generate 6  [icon:firesmall]  plus 1 quantum for each non-fire element.",
       "hasFlavourText": false,
@@ -1350,7 +1225,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5fa",
       "name": "Lava Golem",
       "text": "[icon:earthsmall] : Growth\nLava Golem gains +2/+2",
       "hasFlavourText": false,
@@ -1362,7 +1236,6 @@
       "health": 1
     },
     {
-      "_id": "5fb",
       "name": "Rage Potion",
       "text": "The target creature gains +5/-5",
       "hasFlavourText": false,
@@ -1372,7 +1245,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5fc",
       "name": "Phoenix",
       "text": "Phoenix turns into Ash when killed",
       "hasFlavourText": false,
@@ -1384,7 +1256,6 @@
       "health": 1
     },
     {
-      "_id": "5fd",
       "name": "Ash",
       "text": "[icon:firesmall] : Rebirth\nTurn this card into a Phoenix",
       "hasFlavourText": false,
@@ -1397,7 +1268,6 @@
       "health": 5
     },
     {
-      "_id": "5fe",
       "name": "Seraph",
       "text": "[icon:lightsmall] : Divine shield.\nSeraph can not be targeted for 1 turn.",
       "hasFlavourText": false,
@@ -1409,7 +1279,6 @@
       "health": 1
     },
     {
-      "_id": "5f7",
       "name": "Fahrenheit",
       "text": "Weapon: Deal 4+X damage at the end of every turn. X is the number of  [icon:firesmall] you own, divided by 5.",
       "hasFlavourText": false,
@@ -1421,7 +1290,6 @@
       "health": 5
     },
     {
-      "_id": "5fu",
       "name": "Shard of Bravery",
       "text": "Your opponent draws 2 cards, 3 if your mark is  [icon:firesmall] . Draw an equal amount of cards.",
       "hasFlavourText": false,
@@ -1431,7 +1299,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5fk",
       "name": "Red Nymph",
       "text": "[icon:firesmall] [icon:firesmall] [icon:firesmall] : Rage\nThe target creature gains +5/-5",
       "hasFlavourText": false,
@@ -1443,7 +1310,6 @@
       "health": 6
     },
     {
-      "_id": "8pp",
       "name": "Mark of Water",
       "text": "Each turn  [icon:watersmall]  is generated",
       "hasFlavourText": false,
@@ -1452,7 +1318,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5i4",
       "name": "Water Pillar",
       "text": "Each turn  [icon:watersmall]  is generated",
       "hasFlavourText": false,
@@ -1461,7 +1326,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5jm",
       "name": "Water Pendulum",
       "text": "Alternately generates  [icon:watersmall]  and 1 quantum matching your mark.",
       "hasFlavourText": false,
@@ -1470,7 +1334,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5i5",
       "name": "Chrysaora",
       "text": "[icon:deathsmall] : Poison\nInflict 1 poison damage at the end of every turn. Cause poisoning if ingested.",
       "hasFlavourText": false,
@@ -1482,7 +1345,6 @@
       "health": 2
     },
     {
-      "_id": "5i6",
       "name": "Blue Crawler",
       "text": "flavour text",
       "hasFlavourText": true,
@@ -1494,7 +1356,6 @@
       "health": 3
     },
     {
-      "_id": "5i7",
       "name": "Freeze",
       "text": "Freeze the target creature for 3 turns. Frozen creatures can not attack or use skills.",
       "hasFlavourText": false,
@@ -1504,7 +1365,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5i8",
       "name": "Ice Bolt",
       "text": "Deals 2 damage to the target for each 10 water quantums in your possession. Ice Bolt might freeze the target.",
       "desc": "Chances to freeze target increase by 5% for each point of damage dealt. If player is targeted, Ice Bolt might freeze the player's weapon.",
@@ -1515,7 +1375,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5i9",
       "name": "Ice Shield",
       "text": "Shield: damage dealt to you from physical damage sources is reduced by 1. Attacking creatures might freeze",
       "desc": "Freeze chance is 30%",
@@ -1526,7 +1385,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5ia",
       "name": "Purify",
       "text": "Remove poison and sacrifice status from the target. Heals 2 damage per turn. Cumulative.",
       "hasFlavourText": false,
@@ -1536,7 +1394,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5id",
       "name": "Ice Dragon",
       "text": "flavour text",
       "hasFlavourText": true,
@@ -1548,7 +1405,6 @@
       "health": 6
     },
     {
-      "_id": "5ie",
       "name": "Toadfish",
       "text": "[icon:airsmall] : inflate\nInflict 1 poison damage to a target creature. Cause poisoning if ingested.",
       "hasFlavourText": false,
@@ -1560,7 +1416,6 @@
       "health": 4
     },
     {
-      "_id": "5if",
       "name": "Mind Flayer",
       "text": "[icon:aethersmall] : Psionic wave\nRemove any skill from the target creature.",
       "hasFlavourText": false,
@@ -1572,7 +1427,6 @@
       "health": 2
     },
     {
-      "_id": "5ii",
       "name": "Steam Machine",
       "text": "[icon:firesmall] [icon:firesmall] : Steam\nGain 5 charges (+5|+0). Remove 1 charge per turn.",
       "hasFlavourText": false,
@@ -1584,17 +1438,15 @@
       "health": 6
     },
     {
-      "_id": "5ij",
-      "name": "Dry Spell",
-      "text": "Deals 1 damage to every creature on the field. Gain  [icon:watersmall]  for every creature damaged. Removes Invisibility.",
-      "hasFlavourText": false,
-      "imageUrl": "/assets/images/cardArt/dryspell.jpeg",
-      "element": "Water",
-      "cost": 2,
-      "type": "Spell"
-    },
+        "name": "Dry Spell",
+        "text": "Deals 1 damage to every creature on the field. Gain  [icon:watersmall]  for every creature damaged. Removes Invisibility.",
+        "hasFlavourText": false,
+        "imageUrl": "/assets/images/cardArt/dryspell.jpeg",
+        "element": "Water",
+        "cost": 2,
+        "type": "Spell"
+      },
     {
-      "_id": "5ig",
       "name": "Nymph's Tears",
       "text": "Turn one of your pillars or pendulums into a Nymph. The Nymph will inherit the target's element.",
       "hasFlavourText": false,
@@ -1604,7 +1456,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5ih",
       "name": "Flooding",
       "text": "Kill any creature along the edges of the field. Water and neutral creatures are immune. Absorb  [icon:watersmall]  per turn.",
       "hasFlavourText": false,
@@ -1614,7 +1465,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5ib",
       "name": "Arctic Squid",
       "text": "[icon:watersmall] [icon:watersmall] : Freeze\nFreeze the target creature",
       "hasFlavourText": false,
@@ -1626,7 +1476,6 @@
       "health": 2
     },
     {
-      "_id": "5ic",
       "name": "Trident",
       "text": "Weapon: Deal 4 damage\n[icon:earthsmall] [icon:earthsmall] [icon:earthsmall] : Destroy up to 3 pillars / pendulums in the target cluster",
       "hasFlavourText": false,
@@ -1638,7 +1487,6 @@
       "health": 9
     },
     {
-      "_id": "5j2",
       "name": "Shard of Patience",
       "text": "Your creatures do not attack and gain +2/+2; [icon:watersmall] creatures in a flooded area gain +5/+5. Remove : destroy this card. ",
       "hasFlavourText": false,
@@ -1648,7 +1496,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5io",
       "name": "Nymph Queen",
       "text": "[icon:watersmall] [icon:watersmall] [icon:watersmall] [icon:watersmall] : Nymph's tears\nTurn one of your pillars into a Nymph.",
       "hasFlavourText": false,
@@ -1660,7 +1507,6 @@
       "health": 6
     },
     {
-      "_id": "8pq",
       "name": "Mark of Light",
       "text": "Each turn  [icon:lightsmall]  is generated",
       "hasFlavourText": false,
@@ -1669,7 +1515,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5l8",
       "name": "Light Pillar",
       "text": "Each turn  [icon:lightsmall]  is generated",
       "hasFlavourText": false,
@@ -1678,7 +1523,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5mq",
       "name": "Light Pendulum",
       "text": "Alternately generates  [icon:lightsmall]  and 1 quantum matching your mark.",
       "hasFlavourText": false,
@@ -1687,7 +1531,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5l9",
       "name": "Photon",
       "text": "flavor text",
       "hasFlavourText": true,
@@ -1698,7 +1541,6 @@
       "health": 1
     },
     {
-      "_id": "5la",
       "name": "Golden Dragon",
       "text": "flavour text",
       "hasFlavourText": true,
@@ -1710,7 +1552,6 @@
       "health": 10
     },
     {
-      "_id": "5lb",
       "name": "Pegasus",
       "text": "[icon:airsmall] : Dive\nThe damage dealt is doubled for 1 turn.",
       "hasFlavourText": false,
@@ -1722,7 +1563,6 @@
       "health": 2
     },
     {
-      "_id": "5lc",
       "name": "Holy Light",
       "text": "Heal the target for up to 10 HP. If the target's element is [icon:deathsmall]  or  [icon:darknesssmall] , damage is dealt instead.",
       "hasFlavourText": false,
@@ -1732,7 +1572,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5ld",
       "name": "Solar Shield",
       "text": "Shield: Physical damage reduced by 1, the damage absorbed is converted to  [icon:lightsmall]",
       "hasFlavourText": false,
@@ -1742,7 +1581,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5lg",
       "name": "Reflective Shield",
       "text": "Shield: Any damage from spells is reflected against your opponent. Can not be destroyed or stolen.",
       "hasFlavourText": false,
@@ -1752,7 +1590,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5lk",
       "name": "Hope",
       "text": "Shield: Physical damage reduced by N. N is the number of your light emitting creatures. Immaterial.",
       "hasFlavourText": false,
@@ -1762,7 +1599,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5le",
       "name": "Guardian Angel",
       "text": "[icon:lightsmall] : Heal\nHeal the target creature up to 5 HP",
       "hasFlavourText": false,
@@ -1774,7 +1610,6 @@
       "health": 3
     },
     {
-      "_id": "5lf",
       "name": "Blessing",
       "text": "The target creature gains\n+3/+3",
       "hasFlavourText": false,
@@ -1784,7 +1619,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5lj",
       "name": "Luciferin",
       "text": "All of your creatures without a skill gain 'bioluminescence' (Light: each turn  [icon:lightsmall]  is generated). You heal 10 HP.",
       "desc": "normally cost 2 random quanta, might rework to cost 2 light instead. could also add a new variable to make it so cards with random costs dont show icons.",
@@ -1795,7 +1629,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5ll",
       "name": "Crusader",
       "text": "[icon:lightsmall] [icon:lightsmall] [icon:lightsmall] : Endow\nGain the target weapon's ability and +X|+2. X is the weapon's attack.",
       "hasFlavourText": false,
@@ -1807,7 +1640,6 @@
       "health": 4
     },
     {
-      "_id": "5lm",
       "name": "Sanctuary",
       "text": "Your quanta pool and your hand can not be altered during your opponent's turn. Heal 4 HP per turn.",
       "hasFlavourText": false,
@@ -1817,7 +1649,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5li",
       "name": "Miracle",
       "text": "Heal yourself to maximum health minus 1. This spell consumes all your light quanta left.",
       "hasFlavourText": false,
@@ -1827,7 +1658,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5lh",
       "name": "Morning Star",
       "text": "Weapon: Deal 7 damage at the end of every turn. Cannot be destroyed or stolen",
       "hasFlavourText": false,
@@ -1839,7 +1669,6 @@
       "health": 7
     },
     {
-      "_id": "5m6",
       "name": "Shard of Divinity",
       "text": "Add 16 HP to your maximum health. 24 if your mark is  [icon:lightsmall].",
       "hasFlavourText": false,
@@ -1849,7 +1678,6 @@
       "type": "Spell"
     },
     {
-      "_id": "???",
       "name": "White Nymph",
       "text": "[icon:lightsmall] [icon:lightsmall] [icon:lightsmall] [icon:lightsmall] : Luciferin\nAll your creatures without a skill gain 'bioluminescence'. Heal yourself for up to 10 HP",
       "hasFlavourText": false,
@@ -1861,7 +1689,6 @@
       "health": 9
     },
     {
-      "_id": "8pr",
       "name": "Mark of Air",
       "text": "Each turn  [icon:airsmall]  is generated",
       "hasFlavourText": false,
@@ -1870,7 +1697,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5oc",
       "name": "Wind Pillar",
       "text": "Each turn  [icon:airsmall]  is generated",
       "hasFlavourText": false,
@@ -1879,7 +1705,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5pu",
       "name": "Air Pendulum",
       "text": "Alternately generates  [icon:airsmall]  and 1 quantum matching your mark.",
       "hasFlavourText": false,
@@ -1888,7 +1713,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5od",
       "name": "Dragonfly",
       "text": "Each turn  [icon:airsmall]  is generated",
       "hasFlavourText": false,
@@ -1900,7 +1724,6 @@
       "health": 1
     },
     {
-      "_id": "5oe",
       "name": "Wyrm",
       "text": "[icon:airsmall] [icon:airsmall] : Dive\nThe damage dealt is doubled for 1 turn.",
       "hasFlavourText": false,
@@ -1912,7 +1735,6 @@
       "health": 3
     },
     {
-      "_id": "5of",
       "name": "Azure Dragon",
       "text": "flavour text.",
       "hasFlavourText": true,
@@ -1924,7 +1746,6 @@
       "health": 6
     },
     {
-      "_id": "???",
       "name": "Fog Sheild",
       "text": "Sheild: The attacking creatures have a 40% chance to miss you. d10 1-4 is a miss.",
       "hasFlavourText": false,
@@ -1934,7 +1755,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5oo",
       "name": "Wings",
       "text": "Shield: Only flying or ranged creatures can harm you. Lasts 5 turns.",
       "hasFlavourText": false,
@@ -1944,7 +1764,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5op",
       "name": "Sky Blitz",
       "text": "Double the attack power of all your airborne creatures for 1 turn. All the remaining air quanta is consumed.",
       "hasFlavourText": false,
@@ -1954,7 +1773,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5oh",
       "name": "Thunderstorm",
       "text": "Deals 2 damage to every enemy creature",
       "hasFlavourText": false,
@@ -1964,7 +1782,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5oi",
       "name": "Flying Weapon",
       "text": "Turn your weapon into a creature ",
       "hasFlavourText": false,
@@ -1974,7 +1791,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5oj",
       "name": "Firefly Queen",
       "text": "[icon:lifesmall] [icon:lifesmall] : Firefly\nGenerate a firefly.",
       "hasFlavourText": false,
@@ -1986,7 +1802,6 @@
       "health": 7
     },
     {
-      "_id": "???",
       "name": "Volcanic Firefly Queen",
       "text": "[icon:lifesmall] [icon:lifesmall] : Firefly\nGenerate a Volcanic Firefly.",
       "hasFlavourText": false,
@@ -1998,7 +1813,6 @@
       "health": 7
     },
     {
-      "_id": "5ok",
       "name": "Firefly",
       "text": "Bioluminescence\nEach turn  [icon:lightsmall]  is generated.",
       "hasFlavourText": false,
@@ -2010,7 +1824,6 @@
       "health": 2
     },
     {
-      "_id": "???",
       "name": "Volcanic Firefly",
       "text": "Incandescence\nEach turn  [icon:firesmall]  is generated.",
       "hasFlavourText": false,
@@ -2022,7 +1835,6 @@
       "health": 2
     },
     {
-      "_id": "5om",
       "name": "Unstable Gas",
       "text": "[icon:firesmall] : Ignite (Sacrifice card)\nInflict 20 damages to your opponent and 1 damage to all the creatures on the field.",
       "hasFlavourText": false,
@@ -2032,7 +1844,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5on",
       "name": "Shockwave",
       "text": "Deal 4 damage to a target creature. Instantly kill the creature or destroy the weapon if frozen.",
       "hasFlavourText": false,
@@ -2042,7 +1853,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5ol",
       "name": "Owl's Eye",
       "text": "Weapon: Deal 5 damage at the end of every turn.\n\n[icon:airsmall] [icon:airsmall] : Deal 3 damage to the target creature.",
       "hasFlavourText": false,
@@ -2054,7 +1864,6 @@
       "health": 7
     },
     {
-      "_id": "5pa",
       "name": "Shard of Freedom",
       "text": "Airborne creatures gain a 25% chance to deal +50% damage, ignore shields and evade targeting if  [icon:airsmall].",
       "desc": "roll a d4 on each attack, if its a 4 then it triggers, each extra shard adds to the success, meaning a 3 or 4 with 2 shards, a 2,3 or 4 with 3 shards, and with 4-6 shards its 100% chance to trigger.",
@@ -2065,7 +1874,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5p0",
       "name": "Blue Nymph",
       "text": "[icon:airsmall] [icon:airsmall] [icon:airsmall] : Unstable Gas\nGenerate unstable gas",
       "hasFlavourText": false,
@@ -2077,7 +1885,6 @@
       "health": 5
     },
     {
-      "_id": "8ps",
       "name": "Mark of Time",
       "text": "Each turn  [icon:timesmall]  is generated",
       "hasFlavourText": false,
@@ -2086,7 +1893,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5rg",
       "name": "Time Factory",
       "text": "Each turn  [icon:timesmall]  is generated",
       "hasFlavourText": false,
@@ -2095,7 +1901,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5t2",
       "name": "Time Pendulum",
       "text": "Alternately generates  [icon:timesmall]  and 1 quantum matching your mark.",
       "hasFlavourText": false,
@@ -2104,7 +1909,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5rh",
       "name": "Deja Vu",
       "text": "[icon:timesmall] : Deja Vu\nDeja Vu creates a copy of itself",
       "hasFlavourText": false,
@@ -2116,7 +1920,6 @@
       "health": 1
     },
     {
-      "_id": "5ri",
       "name": "Fate Egg",
       "text": "[icon:timesmall] : Hatch\nThe Fate Egg turns into a random creature. See Random Tab for Creature.",
       "hasFlavourText": false,
@@ -2128,7 +1931,6 @@
       "health": 1
     },
     {
-      "_id": "5rj",
       "name": "Procrastination",
       "text": "Shield: Any creature that damaged you is stuck in a time bubble for 1 turn.",
       "hasFlavourText": false,
@@ -2138,7 +1940,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5rk",
       "name": "Reverse Time",
       "text": "The target creature is placed on top of the creature owner's deck.",
       "hasFlavourText": false,
@@ -2148,7 +1949,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5rl",
       "name": "Golden Hourglass",
       "text": "[icon:timesmall] [icon:timesmall] : Hasten\nDraw a card from your deck.",
       "hasFlavourText": false,
@@ -2158,7 +1958,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5rm",
       "name": "Devonian Dragon",
       "text": "Flavour text",
       "hasFlavourText": true,
@@ -2170,7 +1969,6 @@
       "health": 5
     },
     {
-      "_id": "5rn",
       "name": "Anubis",
       "text": "[icon:aethersmall] [icon:aethersmall] : Immortality\nThe target creature is now immortal (untargetable).",
       "hasFlavourText": false,
@@ -2182,7 +1980,6 @@
       "health": 8
     },
     {
-      "_id": "5rp",
       "name": "Sundial",
       "text": "Stasis: Creatures do not attack for 1 turn.\n\n[icon:lightsmall] : Hasten\nDraw a card from your deck.",
       "hasFlavourText": false,
@@ -2192,7 +1989,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5rq",
       "name": "Scarab",
       "text": "The Scarab's HP is equal to the number of Scarabs you control (min 1).\n\n\n[icon:gravitysmall] : Devour",
       "hasFlavourText": false,
@@ -2204,7 +2000,6 @@
       "health": 0
     },
     {
-      "_id": "5rr",
       "name": "Precognition",
       "text": "You can see your opponent's hand. Draw a card.",
       "hasFlavourText": false,
@@ -2214,7 +2009,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5rt",
       "name": "Dune Scorpion",
       "text": "Neurotoxin: Add 1 neurotoxin damage to each successful attack, 1 extra poison for each card played by afflicted player.",
       "hasFlavourText": false,
@@ -2226,7 +2020,6 @@
       "health": 1
     },
     {
-      "_id": "5ru",
       "name": "Ghost of the Past",
       "text": "Obsession: Inflict 10 damage to the owner of this card if discarded.",
       "hasFlavourText": false,
@@ -2238,7 +2031,6 @@
       "health": 4
     },
     {
-      "_id": "5rs",
       "name": "Pharaoh",
       "text": "[icon:timesmall] [icon:timesmall] : Scarab\nGenerate a Scarab.",
       "hasFlavourText": false,
@@ -2250,7 +2042,6 @@
       "health": 9
     },
     {
-      "_id": "5ro",
       "name": "Eternity",
       "text": "Weapon: Deal 4 damage at the end of every turn.\n\n[icon:timesmall] [icon:timesmall] [icon:timesmall] : Put a creature back on top its owner's deck.",
       "hasFlavourText": false,
@@ -2262,7 +2053,6 @@
       "health": 8
     },
     {
-      "_id": "5se",
       "name": "Shard of Readiness",
       "text": "The target creature's skill cost is now zero. [icon:timesmall]  creatures can use their skill twice this turn.",
       "hasFlavourText": false,
@@ -2272,7 +2062,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5s4",
       "name": "Golden Nymph",
       "text": "[icon:timesmall] [icon:timesmall] : Precognition\nYou can see your opponent's hand. Draw a card.",
       "hasFlavourText": false,
@@ -2284,7 +2073,6 @@
       "health": 8
     },
     {
-      "_id": "8pt",
       "name": "Mark of Darkness",
       "text": "Each turn  [icon:darknesssmall]  is generated",
       "hasFlavourText": false,
@@ -2293,7 +2081,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5uk",
       "name": "Obsidian Pillar",
       "text": "Each turn  [icon:darknesssmall]  is generated",
       "hasFlavourText": false,
@@ -2302,7 +2089,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "???",
       "name": "Darkness Pendulum",
       "text": "Alternately generates  [icon:darknesssmall]  and 1 quantum matching your mark.",
       "hasFlavourText": false,
@@ -2311,7 +2097,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5ul",
       "name": "Black Dragon",
       "text": "flavour text",
       "hasFlavourText": true,
@@ -2323,7 +2108,6 @@
       "health": 5
     },
     {
-      "_id": "5um",
       "name": "Devourer",
       "text": "Absorb 1 quantum from your opponent per turn and return a [icon:darknesssmall]  to you\n\n\n[icon:earthsmall] : Burrow",
       "hasFlavourText": false,
@@ -2335,7 +2119,6 @@
       "health": 2
     },
     {
-      "_id": "5un",
       "name": "Parasite",
       "text": "[icon:deathsmall] : Infection\nInflict 1 Poison damage to a target creature.",
       "hasFlavourText": false,
@@ -2347,7 +2130,6 @@
       "health": 1
     },
     {
-      "_id": "5uo",
       "name": "Dusk Mantle",
       "text": "The attacking creatures have a 50% chance to miss you. Roll any dice, odds are a miss, evens are a hit.",
       "hasFlavourText": false,
@@ -2357,7 +2139,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5up",
       "name": "Steal",
       "text": "Steal a permanent",
       "hasFlavourText": false,
@@ -2367,7 +2148,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5uq",
       "name": "Nightfall",
       "text": "All the  [icon:deathsmall]  or  [icon:darknesssmall]  creatures gain +1/+1",
       "hasFlavourText": false,
@@ -2377,7 +2157,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5us",
       "name": "Drain Life",
       "text": "Drains 2 HP's from the target for each 10 darkness quantums in your possession.",
       "hasFlavourText": false,
@@ -2387,7 +2166,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5ut",
       "name": "Minor Vampire",
       "text": "Vampire:\nThe damage dealt is returned to you as healing.",
       "hasFlavourText": false,
@@ -2399,7 +2177,6 @@
       "health": 2
     },
     {
-      "_id": "5uu",
       "name": "Liquid Shadow",
       "text": "The target creature is poisoned and gains the vampire ability. Previous skills are removed.",
       "hasFlavourText": false,
@@ -2409,7 +2186,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5uv",
       "name": "Gargoyle",
       "text": "[icon:earthsmall] : Stone Form\nGargoyle Gains +0/+20. Can only be used once.",
       "hasFlavourText": false,
@@ -2421,7 +2197,6 @@
       "health": 16
     },
     {
-      "_id": "5v0",
       "name": "Voodoo Doll",
       "text": "Voodoo: If this creature survives an attack, damage and status is inflicted to your opponent as well.",
       "hasFlavourText": false,
@@ -2433,7 +2208,6 @@
       "health": 2
     },
     {
-      "_id": "5v1",
       "name": "Nightmare",
       "text": "Fill your opponent's hand with copies of the target creature's card. Drain 2 HP for each card added.",
       "hasFlavourText": false,
@@ -2443,7 +2217,6 @@
       "type": "Spell"
     },
     {
-      "_id": "5v2",
       "name": "Cloak",
       "text": "Your creatures and your permanents are flipped face-down and are now played face-down for 3 turns except for Cloak. Your opponent cannot target face-down cards",
       "hasFlavourText": false,
@@ -2453,7 +2226,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5ur",
       "name": "Vampire Stiletto",
       "text": "Weapon: Deal 4 damage at the end of every turn. The damage dealt is returned to you as healing.",
       "hasFlavourText": false,
@@ -2465,7 +2237,6 @@
       "health": 4
     },
     {
-      "_id": "5vi",
       "name": "Shard of Void",
       "text": "Reduce your opponent's max HP by 2 per turn. 3 if your mark is  [icon:darknesssmall]",
       "hasFlavourText": false,
@@ -2475,7 +2246,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "5v8",
       "name": "Black Nymph",
       "text": "[icon:darknesssmall] [icon:darknesssmall] : Liquid Shadow\nThe target creature is poisoned and its skill switched to 'vampire'.",
       "hasFlavourText": false,
@@ -2487,7 +2257,6 @@
       "health": 5
     },
     {
-      "_id": "4su",
       "name": "Mark of Aether",
       "text": "Each turn  [icon:aethersmall]  is generated",
       "hasFlavourText": false,
@@ -2496,7 +2265,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "61o",
       "name": "Aether Pillar",
       "text": "Each turn  [icon:aethersmall]  is generated",
       "hasFlavourText": false,
@@ -2505,7 +2273,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "63a",
       "name": "Aether Pendulum",
       "text": "Alternately generates  [icon:aethersmall]  and 1 quantum matching your mark.",
       "hasFlavourText": false,
@@ -2514,7 +2281,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "61p",
       "name": "Spark",
       "text": "flavour text",
       "hasFlavourText": false,
@@ -2525,7 +2291,6 @@
       "health": 0
     },
     {
-      "_id": "61q",
       "name": "Lightning",
       "text": "Deals 5 damage to the target.",
       "hasFlavourText": false,
@@ -2535,7 +2300,6 @@
       "type": "Spell"
     },
     {
-      "_id": "61r",
       "name": "Parallel Universe",
       "text": "Summon an exact copy of the target creature",
       "hasFlavourText": false,
@@ -2545,7 +2309,6 @@
       "type": "Spell"
     },
     {
-      "_id": "61s",
       "name": "Immortal",
       "text": "Immaterial:\nThe Immortal can not be targeted.",
       "hasFlavourText": false,
@@ -2557,7 +2320,6 @@
       "health": 3
     },
     {
-      "_id": "61t",
       "name": "Dimensional Shield",
       "text": "Shield: Shift out of phase for 3 turns. Physical attacks are unable to hit you while this shield is in play.",
       "hasFlavourText": false,
@@ -2567,7 +2329,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "61v",
       "name": "Phase Dragon",
       "text": "Immaterial:\nPhase Dragon can not be targeted.",
       "hasFlavourText": false,
@@ -2579,7 +2340,6 @@
       "health": 6
     },
     {
-      "_id": "620",
       "name": "Phase Spider",
       "text": "[icon:airsmall] : Web\nThe target creature loses its 'airborne' skill",
       "hasFlavourText": false,
@@ -2591,7 +2351,6 @@
       "health": 2
     },
     {
-      "_id": "621",
       "name": "Quintessence",
       "text": "Grant immortality to the target creature. The target creature can no longer be targeted.",
       "hasFlavourText": false,
@@ -2601,7 +2360,6 @@
       "type": "Spell"
     },
     {
-      "_id": "622",
       "name": "Fractal",
       "text": "Fill your hand with copies of the target creature's card. All the remaining aether quanta is consumed.",
       "hasFlavourText": false,
@@ -2611,7 +2369,6 @@
       "type": "Spell"
     },
     {
-      "_id": "623",
       "name": "Mindgate",
       "text": "[icon:aethersmall] [icon:aethersmall] : Duality\nDraw 1 from the opponent's deck, keep it or place it on the top or bottom of their deck.",
       "hasFlavourText": false,
@@ -2621,7 +2378,6 @@
       "type": "Permanent"
     },
     {
-      "_id": "624",
       "name": "Silence",
       "text": "The opponent can not play any cards during the next turn",
       "hasFlavourText": false,
@@ -2631,7 +2387,6 @@
       "type": "Spell"
     },
     {
-      "_id": "625",
       "name": "Psion",
       "text": "Psion's attacks deal spell damage.",
       "hasFlavourText": false,
@@ -2643,7 +2398,6 @@
       "health": 4
     },
     {
-      "_id": "626",
       "name": "Phase Salvager",
       "text": "Salvaging: a permanent destroyed by your opponent is returned to your hand.",
       "hasFlavourText": false,
@@ -2655,7 +2409,6 @@
       "health": 0
     },
     {
-      "_id": "61u",
       "name": "Lobotomizer",
       "text": "Weapon: deal 5 damage at the end of every turn.\n\n[icon:aethersmall] [icon:aethersmall] : remove any skill from the target creature.",
       "hasFlavourText": false,
@@ -2667,7 +2420,6 @@
       "health": 4
     },
     {
-      "_id": "62m",
       "name": "Shard of Wisdom",
       "text": "The target creature gains +4/+0 and now deals spell damage if immortal.",
       "hasFlavourText": false,
@@ -2677,7 +2429,6 @@
       "type": "Spell"
     },
     {
-      "_id": "62c",
       "name": "Turquoise Nymph",
       "text": "[icon:aethersmall] [icon:aethersmall] [icon:aethersmall] : Immortality\nThe target creature is now immortal (untargetable).",
       "hasFlavourText": false,

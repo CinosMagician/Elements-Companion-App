@@ -23,7 +23,7 @@
     border: solid 1px #ccc;
     padding: 10px;
     height: fit-content;
-    /* width: 70%; */
+    width: 70%;
 }
 
 .deckName {
@@ -130,6 +130,7 @@
     border-radius: 10px;
     max-width: 500px;
     width: 100%;
+    background-image: url(/assets/images/cardArt/repeatmainback.png);
 }
 
 .filter-modal-content h3 {

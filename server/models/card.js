@@ -16,6 +16,9 @@ const cardSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
   },
+    isUpped: {
+    type: Boolean
+  },
   isToken: {
     type: Boolean
   },

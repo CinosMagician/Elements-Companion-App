@@ -15,15 +15,46 @@ const CardCanvas = ({ card }) => {
             const img = new Image();
             img.onload = () => resolve(img);
             img.onerror = reject;
-            // img.src = import.meta.env.VITE_BACKEND_URL+src;
-            img.src = localImageTesting+src; 
-            // used for local testing
+
+            const isAbsoluteUrl = /^(https?:)?\/\//i.test(src);
+            if (isAbsoluteUrl) {
+                img.src = src;
+            } else {
+                // img.src = import.meta.env.VITE_BACKEND_URL+src;
+                img.src = localImageTesting+src; 
+                // used for local testing
+            }
         });
+
+        function drawIntenseShadowText(ctx, text, x, y, baseColor, shadowColor = "black") {
+            ctx.save();
+
+            ctx.fillStyle = shadowColor;
+
+            // Multi-layer shadow for intensity
+            for (let i = 1; i <= 3; i++) {
+                ctx.shadowColor = shadowColor;
+                ctx.shadowBlur = i * 3;
+                ctx.shadowOffsetX = 0;
+                ctx.shadowOffsetY = 0;
+
+                ctx.fillText(text, x, y);
+            }
+
+            // Main text
+            ctx.shadowBlur = 0;
+            ctx.fillStyle = baseColor;
+            ctx.fillText(text, x, y);
+
+            ctx.restore();
+        }
 
         const drawCard = async () => {
             try {
                 let lowerCaseElement = card.element.toLowerCase()
-                const backgroundSrc = card.element === 'None' ? '/assets/images/cardbacks/normal.png' : `/assets/images/cardbacks/${lowerCaseElement}.png`;
+                const cardUpped = card.isUpped;
+                console.log(card);
+                const backgroundSrc = card.element === 'None' ? `/assets/images/cardbacks/${cardUpped ? 'upped' : ''}normal.png` : `/assets/images/cardbacks/${cardUpped ? 'upped' : ''}${lowerCaseElement}.png`;
                 const background = await loadImage(backgroundSrc);
                 const cardArt = await loadImage(card.imageUrl);
                 
@@ -36,7 +67,7 @@ const CardCanvas = ({ card }) => {
 
                 let elementIcon = null;
                 if (card.cost && card.cost > 0) {
-                    elementIcon = await loadImage(card.element === 'None' ? '/assets/images/icons/normalsmall.png' : `/assets/images/icons/${lowerCaseElement}small.png`);
+                    elementIcon = await loadImage(card.element === 'None' ? '/assets/images/icons/chromasmall.png' : `/assets/images/icons/${lowerCaseElement}small.png`);
                 }
 
                 ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
@@ -51,43 +82,89 @@ const CardCanvas = ({ card }) => {
                 }
 
                 const textColor = backgroundSrc.includes('light') ? '#FFFFFF' : '#FFFFFF';
+                const textTitleColor = cardUpped ? '#000000' : '#FFFFFF';
 
-                ctx.font = '25px Gill Sans';
-                ctx.fillStyle = textColor;
+                // ctx.font = '25px Gill Sans';
+                // ctx.fillStyle = textColor;
+                // ctx.shadowColor = '#000000';
+                // ctx.shadowBlur = 2;
+                // ctx.shadowOffsetX = 2;
+                // ctx.shadowOffsetY = 2;
+                // ctx.fillText(card.name, 10, 28);
+
+
+                ctx.fillStyle = textTitleColor;
+                ctx.font = '22px Verdana';
+                ctx.shadowColor = '#000000';
+                ctx.letterSpacing = '-1px';
+                if (cardUpped) {
+                    // Upgraded card → black text, no shadow
+                    ctx.shadowBlur = 0;
+                    ctx.shadowOffsetX = 0;
+                    ctx.shadowOffsetY = 0;
+                    ctx.fillText(card.name, 10, 28);
+                } else {
+                    // Normal card → white text with shadow
+                    ctx.shadowBlur = 2;
+                    ctx.shadowOffsetX = 2;
+                    ctx.shadowOffsetY = 2;
+                    ctx.fillText(card.name, 10, 28);
+                }
                 ctx.shadowColor = '#000000';
                 ctx.shadowBlur = 2;
                 ctx.shadowOffsetX = 2;
                 ctx.shadowOffsetY = 2;
-                ctx.fillText(card.name, 10, 28);
 
                 await drawTextWithIcons(card.text, ctx, textColor, 25, 330, 275);
 
                 if (card.cost && card.cost > 0) {
                     const costX = card.cost > 9 ? 230 : 240;
-                    ctx.font = '20px Gill Sans';
+                    ctx.font = '25px Playfair';
                     ctx.fillStyle = textColor;
                     ctx.fillText(`${card.cost}`, costX, 28);
+                    drawIntenseShadowText(ctx, `${card.cost}`, costX, 28, textColor);
                 }
                 if (card.type === 'Creature') {
                     if (card.attack !== null && card.health !== null) {
-                        ctx.font = '22px Gill Sans';
+                        ctx.font = '25px Playfair';
+                        
+                        let attackX, attackY, dividerX, dividerY, healthX, healthY;
+
+                        const baseY = 280;
+
+                        // Attack/health positioning
                         if (card.attack >= 10 && card.health < 10) {
-                            ctx.fillText(`${card.attack}`, 210, 280);
-                            ctx.fillText('|', 240, 278);
-                            ctx.fillText(`${card.health}`, 250, 280);
-                        } else if (card.attack < 10 && card.health < 10){
-                            ctx.fillText(`${card.attack}`, 220, 280);
-                            ctx.fillText('|', 240, 278);
-                            ctx.fillText(`${card.health}`, 250, 280);
-                        } else if (card.attack >= 10 && card.health >= 10){
-                            ctx.fillText(`${card.attack}`, 210, 280);
-                            ctx.fillText('|', 235, 278);
-                            ctx.fillText(`${card.health}`, 240, 280);
-                        } else if (card.attack < 10 && card.health >= 10){ //Could have used else here, but wanted to just track all use cases more easily.
-                            ctx.fillText(`${card.attack}`, 220, 280);
-                            ctx.fillText('|', 235, 278);
-                            ctx.fillText(`${card.health}`, 240, 280);
+                            attackX = 212;
+                            dividerX = 240;
+                            healthX = 250;
+                        } 
+                        else if (card.attack < 10 && card.health < 10) {
+                            attackX = 220;
+                            dividerX = 240;
+                            healthX = 250;
+                        } 
+                        else if (card.attack >= 10 && card.health >= 10) {
+                            attackX = 202;
+                            dividerX = 232;
+                            healthX = 242;
+                        } 
+                        else { // card.attack < 10 && card.health >= 10
+                            attackX = 210;
+                            dividerX = 232;
+                            healthX = 242;
                         }
+
+                        attackY = baseY;
+                        dividerY = baseY +1;
+                        healthY = baseY;
+
+                        // Draw values
+                        ctx.fillText(`${card.attack}`, attackX, attackY);
+                        drawIntenseShadowText(ctx, `${card.attack}`, attackX, attackY, textColor);
+                        ctx.fillText('|', dividerX, dividerY);
+                        drawIntenseShadowText(ctx, `|`, dividerX, dividerY, textColor);
+                        ctx.fillText(`${card.health}`, healthX, healthY);
+                        drawIntenseShadowText(ctx, `${card.health}`, healthX, healthY, textColor);
                     }
                 }
             } catch (error) {
@@ -140,7 +217,7 @@ const CardCanvas = ({ card }) => {
                                     xOffset = x;
                                 }
 
-                                ctx.drawImage(iconImg, xOffset - 8, lineY - iconSize + 10, iconSize, iconSize);
+                                ctx.drawImage(iconImg, xOffset - 8, lineY - iconSize + 7, iconSize, iconSize);
                                 xOffset += iconSize - 8;
                             } catch {
                                 // Handle icon loading error if needed

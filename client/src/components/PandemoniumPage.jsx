@@ -145,14 +145,14 @@ const PandemoniumPage = () => {
             
             {/* Grid container for the selected effects */}
             {selectedEffects.length > 0 && (
-                <div className="effects-grid">
+                <div style={{gridTemplateColumns: `repeat(${Math.min(selectedEffects.length, 3)}, 1fr)`}} className="effects-grid">
                     {selectedEffects.map((item, index) => (
                         <div className="effect-item" key={index}>
-                            <h2>Triggered Effect:</h2><h2 className='titleFont subTitle'>{item.effect.skillName}</h2>
+                            <h2>Triggered Effect:</h2><h2 style={{lineHeight: 0.75}} className='titleFont subTitle'>{item.effect.skillName}</h2>
                             <div className="card-section">
                                 <CardCanvas card={item.card} />
                             </div>
-                            <p>Effect: {item.effect.effect}</p>
+                            <p class="effect-desc">Effect: {item.effect.effect}</p>
                         </div>
                     ))}
                 </div>
